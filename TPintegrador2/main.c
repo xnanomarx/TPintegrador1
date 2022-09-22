@@ -3,16 +3,12 @@
 
 int main()
 {
-    int seleccion=1;
 
     printf("\r\n\r\n");
-    printf("Menu principal:\r\n");
-    printf("---------------\r\n\r\n");
-    printf("1 - Opcion 1\r\n");
-    printf("2 - Opcion 2\r\n");
-    printf("0 - Salir\r\n\r\n");
-    printf("Seleccione una opción: ");
-    scanf("%d",&seleccion);
+    printf("Menu principal\r\n");
+    printf("-----------------------------\r\n\r\n");
+    printf("Seleccione dato a cargar\r\n");
+    printf("1 - Chofer \n2 - Cliente \n3 - Paquete \n ");
 
 
 

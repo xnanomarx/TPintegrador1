@@ -31,6 +31,17 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="TDAchofer.h" />
+		<Unit filename="TDAcliente.h" />
+		<Unit filename="TDAdimension.h" />
+		<Unit filename="TDAdomicilio.h" />
+		<Unit filename="TDAfecha.h" />
+		<Unit filename="TDAfechaEntrega.h" />
+		<Unit filename="TDAfechaSalida.h" />
+		<Unit filename="TDAhora.h" />
+		<Unit filename="TDApaquete.h" />
+		<Unit filename="TDAreparto.h" />
+		<Unit filename="TDAvehiculo.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>

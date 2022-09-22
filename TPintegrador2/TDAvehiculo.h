@@ -1,6 +1,16 @@
 #ifndef TDAVEHICULO_INCLUDED
 #define TDAVEHICULO_INCLUDED
 
+struct vehiculo{
+    char* tipo;
+    char* marca;
+    char* modelo;
+    char* patente;
+}vehiculo;
+
+typedef vehiculo vehiculoPtr;
+
+
 // Operación de creación (Constructor)
 // Precondición: El vehiculo no ha sido creado
 // Postcondición: Se crea vechiculo con tipo, marca, modelo, patente

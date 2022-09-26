@@ -1,5 +1,32 @@
 # depslib dependency file v1.0
-1663887408 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\main.c
+1664162627 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\main.c
 	<stdio.h>
 	<stdlib.h>
+
+1664161249 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdacliente.c
+
+1664161264 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdadimension.c
+
+1664161277 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdadomicilio.c
+
+1664161292 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdafecha.c
+
+1664161313 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdafechaentrega.c
+
+1664161330 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdafechasalida.c
+
+1664161345 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdahora.c
+
+1664161359 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdapaquete.c
+
+1664161389 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdareparto.c
+
+1664161402 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdavehiculo.c
+
+1664161953 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\util.c
+	<stdio.h>
+	<stdlib.h>
+	"util.h"
+
+1664161467 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\util.h
 

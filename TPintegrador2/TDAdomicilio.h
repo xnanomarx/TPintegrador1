@@ -1,7 +1,7 @@
 #ifndef TDADOMICILIO_INCLUDED
 #define TDADOMICILIO_INCLUDED
 
-struct domicilio{
+typedef struct domicilio{
     char* calle;
     char* localidad;
     int numero;
@@ -17,7 +17,7 @@ typedef domicilio* domicilioPtr;
 //Localidad: Representando la localidad
 //Numero: Representando el numero del domicilio
 // Devuelve un puntero a la estructura domicilio
-domicilioPtr crearDomicilio(Char*Calle, Char*Localidad, int Numero)
+domicilioPtr crearDomicilio(char*Calle, char*Localidad, int Numero)
 
 
 // Operación de destrucción (Destructor)

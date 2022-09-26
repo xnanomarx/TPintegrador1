@@ -1,7 +1,7 @@
 #ifndef TDACHOFER_INCLUDED
 #define TDACHOFER_INCLUDED
 
-struct chofer{
+typedef struct chofer{
    char* nombre;
    char* apellido;
    domicilioPtr;
@@ -19,7 +19,7 @@ typedef chofer* choferPtr;
 //domicilio: TDAdomicilio, representa el domicilio del chofer
 //cuil: representa el cuil del chofer
 // Devuelve un puntero a la estructura Chofer
-ChoferPtr crearChofer(Char*nombre, Char*apellido, domicilio, int cuil)
+ChoferPtr crearChofer(char* nombre, char* apellido, domicilio, int cuil)
 
 
 // Operación de destrucción (Destructor)

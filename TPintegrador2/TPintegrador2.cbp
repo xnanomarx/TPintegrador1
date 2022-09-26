@@ -35,19 +35,53 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="TDAchofer.h" />
+		<Unit filename="TDAcliente.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="TDAcliente.h" />
+		<Unit filename="TDAdimension.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="TDAdimension.h" />
+		<Unit filename="TDAdomicilio.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="TDAdomicilio.h" />
+		<Unit filename="TDAfecha.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="TDAfecha.h" />
+		<Unit filename="TDAfechaEntrega.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="TDAfechaEntrega.h" />
+		<Unit filename="TDAfechaSalida.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="TDAfechaSalida.h" />
+		<Unit filename="TDAhora.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="TDAhora.h" />
+		<Unit filename="TDApaquete.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="TDApaquete.h" />
+		<Unit filename="TDAreparto.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="TDAreparto.h" />
+		<Unit filename="TDAvehiculo.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="TDAvehiculo.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="util.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="util.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

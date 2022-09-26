@@ -22,7 +22,7 @@ typedef chofer* choferPtr;
 //domicilio: TDAdomicilio, representa el domicilio del chofer
 //cuil: representa el cuil del chofer
 // Devuelve un puntero a la estructura Chofer
-ChoferPtr crearChofer(char* nombre, char* apellido, domicilio, int cuil)
+ChoferPtr crearChofer(char* nombre, char* apellido, domicilio, cuil)
 
 
 // Operación de destrucción (Destructor)

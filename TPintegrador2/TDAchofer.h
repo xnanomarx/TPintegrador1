@@ -7,8 +7,8 @@
 typedef struct chofer{
    char* nombre;
    char* apellido;
-   domicilioPtr;
-   cuilPtr;
+   domicilioPtr domicilio;
+   cuilPtr cuil;
 } chofer;
 
 typedef chofer* choferPtr;
@@ -22,7 +22,7 @@ typedef chofer* choferPtr;
 //domicilio: TDAdomicilio, representa el domicilio del chofer
 //cuil: representa el cuil del chofer
 // Devuelve un puntero a la estructura Chofer
-ChoferPtr crearChofer(char* nombre, char* apellido, domicilio, int cuil)
+choferPtr crearChofer(char* nombre, char* apellido, domicilioPtr domicilio,cuilPtr cuil);
 
 
 // Operación de destrucción (Destructor)
@@ -31,7 +31,7 @@ ChoferPtr crearChofer(char* nombre, char* apellido, domicilio, int cuil)
 // Parámetros:
 // Chofer: TDAChofer a destruir
 // Devuelve NULL
-ChoferPtr destruirChofer(ChoferPtr Chofer)
+choferPtr destruirChofer(ChoferPtr Chofer);
 
 
 // Operación de obtención de Nombre Chofer
@@ -40,16 +40,7 @@ ChoferPtr destruirChofer(ChoferPtr Chofer)
 // Parámetros:
 //Chofer: TDAChofer del que se obtiene el nombre
 // Devuelve un char representando el nombre
-char getNombreChofer(ChoferPtr chofer)
-
-
-// Operación de obtención de Apellido Chofer
-// Precondición: Chofer debe haberse creado
-// Postcondición: Se obtiene el apellido del chofer
-// Parámetros:
-//Chofer: TDAChofer del que se obtiene el apellido
-// Devuelve un char representando el apellido
-char getApellidoChofer(ChoferPtr Chofer)
+char getNombreChofer(choferPtr chofer);
 
 
 // Operacion de asignacion de nombre del chofer
@@ -59,7 +50,7 @@ char getApellidoChofer(ChoferPtr Chofer)
 //  chofer: TDAchofer al que se asignara un nuevo valor de nombre de chofer
 //   nombre: char representando el nuevo valor del chofer
 // No devuelve valor
-void setNombreChofer(ChoferPtr, char* nombre)
+void setNombreChofer(choferPtr, char* nombre);
 
 // Operacion de asignacion de apellido del chofer
 // Precondicion: chofer debe haberse creado
@@ -68,7 +59,7 @@ void setNombreChofer(ChoferPtr, char* nombre)
 //  chofer: TDAchofer del que se asignara un nuevo valor al apellido
 //  apellido: char representando el apellido del chofer
 // No devuelve valor.
-void setApellidoChofer(ChoferPtf, char* apellido)
+void setApellidoChofer(choferPtf, char* apellido);
 
 
 #endif // TDACHOFER_INCLUDED

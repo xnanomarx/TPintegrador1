@@ -6,8 +6,8 @@
 struct cliente {
     char* nombre;
     char* apellido;
-    domicilioPtr*;
-    cuilPtr*;
+    domicilioPtr domicilio;
+    cuilPtr cuil;
 } cliente;
 
 typedef cliente* clientePtr;
@@ -55,7 +55,7 @@ char* getApellido(clientePtr nombre);
 //  cliente: TDAcliente al que se asigna un nuevo valor de nombre
 //  nombre: char representando el nombre del cliente
 // No devuelve valor.
-void setNombreCliente(clientePtr, char* nombre)
+void setNombreCliente(clientePtr, char* nombre);
 
 // Operacion de asignacion de apellido del cliente
 // Precondicion: cliente debe haberse creado
@@ -64,7 +64,7 @@ void setNombreCliente(clientePtr, char* nombre)
 //  cliente: TDAcliente al que se asigna un nuevo valor del apellido
 //  nombre: char representando el apellido del cliente
 // No devuelve valor.
-void setApellidoCliente(ClientePtr, char nombre)
+void setApellidoCliente(ClientePtr, char nombre);
 
 
 #endif // TDACLIENTE_INCLUDED

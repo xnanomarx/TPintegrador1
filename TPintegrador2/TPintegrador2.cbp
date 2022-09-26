@@ -39,6 +39,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="TDAcliente.h" />
+		<Unit filename="TDAcuil.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="TDAcuil.h" />
 		<Unit filename="TDAdimension.c">
 			<Option compilerVar="CC" />
 		</Unit>

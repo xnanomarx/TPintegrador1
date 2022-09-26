@@ -20,7 +20,7 @@ typedef vehiculo vehiculoPtr;
 // Modelo: representa el modelo de vehiculo
 // Patente: representa la patente del vechiculo
 // Devuelve un puntero a la estructura Vehiculo
-vehiculoPtr crearVehiculo(char*tipo, char*marca,char*modelo,char*patente)
+vehiculoPtr crearVehiculo(char*tipo, char*marca,char*modelo,char*patente);
 
 
 // Operación de destrucción (Destructor)
@@ -29,7 +29,7 @@ vehiculoPtr crearVehiculo(char*tipo, char*marca,char*modelo,char*patente)
 // Parámetros:
 // vehiculo: TDAvehiculo a destruir
 // Devuelve NULL
-vehiculoPtr destruirVehiculo(vehiculoPtr vehiculo)
+vehiculoPtr destruirVehiculo(vehiculoPtr vehiculo);
 
 
 // Operación de obtención de tipo
@@ -38,7 +38,7 @@ vehiculoPtr destruirVehiculo(vehiculoPtr vehiculo)
 // Parámetros:
 // vehiculo: TDAvehiculo del que se obtiene el tipo
 // Devuelve un puntero char representando el tipo
-char* getTipo(vehiculoPtr vehiculo)
+char* getTipo(vehiculoPtr vehiculo);
 
 // Operación de obtención de marca
 // Precondición: vehiculo debe haberse creado
@@ -46,7 +46,7 @@ char* getTipo(vehiculoPtr vehiculo)
 // Parámetros:
 // vehiculo: TDAvehiculo del que se obtiene la marca
 // Devuelve un puntero char representando la marca
-char* getMarca(vehiculoPtr vehiculo)
+char* getMarca(vehiculoPtr vehiculo);
 
 // Operación de obtención de modelo
 // Precondición: vehiculo debe haberse creado
@@ -54,7 +54,7 @@ char* getMarca(vehiculoPtr vehiculo)
 // Parámetros:
 // vehiculo: TDAvehiculo del que se obtiene el modelo
 // Devuelve un puntero char representando el modelo
-char* getModelo(vehiculoPtr vehiculo)
+char* getModelo(vehiculoPtr vehiculo);
 
 // Operación de obtención de patente
 // Precondición: vehiculo debe haberse creado
@@ -62,6 +62,6 @@ char* getModelo(vehiculoPtr vehiculo)
 // Parámetros:
 // vehiculo: TDAvehiculo del que se obtiene la patente
 // Devuelve un puntero a char representando la patente
-char* getPatente(vehiculoPtr vehiculo)
+char* getPatente(vehiculoPtr vehiculo);
 
 #endif // TDAVEHICULO_INCLUDED

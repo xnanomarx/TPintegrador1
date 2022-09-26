@@ -39,7 +39,7 @@ choferPtr destruirChofer(choferPtr Chofer);
 // Postcondición: Se obtiene el nombre del chofer
 // Parámetros:
 //Chofer: TDAChofer del que se obtiene el nombre
-// Devuelve un char representando el nombre
+// Devuelve un puntero a char representando el nombre
 char getNombreChofer(choferPtr chofer);
 
 

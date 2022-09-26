@@ -48,20 +48,23 @@ char* getNombre(clientePtr nombre);
 // Devuelve un puntero a char representando el apellido del cliente
 char* getApellido(clientePtr nombre);
 
-// Operación de obtención de domicilio de cliente
-// Precondición: Cliente debe haber sido creado.
-// Postcondición: Se obtiene domicilio del cliente.
-// Parámetros:
-//   domicilio: TDAdomicilio del que se obtiene el domicilio
-// Devuelve un puntero a la estructura TDAdomicilio del cliente
-domicilio getDomicilio(clientePtr domicilio);
+// Operacion de asignacion de nombre del cliente
+// Precondicion: cliente debe haberse creado
+// Postcondicion: cliente cambia con el nuevo valor del nombre del cliente
+// Parametros:
+//  cliente: TDAcliente al que se asigna un nuevo valor de nombre
+//  nombre: char representando el nombre del cliente
+// No devuelve valor.
+void setNombreCliente(clientePtr, char* nombre)
 
-// Operación de obtención de CUIL de cliente
-// Precondición: Cliente debe haber sido creado.
-// Postcondición: Se obtiene CUIL del cliente.
-// Parámetros:
-//   cuil: TDAcuil del que se obtiene el cuil
-// Devuelve un puntero al TDAcuil del cliente
-cuil getCuil(clientePtr domicilio);
+// Operacion de asignacion de apellido del cliente
+// Precondicion: cliente debe haberse creado
+// Postcondicion: cliente cambia con el nuevo valor del apellido del cliente
+// Parametros:
+//  cliente: TDAcliente al que se asigna un nuevo valor del apellido
+//  nombre: char representando el apellido del cliente
+// No devuelve valor.
+void setApellidoCliente(ClientePtr, char nombre)
+
 
 #endif // TDACLIENTE_INCLUDED

@@ -51,20 +51,24 @@ char getNombreChofer(ChoferPtr chofer)
 // Devuelve un char representando el apellido
 char getApellidoChofer(ChoferPtr Chofer)
 
-// Operación de obtención de Cuil del Chofer
-// Precondición: Chofer debe haberse creado
-// Postcondición: Se obtiene el cuil del chofer
-// Parámetros:
-//Chofer: TDAChofer del que se obtiene el cuil
-// Devuelve un int representando el cuil
-int getCuil(ChoferPtr Chofer)
 
-// Operación de obtención de Domicilio del chofer
-// Precondición: Debe haberse creado chofer
-// Postcondición: Se obtiene el domicilio
-// Parámetros:
-//   Chofer: TDAchofer del que se obtiene el domicilio
-// Devuelve un puntero al TDAdomicilio del chofer
-char* getDomicilio(DomicilioPtr domicilio)
+// Operacion de asignacion de nombre del chofer
+// Precondicion: chofer debe haberse creado
+// Postcondicion: chofer cambia con el nuevo nombre del chofer
+// Parametros:
+//  chofer: TDAchofer al que se asignara un nuevo valor de nombre de chofer
+//   nombre: char representando el nuevo valor del chofer
+// No devuelve valor
+void setNombreChofer(ChoferPtr, char* nombre)
+
+// Operacion de asignacion de apellido del chofer
+// Precondicion: chofer debe haberse creado
+// Postcondicion: chofer cambia con el nuevo valor del apellido del chofer
+// Parametros:
+//  chofer: TDAchofer del que se asignara un nuevo valor al apellido
+//  apellido: char representando el apellido del chofer
+// No devuelve valor.
+void setApellidoChofer(ChoferPtf, char* apellido)
+
 
 #endif // TDACHOFER_INCLUDED

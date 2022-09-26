@@ -5,7 +5,7 @@ typedef struct Fecha{
     int dia;
     int mes;
     int anio;
-    horaPtr*;
+    horaPtr hora;
 }Fecha;
 
 typedef Fecha* FechaPtr;

@@ -22,7 +22,7 @@ typedef chofer* choferPtr;
 //domicilio: TDAdomicilio, representa el domicilio del chofer
 //cuil: representa el cuil del chofer
 // Devuelve un puntero a la estructura Chofer
-ChoferPtr crearChofer(char* nombre, char* apellido, domicilio, int cuil)
+choferPtr crearChofer(char* nombre, char* apellido, domicilio, int cuil);
 
 
 // Operación de destrucción (Destructor)
@@ -31,7 +31,7 @@ ChoferPtr crearChofer(char* nombre, char* apellido, domicilio, int cuil)
 // Parámetros:
 // Chofer: TDAChofer a destruir
 // Devuelve NULL
-ChoferPtr destruirChofer(ChoferPtr Chofer)
+choferPtr destruirChofer(choferPtr Chofer);
 
 
 // Operación de obtención de Nombre Chofer
@@ -40,7 +40,7 @@ ChoferPtr destruirChofer(ChoferPtr Chofer)
 // Parámetros:
 //Chofer: TDAChofer del que se obtiene el nombre
 // Devuelve un char representando el nombre
-char getNombreChofer(ChoferPtr chofer)
+char getNombreChofer(choferPtr chofer);
 
 
 // Operación de obtención de Apellido Chofer
@@ -49,7 +49,7 @@ char getNombreChofer(ChoferPtr chofer)
 // Parámetros:
 //Chofer: TDAChofer del que se obtiene el apellido
 // Devuelve un char representando el apellido
-char getApellidoChofer(ChoferPtr Chofer)
+char getApellidoChofer(choferPtr Chofer);
 
 // Operación de obtención de Cuil del Chofer
 // Precondición: Chofer debe haberse creado
@@ -57,7 +57,7 @@ char getApellidoChofer(ChoferPtr Chofer)
 // Parámetros:
 //Chofer: TDAChofer del que se obtiene el cuil
 // Devuelve un int representando el cuil
-int getCuil(ChoferPtr Chofer)
+int getCuil(choferPtr Chofer);
 
 // Operación de obtención de Domicilio del chofer
 // Precondición: Debe haberse creado chofer
@@ -65,6 +65,6 @@ int getCuil(ChoferPtr Chofer)
 // Parámetros:
 //   Chofer: TDAchofer del que se obtiene el domicilio
 // Devuelve un puntero al TDAdomicilio del chofer
-char* getDomicilio(DomicilioPtr domicilio)
+char* getDomicilio(domicilioPtr domicilio);
 
 #endif // TDACHOFER_INCLUDED

@@ -1,5 +1,8 @@
 #ifndef TDACHOFER_INCLUDED
 #define TDACHOFER_INCLUDED
+#include "TDAdomicilio.h"
+#include "TDAcuil.h"
+#include "util.h"
 
 typedef struct chofer{
    char* nombre;

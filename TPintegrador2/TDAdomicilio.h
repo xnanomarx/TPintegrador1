@@ -5,7 +5,7 @@ typedef struct domicilio{
     char* calle;
     char* localidad;
     int numero;
-}
+}domicilio;
 
 typedef domicilio* domicilioPtr;
 
@@ -17,7 +17,7 @@ typedef domicilio* domicilioPtr;
 //Localidad: Representando la localidad
 //Numero: Representando el numero del domicilio
 // Devuelve un puntero a la estructura domicilio
-domicilioPtr crearDomicilio(char*Calle, char*Localidad, int Numero)
+domicilioPtr crearDomicilio(char*Calle, char*Localidad, int Numero);
 
 
 // Operación de destrucción (Destructor)
@@ -26,7 +26,7 @@ domicilioPtr crearDomicilio(char*Calle, char*Localidad, int Numero)
 // Parámetros:
 //domicilio: TDADomicilio a destruir
 // Devuelve NULL
-domicilioPtr destruirDomicilio(domicilioPtr domicilio)
+domicilioPtr destruirDomicilio(domicilioPtr domicilio);
 
 
 // Operación de obtención de Calle
@@ -35,7 +35,7 @@ domicilioPtr destruirDomicilio(domicilioPtr domicilio)
 // Parámetros:
 //Domicilio: TDAdomicilio del que se obtiene la calle
 // Devuelve un puntero representando la calle
-char* getCalle(domicilioPtr domicilio)
+char* getCalle(domicilioPtr domicilio);
 
 // Operación de obtención de Localidad
 // Precondición: Domicilio debe haberse creado
@@ -43,7 +43,7 @@ char* getCalle(domicilioPtr domicilio)
 // Parámetros:
 // Domicilio: TDAdomicilio del que se obtiene la localidad
 // Devuelve puntero representando la localidad
-Char* getLocalidad(domicilioPtr domicilio)
+char* getLocalidad(domicilioPtr domicilio);
 
 // Operación de obtención de Numero
 // Precondición: Domicilio debe haberse creado
@@ -51,7 +51,7 @@ Char* getLocalidad(domicilioPtr domicilio)
 // Parámetros:
 // Domicilio: TDAdomicilio del que se obtiene el numero
 // Devuelve un puntero representando el numero
-int getNumero(domicilioPtr domicilio)
+int getNumero(domicilioPtr domicilio);
 
 // Operaciòn de asignaciòn de calle de domicilio
 // Precondiciòn: Domicilio debe haberse creado
@@ -59,7 +59,7 @@ int getNumero(domicilioPtr domicilio)
 // Paràmetros:
 //  calle: puntero a char repreasentando el valor de calle
 // No devuelve nada
-void* setCalle (domcilioPtr calle);
+void* setCalle (domicilioPtr calle);
 
 // Operaciòn de asignaciòn de numero de domicilio
 // Precondiciòn: Domicilio debe haberse creado
@@ -67,7 +67,7 @@ void* setCalle (domcilioPtr calle);
 // Paràmetros:
 //  numero: entero representando el valor de calle
 // No devuelve nada
-void* setNumero (domcilioPtr numero);
+void* setNumero (domicilioPtr numero);
 
 // Operaciòn de asignaciòn de localidad de domicilio
 // Precondiciòn: Domicilio debe haberse creado
@@ -75,7 +75,7 @@ void* setNumero (domcilioPtr numero);
 // Paràmetros:
 //  localidad: puntero a char representando el valor de localidad
 // No devuelve nada
-void* setLocalidad (domcilioPtr localidad);
+void* setLocalidad (domicilioPtr localidad);
 
 
 #endif // TDADOMICILIO_INCLUDED

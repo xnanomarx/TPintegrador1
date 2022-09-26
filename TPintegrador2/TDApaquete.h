@@ -1,17 +1,29 @@
 #ifndef TDAPAQUETE_INCLUDED
 #define TDAPAQUETE_INCLUDED
 
+struct paquete{
+    char* motivo;
+    bool estadoEntrega;
+    int codigo;
+    FechaSalidaPtr*;
+    FechaEntregaPtr*:
+    DimensionesPtr*;
+} paquete;
+
+typedef paquete* paquetePtr;
+
 // Operación de creación (Constructor)
 // Precondición: el Paquete no ha sido creado
-// Postcondición: se crea un paquete con altura, ancho, largo, peso y un código.
+// Postcondición: se crea un paquete con motivo, estadoEntrega, FechaSalida, FechaEntrega, Dimensiones y codigo.
 // Parámetros:
-//  altura: entero representando la altura del paquete
-//  ancho: entero representando el ancho del paquete
-//  largo: entero representando el largo del paquete
-//  peso: entero representando el peso del paquete
+//  motivo: char que representa el motivo del incumplimiento de la entrega
+//  estadoEntrega: bool que representa si se ha entregado o no el paquete
+//  FechaSalida: TDAFechaSalida representa la fecha de salida del paquete
+//  FechaEntrega: TDAFechaEntrega representa la fecha de entrega del paquete
+//  Dimensiones: TDADimensiones representa las dimensiones del paquete
 //  codigo: entero representando el código del paquete
 // Devuelve un puntero a la estructura Paquete en memoria dinámica
-paquetePtr crearPaquete (int altura, int ancho, int largo, int peso, int codigo);
+paquetePtr crearPaquete (char* motivo, bool estadoEntrega, int codigo, FechaSalidaPtr*, FechaEntregaPtr*, DimensionesPtr*);
 
 // Operación de destrucción (Destructor)
 // Precondición: Paquete debe haber sido creado
@@ -19,28 +31,24 @@ paquetePtr crearPaquete (int altura, int ancho, int largo, int peso, int codigo)
 // Parámetros:
 //  paquete: TDA paquete a destruir.
 // Devuelve NULL
-paquetePtr destruirPaquete(paquetePtr paquete);
+paquetePtr destruirPaquete(PaquetePtr paquete);
 
-// Operación de asignación de dimensiones de paquete
-// Precondición: Paquete debe haber sido creado.
-// Postcondición: Paquete cambia con el nuevo valor de dimensiones
+// Operación de obtención de Motivo
+// Precondición: Paquete debe haberse creado
+// Postcondición: se obtiene el motivo
 // Parámetros:
-//  dimensiones: TDAdimensiones al que se le asignará el nuevo valor de dimensiones
-//  altura: Entero representando el nuevo valor de altura
-//  ancho: Entero representando el nuevo valor de ancho
-//  largo: Entero representando el nuevo valor de largo
-//  Peso: Entero representando el nuevo valor de peso
-// No devuelve valor.
-void* setDimensiones (dimensionesPtr altura, ancho, largo, peso);
+// paquete: TDAPaquete del que se obtiene el motivo
+// Devuelve un puntero char representando el motivo
+char* getmotivo(PaquetePtr Paquete)
 
 
-// Operación de obtencion de dimensiones de paquete
-// Precondición: Paquete debe haber sido creado
-// Postcondición: Se obtiene dimensiones de paquete
+// Operación de obtención de EstadoEntrega
+// Precondición: Paquete debe haberse creado
+// Postcondición: se obtiene el estado de la entrega
 // Parámetros:
-//  dimensiones: TDAdimensiones del que se obtiene dimensiones de paquete
-// Devuelve un puntero a la estructura TDAdimensiones de paquete
-dimensionesPtr getDimensiones(paquetePtr dimensiones);
+// paquete: TDAPaquete del que se obtiene EstadoEntrega
+// Devuelve un booleando representando el estado de la entrega
+bool getEstadoEntrega(PaquetePtr paquete)
 
 // Operación de obtención de código de paquete
 // Precondición: Paquete debe haber sido creado
@@ -48,6 +56,33 @@ dimensionesPtr getDimensiones(paquetePtr dimensiones);
 // Parámetros:
 //  codigo: TDApaquete del que se obtiene el codigo
 // Devuelve un entero representando el código del paquete
-int getCodigo(paquete Ptr codigo);
+int getCodigo(PaquetePtr paquete);
+
+// Operación de asignacion de motivo
+// Precondición: Motivo debe haberse creado
+// Postcondición: Paquete cambia con el nuevo motivo
+// Parámetros:
+//  Paquete: TDAPaquete al que se le asignara el nuevo motivo
+//  motivo: char representando el nuevo motivo de incumplimiento
+// No devuelve un valor
+void setmotivo(PaquetePtr paquete, char* motivo);
+
+// Operación de asignacion de estadoEntrega
+// Precondición: estadoEntrega debe haberse creado
+// Postcondición: Paquete cambia con el nuevo estadoEntrega
+// Parámetros:
+//  Paquete: TDAPaquete al que se le asignara el nuevo estado de entrega
+//  estadoEntrega: booleano representando el nuevo estado de entrega
+// No devuelve un valor
+void setEstadoEntrega(PaquetePtr paquete, bool estadoEntrega);
+
+// Operación de asignacion de codigo
+// Precondición: codigo debe haberse creado
+// Postcondición: Paquete cambia con el nuevo codigo
+// Parámetros:
+//  Paquete: TDAPaquete al que se le asignara el nuevo codigo
+//  codigo: entero representando el nuevo codigo de paquete
+// No devuelve un valor
+void setCodigo(PaquetePtr paquete, int codigo);
 
 #endif // TDAPAQUETE_INCLUDED

@@ -4,6 +4,7 @@
 
 choferPtr crearChofer(char* nombre, char* apellido, domicilioPtr, cuilPtr){
     choferPtr chof=(FechaPtr)obtenerMemoria(sizeof(chofer));
+    chof->nombre,apellido,domicilioPtr,cuilPtr;
 
 
 

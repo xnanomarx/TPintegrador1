@@ -31,7 +31,7 @@ choferPtr crearChofer(char* nombre, char* apellido, domicilioPtr domicilio,cuilP
 // Parámetros:
 // Chofer: TDAChofer a destruir
 // Devuelve NULL
-choferPtr destruirChofer(ChoferPtr Chofer);
+choferPtr destruirChofer(choferPtr Chofer);
 
 
 // Operación de obtención de Nombre Chofer
@@ -40,7 +40,7 @@ choferPtr destruirChofer(ChoferPtr Chofer);
 // Parámetros:
 //Chofer: TDAChofer del que se obtiene el nombre
 // Devuelve un char representando el nombre
-char getNombreChofer(choferPtr chofer);
+char* getNombreChofer(choferPtr chofer);
 
 
 // Operacion de asignacion de nombre del chofer
@@ -59,7 +59,7 @@ void setNombreChofer(choferPtr, char* nombre);
 //  chofer: TDAchofer del que se asignara un nuevo valor al apellido
 //  apellido: char representando el apellido del chofer
 // No devuelve valor.
-void setApellidoChofer(choferPtf, char* apellido);
+void setApellidoChofer(choferPtr, char* apellido);
 
 
 #endif // TDACHOFER_INCLUDED

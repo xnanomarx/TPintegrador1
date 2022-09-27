@@ -1,9 +1,11 @@
 #ifndef TDACLIENTE_INCLUDED
 #define TDACLIENTE_INCLUDED
+#include "TDAdomicilio.h"
+#include "TDAcuil.h"
 
 // Primitivas
 
-struct cliente {
+typedef struct cliente {
     char* nombre;
     char* apellido;
     domicilioPtr domicilio;
@@ -21,7 +23,7 @@ typedef cliente* clientePtr;
 //   domicilio: TDAdomicilio que se crea al cliente
 //   cuil: TDAcuilque se crea al cliente
 // Devuelve un puntero a la estructura Cliente en memoria dinámica.
-clientePtr crearCliente (char* nombre,char* apellido,domicilio,cuil);
+clientePtr crearCliente (char* nombre, char* apellido, domicilioPtr domicilio, cuilPtr cuil);
 
 // Operación de destrucción (Destructor)
 // Precondición: Cliente debe haber sido creado
@@ -55,7 +57,7 @@ char* getApellido(clientePtr nombre);
 //  cliente: TDAcliente al que se asigna un nuevo valor de nombre
 //  nombre: char representando el nombre del cliente
 // No devuelve valor.
-void setNombreCliente(clientePtr, char* nombre);
+void setNombreCliente(clientePtr cliente, char* nombre);
 
 // Operacion de asignacion de apellido del cliente
 // Precondicion: cliente debe haberse creado
@@ -64,7 +66,7 @@ void setNombreCliente(clientePtr, char* nombre);
 //  cliente: TDAcliente al que se asigna un nuevo valor del apellido
 //  nombre: char representando el apellido del cliente
 // No devuelve valor.
-void setApellidoCliente(ClientePtr, char nombre);
+void setApellidoCliente(clientePtr cliente, char* apellido);
 
 
 #endif // TDACLIENTE_INCLUDED

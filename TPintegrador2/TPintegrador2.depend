@@ -1,46 +1,107 @@
 # depslib dependency file v1.0
-1664162627 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\main.c
+1664228425 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\main.c
 	<stdio.h>
 	<stdlib.h>
 
 1664161249 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdacliente.c
 
-1664161264 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdadimension.c
-
-1664227685 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdadomicilio.c
-	<stdio.h>
-	<stdlib.h>
-	"TDAdomicilio.h"
-
-1664161292 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdafecha.c
-
-1664161313 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdafechaentrega.c
-
-1664161330 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdafechasalida.c
-
-1664227913 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdahora.c
-	<stdio.h>
-	<stdlib.h>
-	"TDAhora.h"
-
-1664161359 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdapaquete.c
-
-1664161389 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdareparto.c
-
-1664227685 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdavehiculo.c
+1664228425 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdadimension.c
 	<stdio.h>
 	<stdlib.h>
 
-1664161953 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\util.c
+1664228425 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdadomicilio.c
+	<stdio.h>
+	<stdlib.h>
+
+1664228425 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdafecha.c
+	<stdio.h>
+	<stdlib.h>
+
+1664228425 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdafechaentrega.c
+	<stdio.h>
+	<stdlib.h>
+
+1664228425 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdafechasalida.c
+	<stdio.h>
+	<stdlib.h>
+
+1664228425 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdahora.c
+	<stdio.h>
+	<stdlib.h>
+
+1664228425 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdapaquete.c
+	<stdio.h>
+	<stdlib.h>
+
+1664228425 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdareparto.c
+	<stdio.h>
+	<stdlib.h>
+
+1664228425 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdavehiculo.c
+	<stdio.h>
+	<stdlib.h>
+
+1664228425 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\util.c
 	<stdio.h>
 	<stdlib.h>
 	"util.h"
 
-1664223661 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\util.h
+1664228425 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\util.h
 
-1664223661 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdacuil.c
+1664228425 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdacuil.c
 
 1664214153 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdadomicilio.h
 
 1664223661 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdahora.h
+
+1664218743 source:c:\users\rukys\documents\github\tpintegrador1\tpintegrador2\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1664220711 source:c:\users\rukys\documents\github\tpintegrador1\tpintegrador2\tdacliente.c
+	<stdio.h>
+	<stdlib.h>
+
+1664220711 source:c:\users\rukys\documents\github\tpintegrador1\tpintegrador2\tdadimension.c
+	<stdio.h>
+	<stdlib.h>
+
+1664220711 source:c:\users\rukys\documents\github\tpintegrador1\tpintegrador2\tdadomicilio.c
+	<stdio.h>
+	<stdlib.h>
+
+1664220711 source:c:\users\rukys\documents\github\tpintegrador1\tpintegrador2\tdafecha.c
+	<stdio.h>
+	<stdlib.h>
+
+1664220711 source:c:\users\rukys\documents\github\tpintegrador1\tpintegrador2\tdafechaentrega.c
+	<stdio.h>
+	<stdlib.h>
+
+1664220711 source:c:\users\rukys\documents\github\tpintegrador1\tpintegrador2\tdafechasalida.c
+	<stdio.h>
+	<stdlib.h>
+
+1664220711 source:c:\users\rukys\documents\github\tpintegrador1\tpintegrador2\tdahora.c
+	<stdio.h>
+	<stdlib.h>
+
+1664220711 source:c:\users\rukys\documents\github\tpintegrador1\tpintegrador2\tdapaquete.c
+	<stdio.h>
+	<stdlib.h>
+
+1664220711 source:c:\users\rukys\documents\github\tpintegrador1\tpintegrador2\tdareparto.c
+	<stdio.h>
+	<stdlib.h>
+
+1664220711 source:c:\users\rukys\documents\github\tpintegrador1\tpintegrador2\tdavehiculo.c
+	<stdio.h>
+	<stdlib.h>
+
+1664218743 source:c:\users\rukys\documents\github\tpintegrador1\tpintegrador2\util.c
+	<stdio.h>
+	<stdlib.h>
+	"util.h"
+
+1664220856 c:\users\rukys\documents\github\tpintegrador1\tpintegrador2\util.h
 

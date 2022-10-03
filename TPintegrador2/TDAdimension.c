@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 00024848f45268e6c298694fd96aea8439aaa404
 #include "TDAdimension.h"
 #include "util.h"
 
@@ -30,5 +33,8 @@ int getLargo (dimensionPtr dimension){
 int getPeso (dimensionPtr dimension){
     return dimension -> peso;
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/branchMariano
+=======
+>>>>>>> 00024848f45268e6c298694fd96aea8439aaa404

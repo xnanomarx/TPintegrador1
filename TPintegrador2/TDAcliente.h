@@ -24,10 +24,14 @@ typedef cliente* clientePtr;
 //   cuil: TDAcuilque se crea al cliente
 // Devuelve un puntero a la estructura Cliente en memoria dinámica.
 <<<<<<< HEAD
+<<<<<<< HEAD
 clientePtr crearCliente (char* nombre, char* apellido, domicilioPtr domicilio, cuilPtr cuil);
 =======
 clientePtr crearCliente (char* nombre,char* apellido,domicilio,cuil);
 >>>>>>> origin/branchMariano
+=======
+clientePtr crearCliente (char* nombre, char* apellido, domicilioPtr domicilio, cuilPtr cuil);
+>>>>>>> 00024848f45268e6c298694fd96aea8439aaa404
 
 // Operación de destrucción (Destructor)
 // Precondición: Cliente debe haber sido creado
@@ -62,10 +66,14 @@ char* getApellido(clientePtr nombre);
 //  nombre: char representando el nombre del cliente
 // No devuelve valor.
 <<<<<<< HEAD
+<<<<<<< HEAD
 void setNombreCliente(clientePtr cliente, char* nombre);
 =======
 void setNombreCliente(clientePtr, char* nombre);
 >>>>>>> origin/branchMariano
+=======
+void setNombreCliente(clientePtr cliente, char* nombre);
+>>>>>>> 00024848f45268e6c298694fd96aea8439aaa404
 
 // Operacion de asignacion de apellido del cliente
 // Precondicion: cliente debe haberse creado
@@ -75,10 +83,14 @@ void setNombreCliente(clientePtr, char* nombre);
 //  nombre: char representando el apellido del cliente
 // No devuelve valor.
 <<<<<<< HEAD
+<<<<<<< HEAD
 void setApellidoCliente(clientePtr cliente, char* apellido);
 =======
 void setApellidoCliente(ClientePtr, char nombre);
 >>>>>>> origin/branchMariano
+=======
+void setApellidoCliente(clientePtr cliente, char* apellido);
+>>>>>>> 00024848f45268e6c298694fd96aea8439aaa404
 
 
 #endif // TDACLIENTE_INCLUDED

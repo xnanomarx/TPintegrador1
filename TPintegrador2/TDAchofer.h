@@ -31,7 +31,11 @@ choferPtr crearChofer(char* nombre, char* apellido, domicilioPtr domicilio,cuilP
 // Parámetros:
 // Chofer: TDAChofer a destruir
 // Devuelve NULL
+<<<<<<< HEAD
 choferPtr destruirChofer(choferPtr chofer);
+=======
+choferPtr destruirChofer(choferPtr Chofer);
+>>>>>>> 00024848f45268e6c298694fd96aea8439aaa404
 
 
 // Operación de obtención de Nombre Chofer
@@ -41,10 +45,14 @@ choferPtr destruirChofer(choferPtr chofer);
 //Chofer: TDAChofer del que se obtiene el nombre
 // Devuelve un char representando el nombre
 <<<<<<< HEAD
+<<<<<<< HEAD
 char* getNombreChofer(choferPtr chofer);
 =======
 char getNombreChofer(choferPtr chofer);
 >>>>>>> origin/branchMariano
+=======
+char* getNombreChofer(choferPtr chofer);
+>>>>>>> 00024848f45268e6c298694fd96aea8439aaa404
 
 
 // Operacion de asignacion de nombre del chofer
@@ -64,10 +72,14 @@ void setNombreChofer(choferPtr, char* nombre);
 //  apellido: char representando el apellido del chofer
 // No devuelve valor.
 <<<<<<< HEAD
+<<<<<<< HEAD
 void setApellidoChofer(choferPtr, char* apellido);
 =======
 void setApellidoChofer(choferPtf, char* apellido);
 >>>>>>> origin/branchMariano
+=======
+void setApellidoChofer(choferPtr, char* apellido);
+>>>>>>> 00024848f45268e6c298694fd96aea8439aaa404
 
 
 #endif // TDACHOFER_INCLUDED

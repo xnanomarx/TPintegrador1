@@ -39,7 +39,7 @@ paquetePtr destruirPaquete(PaquetePtr paquete);
 // Parámetros:
 // paquete: TDAPaquete del que se obtiene el motivo
 // Devuelve un puntero char representando el motivo
-char* getmotivo(PaquetePtr Paquete)
+char* getmotivo(PaquetePtr Paquete);
 
 
 // Operación de obtención de EstadoEntrega
@@ -48,7 +48,7 @@ char* getmotivo(PaquetePtr Paquete)
 // Parámetros:
 // paquete: TDAPaquete del que se obtiene EstadoEntrega
 // Devuelve un booleando representando el estado de la entrega
-bool getEstadoEntrega(PaquetePtr paquete)
+bool getEstadoEntrega(PaquetePtr paquete);
 
 // Operación de obtención de código de paquete
 // Precondición: Paquete debe haber sido creado

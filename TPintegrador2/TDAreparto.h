@@ -21,7 +21,7 @@ typedef reparto* repartoPtr;
 // HoraSalida: TDAhoraSalida representa la hora de salida del paquete
 // HoraLlegada: TDAhoraLlegada representa la hora de Llegada del paquete
 // Devuelve un puntero a la estructura Reparto
-repartoPtr crearReparto(char* direccEntrega, char* direccRetiro, Pilaptr*, horaSalidaPtr*, horaLlegadaPtr*)
+repartoPtr crearReparto(char* direccEntrega, char* direccRetiro, Pilaptr*, horaSalidaPtr*, horaLlegadaPtr*);
 
 
 // Operación de destrucción (Destructor)
@@ -30,7 +30,7 @@ repartoPtr crearReparto(char* direccEntrega, char* direccRetiro, Pilaptr*, horaS
 // Parámetros:
 // vehiculo: TDAvehiculo a destruir
 // Devuelve NULL
-repartoPtr destruirReparto(repartoPtr reparto)
+repartoPtr destruirReparto(repartoPtr reparto);
 
 
 // Operación de obtención de direccEntrega
@@ -39,7 +39,7 @@ repartoPtr destruirReparto(repartoPtr reparto)
 // Parámetros:
 // reparto: TDAreparto del que se obtiene la direccEntrega
 // Devuelve un puntero a char representando la direccion de entrega
-char* getDirrecEntrega(repartoPtr reparto)
+char* getDirrecEntrega(repartoPtr reparto);
 
 // Operación de obtención de direccRetiro
 // Precondición: reparto debe haberse creado
@@ -47,7 +47,7 @@ char* getDirrecEntrega(repartoPtr reparto)
 // Parámetros:
 // reparto: TDAreparto del que se obtiene la direccRetiro
 // Devuelve un puntero a char representando la direccion de retiro
-char* getDireccRetiro(repartoPtr reparto)
+char* getDireccRetiro(repartoPtr reparto);
 
 // Operación de obtención de HoraEntrega
 // Precondición: reparto debe haberse creado
@@ -55,7 +55,7 @@ char* getDireccRetiro(repartoPtr reparto)
 // Parámetros:
 // reparto: TDAreparto del que se obtiene la hora de entrega
 // Devuelve un puntero al TDAreparto representando la hora de entrega
-int getHoraEntrega(repartoPtr reparto)
+int getHoraEntrega(repartoPtr reparto);
 
 // Operación de obtención de HoraLlegada
 // Precondición: reparto debe haberse creado
@@ -63,7 +63,7 @@ int getHoraEntrega(repartoPtr reparto)
 // Parámetros:
 // reparto: TDAreparto del que se obtiene la hora llegada
 // Devuelve un puntero al TDAreparto representando la hora de llegada
-int getHoraLlegada(repartoPtr reparto)
+int getHoraLlegada(repartoPtr reparto);
 
 // Operaciòn de asignaciòn de direccion de entrega de reparto
 // Precondiciòn: Reparto debe haberse creado

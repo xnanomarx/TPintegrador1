@@ -17,7 +17,7 @@ clientePtr crearCliente (char* nombre,char* apellido,domicilioPtr domicilio,cuil
     return cliente;
 }
 
-clientPtr destruirCliente(clientePtr cliente){
+clientePtr destruirCliente(clientePtr cliente){
     free(cliente->nombre);
     free(cliente->apellido);
     free(cliente->domicilio);
@@ -31,7 +31,7 @@ void mostrarCliente(clientePtr cliente){
     printf("Cliente:\n");
     printf("Nombre y Apellido: %s, %s\n",cliente->nombre, cliente->apellido);
     printf("Domicilio:%s, %s, %d\n",cliente->domicilio->calle, cliente->domicilio->localidad,cliente->domicilio->numero);
-    printf("Cuil:")
+    printf("Cuil:");
     mostrarCuil;
 }
 
@@ -46,7 +46,7 @@ void setDomicilio(clientePtr cliente, domicilioPtr domicilio){
     cliente->domicilio=domicilio;
 }
 void setCuil(clientePtr cliente,cuilPtr cuil){
-    cliente->cuil=cuil
+    cliente->cuil=cuil;
 }
 
 char* getNombreCliente(clientePtr cliente){

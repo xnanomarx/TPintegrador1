@@ -16,7 +16,11 @@ choferPtr destruirChofer(choferPtr chofer){
 }
 
 char* getNombreChofer(choferPtr chofer){
+<<<<<<< HEAD
     return chofer -> nombre;
+=======
+    return -> nombre;
+>>>>>>> main
 }
 
 char* getApellidoChofer(choferPtr chofer){

@@ -6,6 +6,7 @@
 1664161249 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdacliente.c
 
 1664228425 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdadimension.c
+<<<<<<< HEAD
 	<stdio.h>
 	<stdlib.h>
 
@@ -47,15 +48,48 @@
 	<stdio.h>
 	<stdlib.h>
 
+=======
+	<stdio.h>
+	<stdlib.h>
+
+1664228425 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdadomicilio.c
+	<stdio.h>
+	<stdlib.h>
+
+1664228425 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdafecha.c
+	<stdio.h>
+	<stdlib.h>
+
+1664228425 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdafechaentrega.c
+	<stdio.h>
+	<stdlib.h>
+
+1664228425 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdafechasalida.c
+	<stdio.h>
+	<stdlib.h>
+
+1664228425 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdahora.c
+	<stdio.h>
+	<stdlib.h>
+
+1664228425 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdapaquete.c
+	<stdio.h>
+	<stdlib.h>
+
+>>>>>>> main
 1664228425 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdareparto.c
 	<stdio.h>
 	<stdlib.h>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 1664228425 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdavehiculo.c
 =======
 1664227685 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdavehiculo.c
 >>>>>>> 00024848f45268e6c298694fd96aea8439aaa404
+=======
+1664228425 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdavehiculo.c
+>>>>>>> main
 	<stdio.h>
 	<stdlib.h>
 
@@ -65,13 +99,17 @@
 	"util.h"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 1664228425 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\util.h
 
 1664228425 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdacuil.c
 =======
 1664223661 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\util.h
+=======
+1664228425 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\util.h
+>>>>>>> main
 
-1664223661 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdacuil.c
+1664228425 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdacuil.c
 
 1664214153 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdadomicilio.h
 

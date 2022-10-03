@@ -32,10 +32,14 @@ choferPtr crearChofer(char* nombre, char* apellido, domicilioPtr domicilio,cuilP
 // Chofer: TDAChofer a destruir
 // Devuelve NULL
 <<<<<<< HEAD
+<<<<<<< HEAD
 choferPtr destruirChofer(choferPtr chofer);
 =======
 choferPtr destruirChofer(choferPtr Chofer);
 >>>>>>> 00024848f45268e6c298694fd96aea8439aaa404
+=======
+choferPtr destruirChofer(choferPtr chofer);
+>>>>>>> main
 
 
 // Operación de obtención de Nombre Chofer
@@ -46,6 +50,7 @@ choferPtr destruirChofer(choferPtr Chofer);
 // Devuelve un char representando el nombre
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 char* getNombreChofer(choferPtr chofer);
 =======
 char getNombreChofer(choferPtr chofer);
@@ -53,6 +58,9 @@ char getNombreChofer(choferPtr chofer);
 =======
 char* getNombreChofer(choferPtr chofer);
 >>>>>>> 00024848f45268e6c298694fd96aea8439aaa404
+=======
+char* getNombreChofer(choferPtr chofer);
+>>>>>>> main
 
 
 // Operacion de asignacion de nombre del chofer
@@ -73,6 +81,7 @@ void setNombreChofer(choferPtr, char* nombre);
 // No devuelve valor.
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 void setApellidoChofer(choferPtr, char* apellido);
 =======
 void setApellidoChofer(choferPtf, char* apellido);
@@ -80,6 +89,9 @@ void setApellidoChofer(choferPtf, char* apellido);
 =======
 void setApellidoChofer(choferPtr, char* apellido);
 >>>>>>> 00024848f45268e6c298694fd96aea8439aaa404
+=======
+void setApellidoChofer(choferPtr, char* apellido);
+>>>>>>> main
 
 
 #endif // TDACHOFER_INCLUDED

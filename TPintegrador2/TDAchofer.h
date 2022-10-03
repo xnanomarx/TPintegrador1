@@ -42,6 +42,14 @@ choferPtr destruirChofer(choferPtr chofer);
 // Devuelve un char representando el nombre
 char* getNombreChofer(choferPtr chofer);
 
+// Operación de obtención de Apellido Chofer
+// Precondición: Chofer debe haberse creado
+// Postcondición: Se obtiene el apellido del chofer
+// Parámetros:
+//Chofer: TDAChofer del que se obtiene el apellido
+// Devuelve un char representando el apellido
+char* getApellidoChofer(choferPtr chofer);
+
 
 // Operacion de asignacion de nombre del chofer
 // Precondicion: chofer debe haberse creado

@@ -14,17 +14,19 @@ choferPtr destruirChofer(choferPtr chofer){
 }
 
 char* getNombreChofer(choferPtr chofer){
-    return -> nombre;
+    return chofer->nombre;
 }
 
-char getApellidoChofer(choferPtr Chofer){
-    return->apellido;
+char* getApellidoChofer(choferPtr chofer){
+    return chofer->apellido;
 }
 
-int getCuil(choferPtr Chofer){
-    return -> cuil;
+int getCuil(choferPtr chofer){
+    return chofer->cuil;
 }
 
-char* getDomicilio(domicilioPtr domicilio);
+char* getDomicilio(domicilioPtr domicilio){
+    return chofer->domicilio;
+}
 
 

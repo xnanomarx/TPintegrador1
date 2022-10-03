@@ -5,7 +5,6 @@ int main()
 {
     int volverAInicio=0; //control
 
-
     printf("\r\n\r\n"); // inicio
     printf("Menu principal\r\n");
     printf("-----------------------------\r\n\r\n");

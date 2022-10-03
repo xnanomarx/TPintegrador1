@@ -10,7 +10,6 @@ struct vehiculo{
 
 typedef vehiculo vehiculoPtr;
 
-
 // Operación de creación (Constructor)
 // Precondición: El vehiculo no ha sido creado
 // Postcondición: Se crea vechiculo con tipo, marca, modelo, patente
@@ -63,5 +62,45 @@ char* getModelo(vehiculoPtr vehiculo);
 // vehiculo: TDAvehiculo del que se obtiene la patente
 // Devuelve un puntero a char representando la patente
 char* getPatente(vehiculoPtr vehiculo);
+
+// Operaciòn de asignaciòn de tipo a vehiculo
+// Precondiciòn: Vehiculo debe haberse creado
+// Postcondiciòn: Vehiculo cambia con el nuevo valor de tipo
+// Paràmetros:
+//  tipo: string representando el tipo de vehiculo
+// No devuelve nada
+void* setTipo(vehiculoPtr vehiculo, char* tipo);
+
+// Operaciòn de asignaciòn de tipo a vehiculo
+// Precondiciòn: Vehiculo debe haberse creado
+// Postcondiciòn: Vehiculo cambia con el nuevo valor de tipo
+// Paràmetros:
+//  tipo: string representando el tipo de vehiculo
+// No devuelve nada
+void* setTipo(vehiculoPtr vehiculo, char* tipo);
+
+// Operaciòn de asignaciòn de marca a vehiculo
+// Precondiciòn: Vehiculo debe haberse creado
+// Postcondiciòn: Vehiculo cambia con el nuevo valor de marca
+// Paràmetros:
+//  marca: string representando la marca de vehiculo
+// No devuelve nada
+void* setMarca(vehiculoPtr vehiculo, char* marca);
+
+// Operaciòn de asignaciòn de modelo a vehiculo
+// Precondiciòn: Vehiculo debe haberse creado
+// Postcondiciòn: Vehiculo cambia con el nuevo valor de modelo
+// Paràmetros:
+//  modelo: string representando el modelo de vehiculo
+// No devuelve nada
+void* setModelo(vehiculoPtr vehiculo, char* modelo);
+
+// Operaciòn de asignaciòn de patente a vehiculo
+// Precondiciòn: Vehiculo debe haberse creado
+// Postcondiciòn: Vehiculo cambia con el nuevo valor de patente
+// Paràmetros:
+//  patente: string representando la patente de vehiculo
+// No devuelve nada
+void* setPatente(vehiculoPtr vehiculo, char* patente);
 
 #endif // TDAVEHICULO_INCLUDED

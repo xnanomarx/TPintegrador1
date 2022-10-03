@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "TDAcliente.h"
-#include "TDAutil.h"
+#include "util.h"
 #include "TDAcuil.h"
 #include "TDAdomicilio.h"
 
@@ -11,8 +11,6 @@ clientePtr crearCliente (char* nombre,char* apellido,domicilioPtr domicilio,cuil
     char* ape=(char*)obtenerMemoria(sizeof(char)*(strlen(apellido)+1));
     strcpy(nom,nombre);
     strcpy(ape,apellido);
-    cliente->nombre=nom;
-    cliente->apellido=ape;
     cliente->domicilio=domicilio;
     cliente->cuil=cuil;
 
@@ -20,7 +18,7 @@ clientePtr crearCliente (char* nombre,char* apellido,domicilioPtr domicilio,cuil
 }
 
 clientPtr destruirCliente(clientePtr cliente){
-    free(cleinte->nombre);
+    free(cliente->nombre);
     free(cliente->apellido);
     free(cliente->domicilio);
     free(cliente->cuil);

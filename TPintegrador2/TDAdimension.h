@@ -1,7 +1,7 @@
 #ifndef TDADIMENSION_INCLUDED
 #define TDADIMENSION_INCLUDED
 
-struct dimension{
+typedef struct dimension{
     int altura;
     int ancho;
     int largo;
@@ -60,5 +60,37 @@ int getLargo (dimensionPtr dimension)
 // dimension: TDAdimension del que se obtiene el peso
 // Devuelve un entero representando el peso
 int getPeso (dimensionPtr dimension)
+
+// Operaciòn de asignaciòn de altura a dimension
+// Precondiciòn: Dimension debe haberse creado
+// Postcondiciòn: Dimension cambia con el nuevo valor de altura
+// Paràmetros:
+//  altura: entero representando el valor de la altura del paquete
+// No devuelve nada
+void* setAltura(dimensionPtr altura);
+
+// Operaciòn de asignaciòn de ancho a dimension
+// Precondiciòn: Dimension debe haberse creado
+// Postcondiciòn: Dimension cambia con el nuevo valor de ancho
+// Paràmetros:
+//  ancho: entero representando el valor del ancho del paquete
+// No devuelve nada
+void* setAncho(dimensionPtr ancho);
+
+// Operaciòn de asignaciòn de largo a dimension
+// Precondiciòn: Dimension debe haberse creado
+// Postcondiciòn: Dimension cambia con el nuevo valor de largo
+// Paràmetros:
+//  largo: entero representando el valor del largo del paquete
+// No devuelve nada
+void* setLargo(dimensionPtr largo);
+
+// Operaciòn de asignaciòn de peso a dimension
+// Precondiciòn: Dimension debe haberse creado
+// Postcondiciòn: Dimension cambia con el nuevo valor de peso
+// Paràmetros:
+//  peso: entero representando el valor del peso del paquete
+// No devuelve nada
+void* setPeso(dimensionPtr eso);
 
 #endif // TDADIMENSION_INCLUDED

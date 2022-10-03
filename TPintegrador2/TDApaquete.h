@@ -1,13 +1,16 @@
 #ifndef TDAPAQUETE_INCLUDED
 #define TDAPAQUETE_INCLUDED
+#include "TDAdimension.h"
+#include "TDAfechaSalida.h"
+#include "TDAfechaEntrega.h"
 
-struct paquete{
+typedef struct paquete{
     char* motivo;
     bool estadoEntrega;
     int codigo;
     FechaSalidaPtr*;
-    FechaEntregaPtr*:
-    DimensionesPtr*;
+    FechaEntregaPtr*;
+    dimensionPtr*;
 } paquete;
 
 typedef paquete* paquetePtr;
@@ -23,7 +26,7 @@ typedef paquete* paquetePtr;
 //  Dimensiones: TDADimensiones representa las dimensiones del paquete
 //  codigo: entero representando el código del paquete
 // Devuelve un puntero a la estructura Paquete en memoria dinámica
-paquetePtr crearPaquete (char* motivo, bool estadoEntrega, int codigo, FechaSalidaPtr*, FechaEntregaPtr*, DimensionesPtr*);
+paquetePtr crearPaquete (char* motivo, bool estadoEntrega, int codigo, FechaSalidaPtr FechaSalida, FechaEntregaPtr FechaEntrega, dimensionPtr dimension);
 
 // Operación de destrucción (Destructor)
 // Precondición: Paquete debe haber sido creado
@@ -31,7 +34,7 @@ paquetePtr crearPaquete (char* motivo, bool estadoEntrega, int codigo, FechaSali
 // Parámetros:
 //  paquete: TDA paquete a destruir.
 // Devuelve NULL
-paquetePtr destruirPaquete(PaquetePtr paquete);
+paquetePtr destruirPaquete(paquetePtr paquete);
 
 // Operación de obtención de Motivo
 // Precondición: Paquete debe haberse creado
@@ -39,7 +42,7 @@ paquetePtr destruirPaquete(PaquetePtr paquete);
 // Parámetros:
 // paquete: TDAPaquete del que se obtiene el motivo
 // Devuelve un puntero char representando el motivo
-char* getmotivo(PaquetePtr Paquete)
+char* getmotivo(paquetePtr Paquete);
 
 
 // Operación de obtención de EstadoEntrega
@@ -48,7 +51,7 @@ char* getmotivo(PaquetePtr Paquete)
 // Parámetros:
 // paquete: TDAPaquete del que se obtiene EstadoEntrega
 // Devuelve un booleando representando el estado de la entrega
-bool getEstadoEntrega(PaquetePtr paquete)
+bool getEstadoEntrega(paquetePtr paquete);
 
 // Operación de obtención de código de paquete
 // Precondición: Paquete debe haber sido creado
@@ -56,7 +59,7 @@ bool getEstadoEntrega(PaquetePtr paquete)
 // Parámetros:
 //  codigo: TDApaquete del que se obtiene el codigo
 // Devuelve un entero representando el código del paquete
-int getCodigo(PaquetePtr paquete);
+int getCodigo(paquetePtr paquete);
 
 // Operación de asignacion de motivo
 // Precondición: Motivo debe haberse creado
@@ -65,7 +68,7 @@ int getCodigo(PaquetePtr paquete);
 //  Paquete: TDAPaquete al que se le asignara el nuevo motivo
 //  motivo: char representando el nuevo motivo de incumplimiento
 // No devuelve un valor
-void setmotivo(PaquetePtr paquete, char* motivo);
+void setmotivo(paquetePtr paquete, char* motivo);
 
 // Operación de asignacion de estadoEntrega
 // Precondición: estadoEntrega debe haberse creado
@@ -74,7 +77,7 @@ void setmotivo(PaquetePtr paquete, char* motivo);
 //  Paquete: TDAPaquete al que se le asignara el nuevo estado de entrega
 //  estadoEntrega: booleano representando el nuevo estado de entrega
 // No devuelve un valor
-void setEstadoEntrega(PaquetePtr paquete, bool estadoEntrega);
+void setEstadoEntrega(paquetePtr paquete, bool estadoEntrega);
 
 // Operación de asignacion de codigo
 // Precondición: codigo debe haberse creado
@@ -83,6 +86,6 @@ void setEstadoEntrega(PaquetePtr paquete, bool estadoEntrega);
 //  Paquete: TDAPaquete al que se le asignara el nuevo codigo
 //  codigo: entero representando el nuevo codigo de paquete
 // No devuelve un valor
-void setCodigo(PaquetePtr paquete, int codigo);
+void setCodigo(paquetePtr paquete, int codigo);
 
 #endif // TDAPAQUETE_INCLUDED

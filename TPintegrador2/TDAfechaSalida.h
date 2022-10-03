@@ -1,9 +1,11 @@
 #ifndef TDAFECHASALIDA_H_INCLUDED
 #define TDAFECHASALIDA_H_INCLUDED
-
+#include "TDAfecha.h"
 typedef struct FechaSalida{
     int FechaPtr;
 }FechaSalida;
+
+typedef FechaSalida* FechaSalidaPtr;
 
 // Operación de creación (Constructor)
 // Precondición: La FechaSalida no ha sido creada

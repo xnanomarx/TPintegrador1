@@ -3,27 +3,44 @@
 #include "TDAdomicilio.h"
 #include "util.h"
 
-domicilioPtr crearDomicilio(char*Calle, char*Localidad, int Numero){
+domicilioPtr crearDomicilio(char* calle, int numero, char* localidad){
+    domicilioPtr domicilio=(domicilioPtr)obtenerMemoria(sizeof(domicilio));
+    domicilio->calle=calle;
+    domicilio->localidad=localidad;
+    domicilio->numero=numero;
+    return cliente;
+}
 
+domicilioPtr destruirDomicilio(domicilioPtr domicilio){
+    free(domicilio->calle);
+    free(domicilio->localidad);
+    free(domicilio->numero);
+
+    free(domicilio);
+    return NULL;
 }
 
 
-domicilioPtr destruirDomicilio(domicilioPtr domicilio);
+char* getCalle(domicilioPtr domicilio){
+    return domicilio->calle;
+}
 
+char* getLocalidad(domicilioPtr domicilio){
+    return domicilio->localidad;
+}
 
-char* getCalle(domicilioPtr domicilio);
+int getNumero(domicilioPtr domicilio){
+    return domicilio->numero;
+}
 
+void* setCalle (domicilioPtr domicilio, char* calle){
+    domicilio->calle=calle;
+}
 
-char* getLocalidad(domicilioPtr domicilio);
+void* setLocalidad (domicilioPtr domicilio, char* localidad){
+    domicilio->localidad=localidad;
+}
 
-
-int getNumero(domicilioPtr domicilio);
-
-
-void* setCalle (domicilioPtr calle);
-
-
-void* setNumero (domicilioPtr numero);
-
-
-void* setLocalidad (domicilioPtr localidad);
+void* setNumero (domicilioPtr domicilio, int numero){
+    domicilio->numero=numero;
+}

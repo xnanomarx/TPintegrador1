@@ -1,5 +1,6 @@
 #ifndef TDAFECHA_H_INCLUDED
 #define TDAFECHA_H_INCLUDED
+#include "TDAhora.h"
 
 typedef struct Fecha{
     int dia;

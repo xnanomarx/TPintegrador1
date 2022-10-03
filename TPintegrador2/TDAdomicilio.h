@@ -17,7 +17,7 @@ typedef domicilio* domicilioPtr;
 //Localidad: Representando la localidad
 //Numero: Representando el numero del domicilio
 // Devuelve un puntero a la estructura domicilio
-domicilioPtr crearDomicilio(char*Calle, char*Localidad, int Numero);
+domicilioPtr crearDomicilio(char*Calle, int Numero, char*Localidad);
 
 
 // Operación de destrucción (Destructor)

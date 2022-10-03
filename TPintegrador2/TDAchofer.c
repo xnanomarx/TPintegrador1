@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "TDAchofer.h"
 #include "TDAdomicilio.h"
+#include "TDAcuil.h"
 
 choferPtr crearChofer(char* nombre, char* apellido, domicilioPtr domicilio, cuilPtr cuil){
     choferPtr chof=(choferPtr)obtenerMemoria(sizeof(chofer));
@@ -15,6 +16,11 @@ choferPtr crearChofer(char* nombre, char* apellido, domicilioPtr domicilio, cuil
 }
 
 choferPtr destruirChofer(choferPtr chofer){
+    free(chofer->nombre);
+    free(chofer->apellido);
+    free(chofer->domicilio);
+    free(chofer->cuil);
+
     free(chofer);
     return NULL;
 }

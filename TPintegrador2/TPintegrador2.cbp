@@ -55,14 +55,6 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="TDAfecha.h" />
-		<Unit filename="TDAfechaEntrega.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="TDAfechaEntrega.h" />
-		<Unit filename="TDAfechaSalida.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="TDAfechaSalida.h" />
 		<Unit filename="TDAhora.c">
 			<Option compilerVar="CC" />
 		</Unit>

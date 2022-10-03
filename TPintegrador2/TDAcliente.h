@@ -1,9 +1,11 @@
 #ifndef TDACLIENTE_INCLUDED
 #define TDACLIENTE_INCLUDED
+#include "TDAdomicilio.h"
+#include "TDAcuil.h"
 
 // Primitivas
 
-struct cliente {
+typedef struct cliente {
     char* nombre;
     char* apellido;
     domicilioPtr domicilio;
@@ -46,7 +48,7 @@ char* getNombre(clientePtr nombre);
 // Parámetros:
 //   apellido: TDAcliente del que se obtiene el apellido
 // Devuelve un puntero a char representando el apellido del cliente
-char* getApellido(clientePtr nombre);
+char* getApellido(clientePtr apellido);
 
 // Operacion de asignacion de nombre del cliente
 // Precondicion: cliente debe haberse creado
@@ -62,9 +64,9 @@ void setNombreCliente(clientePtr, char* nombre);
 // Postcondicion: cliente cambia con el nuevo valor del apellido del cliente
 // Parametros:
 //  cliente: TDAcliente al que se asigna un nuevo valor del apellido
-//  nombre: char representando el apellido del cliente
+//  apellido: char representando el apellido del cliente
 // No devuelve valor.
-void setApellidoCliente(ClientePtr, char nombre);
+void setApellidoCliente(clientePtr, char* apellido);
 
 
 #endif // TDACLIENTE_INCLUDED

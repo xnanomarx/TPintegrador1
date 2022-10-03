@@ -1,12 +1,12 @@
 #ifndef TDAHORA_H_INCLUDED
 #define TDAHORA_H_INCLUDED
 
-typedef struct Hora{
+typedef struct hora{
     int horas;
     int minutos;
 }Hora;
 
-typedef Hora* HoraPtr;
+typedef hora* horaPtr;
 
 // Operación de creación (Constructor)
 // Precondición: La hora no ha sido creada.
@@ -15,7 +15,7 @@ typedef Hora* HoraPtr;
 //   minutos: entero representando los minutos de la hora
 //   horas: entero representando la hora del dia
 // Devuelve puntero a la estructura Hora en memoria dinamica
-HoraPtr crearHora(int horas, int minutos);
+horaPtr crearHora(int horas, int minutos);
 
 // Operación de destrucción (Destructor)
 // Precondición: Hora debe haberse creado con crearHora
@@ -23,7 +23,7 @@ HoraPtr crearHora(int horas, int minutos);
 // Parámetros:
 //   hora: TDAFHora a destruir
 // Devuelve NULL
-HoraPtr destruirHora(HoraPtr hora);
+horaPtr destruirHora(horaPtr hora);
 
 // Operación de obtencion de los minutos de la hora
 // Precondición: Hora debe haberse creado
@@ -31,7 +31,7 @@ HoraPtr destruirHora(HoraPtr hora);
 // Parámetros:
 //  hora: TDAHora del que se obtienen los minutos
 // Devuelve un entero representando los minutos del dia
-int getMinutos(HoraPtr Hora);
+int getMinutos(horaPtr hora);
 
 // Operación de obtencion de la hora
 // Precondición: Hora debe haberse creado
@@ -39,7 +39,7 @@ int getMinutos(HoraPtr Hora);
 // Parámetros:
 //  Hora: TDAHora del que se obtiene la hora
 // Devuelve un entero representando La hora
-int gethoras(HoraPtr Hora);
+int gethoras(horaPtr hora);
 
 // Operación de asignacion de los minutos de la hora
 // Precondición: Hora debe haberse creado
@@ -48,7 +48,7 @@ int gethoras(HoraPtr Hora);
 //  Hora: TDAHora al que se asignara el nuevo valor de hora
 //  minutos: entero representando el nuevo valor de los minutos de hora
 // No devuelve un valor
-void setMinutos(HoraPtr Hora, int minutos);
+void setMinutos(horaPtr hora, int minutos);
 
 // Operación de asignacion de las horas
 // Precondición: Hora debe haberse creado
@@ -57,6 +57,6 @@ void setMinutos(HoraPtr Hora, int minutos);
 //  Hora: TDAHora al que se asignara el nuevo valor de las horas
 //  horas: entero representando el nuevo valor de las horas
 // No devuelve un valor
-void setHoras(HoraPtr Hora, int horas);
+void sethoras(horaPtr hora, int horas);
 
 #endif // TDAHORA_H_INCLUDED

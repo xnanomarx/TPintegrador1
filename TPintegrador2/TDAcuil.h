@@ -2,7 +2,7 @@
 #define TDACUIL_H_INCLUDED
 
 typedef struct cuil{
-    int cuil;
+    char* cuil[11];
 }cuil;
 
 typedef cuil* cuilPtr;
@@ -13,7 +13,7 @@ typedef cuil* cuilPtr;
 // Parámetros:
 // dni: recibe un vector con el dni del cliente
 // genero: recibe un char indicando el genero
-cuilPtr crearCuil(int cuil);
+cuilPtr crearCuil(char* cuil[11]);
 
 // Función de validar cuil
 // Precondicion: debe haberse creado cuil
@@ -21,7 +21,7 @@ cuilPtr crearCuil(int cuil);
 // Parámetros:
 // cuil: recibe
 // genero: recibe un char indicando el genero
-cuilPtr validarCuil(int cuil, char genero);
+void validarCuil(char cuil[11]);
 
 
 

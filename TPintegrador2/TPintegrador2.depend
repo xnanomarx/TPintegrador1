@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1664821982 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\main.c
+1664823098 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\main.c
 	<stdio.h>
 	<stdlib.h>
 
@@ -50,7 +50,7 @@
 
 1664228425 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdacuil.c
 
-1664214153 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdadomicilio.h
+1664228425 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdadomicilio.h
 
 1664223661 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdahora.h
 
@@ -104,4 +104,17 @@
 	"util.h"
 
 1664220856 c:\users\rukys\documents\github\tpintegrador1\tpintegrador2\util.h
+
+1664823580 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdachofer.c
+	<stdio.h>
+	<stdlib.h>
+	"TDAchofer.h"
+	"TDAdomicilio.h"
+
+1664823180 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdachofer.h
+	"TDAdomicilio.h"
+	"TDAcuil.h"
+	"util.h"
+
+1664228425 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdacuil.h
 

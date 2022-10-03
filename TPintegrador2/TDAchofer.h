@@ -50,6 +50,7 @@ char* getNombreChofer(choferPtr chofer);
 // Devuelve un char representando el apellido
 char* getApellidoChofer(choferPtr chofer);
 
+char* getDomicilioChofer(choferPtr domicilio);
 
 // Operacion de asignacion de nombre del chofer
 // Precondicion: chofer debe haberse creado

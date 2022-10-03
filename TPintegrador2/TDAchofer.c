@@ -1,10 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "TDAchofer.h"
+#include "TDAdomicilio.h"
 
 choferPtr crearChofer(char* nombre, char* apellido, domicilioPtr domicilio, cuilPtr cuil){
     choferPtr chof=(choferPtr)obtenerMemoria(sizeof(chofer));
     chof->nombre=nombre,apellido=apellido,domicilio=domicilio,cuil=cuil;
+    chofer->nombre=nombre;
+    chofer->apellido=apellido;
+    chofer->domicilio=domicilio;
+    chofer->cuil=cuil;
+
     return chof;
 }
 
@@ -25,7 +31,7 @@ int getCuil(choferPtr chofer){
     return chofer->cuil;
 }
 
-char* getDomicilio(domicilioPtr domicilio){
+char* getDomicilioChofer(choferPtr chofer){
     return chofer->domicilio;
 }
 

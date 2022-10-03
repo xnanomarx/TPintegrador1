@@ -31,7 +31,7 @@ choferPtr crearChofer(char* nombre, char* apellido, domicilioPtr domicilio,cuilP
 // Parámetros:
 // Chofer: TDAChofer a destruir
 // Devuelve NULL
-choferPtr destruirChofer(ChoferPtr Chofer);
+choferPtr destruirChofer(choferPtr chofer);
 
 
 // Operación de obtención de Nombre Chofer

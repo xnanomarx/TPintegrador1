@@ -153,3 +153,12 @@
 
 1664822868 c:\users\santi\documents\github\tpintegrador1\tpintegrador2\util.h
 
+1664830826 source:c:\users\santi\documents\github\tpintegrador1\tpintegrador2\tdadimension.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"TDAdimension.h"
+	"util.h"
+
+1664830826 c:\users\santi\documents\github\tpintegrador1\tpintegrador2\tdadimension.h
+

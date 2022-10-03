@@ -31,18 +31,18 @@ int getPeso (dimensionPtr dimension){
     return dimension->peso;
 }
 
-void setAltura(dimensionPtr, int altura){
-
+void setAltura(dimensionPtr dimension, int altura){
+    dimension->altura=altura;
 }
 
-void setAncho(dimensionPtr, int ancho){
-
+void setAncho(dimensionPtr dimension, int ancho){
+    dimension->ancho=ancho;
 }
 
-void setLargo(dimensionPtr, int largo){
-
+void setLargo(dimensionPtr dimension, int largo){
+    dimension->largo=largo;
 }
 
-void setPeso(dimensionPtr, int peso){
-
+void setPeso(dimensionPtr dimension, int peso){
+    dimension->peso=peso;
 }

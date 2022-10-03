@@ -5,6 +5,8 @@ typedef struct FechaEntrega{
     int FechaPtr;
 }FechaEntrega;
 
+typedef FechaEntrega* FechaEntregaPtr;
+
 // Operación de creación (Constructor)
 // Precondición: La FechaEntrega no ha sido creada
 // Postcondición: Se ha creado la FechaEntrega con TDAFecha

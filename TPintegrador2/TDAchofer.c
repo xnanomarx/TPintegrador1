@@ -4,7 +4,7 @@
 
 choferPtr crearChofer(char* nombre, char* apellido, domicilioPtr domicilio, cuilPtr cuil){
     choferPtr chof=(choferPtr)obtenerMemoria(sizeof(chofer));
-    chof->nombre=nombre,apellido=apellido,domicilio=domicilio,cuilPtr=cuil;
+    chof->nombre=nombre,apellido=apellido,domicilio=domicilio,cuil=cuil;
     return chof;
 }
 
@@ -13,7 +13,7 @@ choferPtr destruirChofer(choferPtr chofer){
     return NULL;
 }
 
-choferPtr getNombreChofer(choferPtr chofer){
+char* getNombreChofer(choferPtr chofer){
     return -> nombre;
 }
 

@@ -67,7 +67,7 @@ int getPeso (dimensionPtr dimension)
 // Paràmetros:
 //  altura: entero representando el valor de la altura del paquete
 // No devuelve nada
-void* setAltura(dimensionPtr altura);
+void* setAltura(dimensionPtr, int altura);
 
 // Operaciòn de asignaciòn de ancho a dimension
 // Precondiciòn: Dimension debe haberse creado
@@ -75,7 +75,7 @@ void* setAltura(dimensionPtr altura);
 // Paràmetros:
 //  ancho: entero representando el valor del ancho del paquete
 // No devuelve nada
-void* setAncho(dimensionPtr ancho);
+void* setAncho(dimensionPtr, int ancho);
 
 // Operaciòn de asignaciòn de largo a dimension
 // Precondiciòn: Dimension debe haberse creado
@@ -83,7 +83,7 @@ void* setAncho(dimensionPtr ancho);
 // Paràmetros:
 //  largo: entero representando el valor del largo del paquete
 // No devuelve nada
-void* setLargo(dimensionPtr largo);
+void* setLargo(dimensionPtr, int largo);
 
 // Operaciòn de asignaciòn de peso a dimension
 // Precondiciòn: Dimension debe haberse creado
@@ -91,6 +91,6 @@ void* setLargo(dimensionPtr largo);
 // Paràmetros:
 //  peso: entero representando el valor del peso del paquete
 // No devuelve nada
-void* setPeso(dimensionPtr eso);
+void* setPeso(dimensionPtr, int peso);
 
 #endif // TDADIMENSION_INCLUDED

@@ -1,7 +1,7 @@
 #ifndef TDADIMENSION_INCLUDED
 #define TDADIMENSION_INCLUDED
 
-struct dimension{
+typedef struct dimension{
     int altura;
     int ancho;
     int largo;
@@ -19,7 +19,7 @@ typedef dimension* dimensionPtr;
 // largo: representa el largo del paquete
 // peso: representa el peso del paquete
 // Devuelve un puntero a la esctructura Dimension
-dimensionPtr crearDimension(int altura, int ancho, int largo, int peso)
+dimensionPtr crearDimension(int altura, int ancho, int largo, int peso);
 
 // Operación de destrucción (Destructor)
 // Precondición: dimension debe haberse creado con crearDimension
@@ -27,7 +27,7 @@ dimensionPtr crearDimension(int altura, int ancho, int largo, int peso)
 // Parámetros:
 // dimension: TDAdimension a destruir
 // Devuelve NULL
-dimensionPtr destruirDimension(dimensionPtr dimension)
+dimensionPtr destruirDimension(dimensionPtr dimension);
 
 // Operación de obtención de altura
 // Precondición: dimension debe haber sido creada
@@ -35,7 +35,7 @@ dimensionPtr destruirDimension(dimensionPtr dimension)
 // Parámetros:
 // dimension: TDAdimension del que se obtiene la altura
 // Devuelve un entero representando la altura
-int getAltura (dimensionPtr dimension)
+int getAltura (dimensionPtr dimension);
 
 // Operación de obtención de ancho
 // Precondición: dimension debe haberse creado
@@ -43,7 +43,7 @@ int getAltura (dimensionPtr dimension)
 // Parámetros:
 // dimension: TDAdimension del que se obtiene el ancho
 // Devuelve un entero representando el ancho
-int getAncho (dimensionPtr dimension)
+int getAncho (dimensionPtr dimension);
 
 // Operación de obtención de largo
 // Precondición: dimension debe haberse creado
@@ -51,7 +51,7 @@ int getAncho (dimensionPtr dimension)
 // Parámetros:
 // dimension: TDAdimension del que se obtiene el largo
 // Devuelve un entero representando el largo
-int getLargo (dimensionPtr dimension)
+int getLargo (dimensionPtr dimension);
 
 // Operación de obtención de peso
 // Precondición: dimension debe haberse creado
@@ -59,6 +59,6 @@ int getLargo (dimensionPtr dimension)
 // Parámetros:
 // dimension: TDAdimension del que se obtiene el peso
 // Devuelve un entero representando el peso
-int getPeso (dimensionPtr dimension)
+int getPeso (dimensionPtr dimension);
 
 #endif // TDADIMENSION_INCLUDED

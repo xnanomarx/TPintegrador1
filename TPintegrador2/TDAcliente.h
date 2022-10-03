@@ -1,13 +1,15 @@
 #ifndef TDACLIENTE_INCLUDED
 #define TDACLIENTE_INCLUDED
+#include "TDAdomicilio.h"
+#include "TDAcuil.h"
 
 // Primitivas
 
-struct cliente {
+typedef struct cliente {
     char* nombre;
     char* apellido;
-    domicilioPtr*;
-    cuilPtr*;
+    domicilioPtr domicilio;
+    cuilPtr cuil;
 } cliente;
 
 typedef cliente* clientePtr;
@@ -21,7 +23,11 @@ typedef cliente* clientePtr;
 //   domicilio: TDAdomicilio que se crea al cliente
 //   cuil: TDAcuilque se crea al cliente
 // Devuelve un puntero a la estructura Cliente en memoria dinámica.
+<<<<<<< HEAD
+clientePtr crearCliente (char* nombre, char* apellido, domicilioPtr domicilio, cuilPtr cuil);
+=======
 clientePtr crearCliente (char* nombre,char* apellido,domicilio,cuil);
+>>>>>>> origin/branchMariano
 
 // Operación de destrucción (Destructor)
 // Precondición: Cliente debe haber sido creado
@@ -48,20 +54,31 @@ char* getNombre(clientePtr nombre);
 // Devuelve un puntero a char representando el apellido del cliente
 char* getApellido(clientePtr nombre);
 
-// Operación de obtención de domicilio de cliente
-// Precondición: Cliente debe haber sido creado.
-// Postcondición: Se obtiene domicilio del cliente.
-// Parámetros:
-//   domicilio: TDAdomicilio del que se obtiene el domicilio
-// Devuelve un puntero a la estructura TDAdomicilio del cliente
-domicilio getDomicilio(clientePtr domicilio);
+// Operacion de asignacion de nombre del cliente
+// Precondicion: cliente debe haberse creado
+// Postcondicion: cliente cambia con el nuevo valor del nombre del cliente
+// Parametros:
+//  cliente: TDAcliente al que se asigna un nuevo valor de nombre
+//  nombre: char representando el nombre del cliente
+// No devuelve valor.
+<<<<<<< HEAD
+void setNombreCliente(clientePtr cliente, char* nombre);
+=======
+void setNombreCliente(clientePtr, char* nombre);
+>>>>>>> origin/branchMariano
 
-// Operación de obtención de CUIL de cliente
-// Precondición: Cliente debe haber sido creado.
-// Postcondición: Se obtiene CUIL del cliente.
-// Parámetros:
-//   cuil: TDAcuil del que se obtiene el cuil
-// Devuelve un puntero al TDAcuil del cliente
-cuil getCuil(clientePtr domicilio);
+// Operacion de asignacion de apellido del cliente
+// Precondicion: cliente debe haberse creado
+// Postcondicion: cliente cambia con el nuevo valor del apellido del cliente
+// Parametros:
+//  cliente: TDAcliente al que se asigna un nuevo valor del apellido
+//  nombre: char representando el apellido del cliente
+// No devuelve valor.
+<<<<<<< HEAD
+void setApellidoCliente(clientePtr cliente, char* apellido);
+=======
+void setApellidoCliente(ClientePtr, char nombre);
+>>>>>>> origin/branchMariano
+
 
 #endif // TDACLIENTE_INCLUDED

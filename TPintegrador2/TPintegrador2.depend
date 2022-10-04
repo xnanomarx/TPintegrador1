@@ -169,3 +169,25 @@
 
 1664820178 e:\downloads\tpintegrador2\tdacuil.h
 
+1664820178 source:e:\documents\github\tpintegrador1\tpintegrador2\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1664837248 source:e:\documents\github\tpintegrador1\tpintegrador2\tdacuil.c
+	<stdio.h>
+	<stdlib.h>
+	"TDAcuil.h"
+
+1664841934 e:\documents\github\tpintegrador1\tpintegrador2\tdacuil.h
+
+1664839022 source:e:\documents\github\tpintegrador1\tpintegrador2\tdadimension.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"TDAdimension.h"
+	"util.h"
+
+1664820178 e:\documents\github\tpintegrador1\tpintegrador2\tdadimension.h
+
+1664820178 e:\documents\github\tpintegrador1\tpintegrador2\util.h
+

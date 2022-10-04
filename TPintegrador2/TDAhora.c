@@ -8,7 +8,10 @@ horaPtr crearHora(int horas, int minutos){
 }
 
 horaPtr destruirHora(horaPtr hora){
+    free(hora->horas);
+    free(hora->minutos);
     free(hora);
+    return NULL;
 }
 
 int getMinutos(horaPtr hora){

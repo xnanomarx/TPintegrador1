@@ -17,6 +17,7 @@ repartoPtr destruirReparto(repartoPtr reparto){
     free(reparto->direccRetiro);
     free(reparto->pila);
     free(reparto);
+    return NULL;
 }
 
 char* getDirrecEntrega(repartoPtr reparto){

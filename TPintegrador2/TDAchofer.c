@@ -7,10 +7,6 @@
 choferPtr crearChofer(char* nombre, char* apellido, domicilioPtr domicilio, cuilPtr cuil){
     choferPtr chof=(choferPtr)obtenerMemoria(sizeof(chofer));
     chof->nombre=nombre,apellido=apellido,domicilio=domicilio,cuil=cuil;
-    chofer->nombre=nombre;
-    chofer->apellido=apellido;
-    chofer->domicilio=domicilio;
-    chofer->cuil=cuil;
 
     return chof;
 }
@@ -33,9 +29,6 @@ char* getApellidoChofer(choferPtr chofer){
     return chofer->apellido;
 }
 
-int getCuil(choferPtr chofer){
-    return chofer->cuil;
-}
 
 char* getDomicilioChofer(choferPtr chofer){
     return chofer->domicilio;

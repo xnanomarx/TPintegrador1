@@ -2,12 +2,9 @@
 #define TDAFECHA_H_INCLUDED
 #include "TDAhora.h"
 
-typedef struct Fecha{
-    int dia;
-    int mes;
-    int anio;
-    horaPtr hora;
-}Fecha;
+typedef struct Fecha {
+    int diaJuliano;
+} Fecha;
 
 typedef Fecha* FechaPtr;
 

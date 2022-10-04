@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "TDAvehiculo.h"
+#include "util.h"
 
 vehiculoPtr crearVehiculo(char*tipo, char*marca,char*modelo,char*patente){
     vehiculoPtr vehiculo=(vehiculoPtr)obtenerMemoria(sizeof(vehiculo));
@@ -20,20 +21,32 @@ vehiculoPtr destruirVehiculo(vehiculoPtr vehiculo){
     return NULL;
 }
 
-char* getTipo(vehiculoPtr vehiculo);
+char* getTipo(vehiculoPtr vehiculo){
+    return vehiculo->tipo;
+}
 
-char* getMarca(vehiculoPtr vehiculo);
+char* getMarca(vehiculoPtr vehiculo){
+    return vehiculo->marca;
+}
 
-char* getModelo(vehiculoPtr vehiculo);
+char* getModelo(vehiculoPtr vehiculo){
+    return vehiculo->modelo;
+}
 
-char* getPatente(vehiculoPtr vehiculo);
+char* getPatente(vehiculoPtr vehiculo){
+    return vehiculo->patente;
+}
+void* setTipo(vehiculoPtr vehiculo, char* tipo){
+    vehiculo->tipo=tipo;
+}
 
-void* setTipo(vehiculoPtr vehiculo, char* tipo);
+void* setMarca(vehiculoPtr vehiculo, char* marca){
+     vehiculo->marca=marca;
+}
 
-void* setTipo(vehiculoPtr vehiculo, char* tipo);
-
-void* setMarca(vehiculoPtr vehiculo, char* marca);
-
-void* setModelo(vehiculoPtr vehiculo, char* modelo);
-
-void* setPatente(vehiculoPtr vehiculo, char* patente);
+void* setModelo(vehiculoPtr vehiculo, char* modelo){
+     vehiculo->modelo=modelo;
+}
+void* setPatente(vehiculoPtr vehiculo, char* patente){
+     vehiculo->patente=patente;
+}

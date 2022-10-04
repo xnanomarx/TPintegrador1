@@ -2,14 +2,12 @@
 #include <stdlib.h>
 #include "TDAreparto.h"
 
-repartoPtr crearReparto(char* direccEntrega, char* direccRetiro, PilaPtr pila, horaPtr horaSalida, horaPtr horaLlegada){
-/*  repartoPtr reparto=(repartoPtr)obtenerMemoria(sizeof(reparto));
+repartoPtr crearReparto(char* direccEntrega, char* direccRetiro, PtrPila pila, horaPtr horaSalida, horaPtr horaLlegada){
+    repartoPtr reparto=(repartoPtr)obtenerMemoria(sizeof(reparto));
     reparto->direccEntrega=direccEntrega;
     reparto->direccRetiro=direccRetiro;
     reparto->horaSalida=horaSalida;
-    reparto->horaLlegada=horaLlegada;*/
-    domicilioPtr->calle=direccEntrega;
-    domicilioPtr
+    reparto->horaLlegada=horaLlegada;
 }
 
 repartoPtr destruirReparto(repartoPtr reparto){

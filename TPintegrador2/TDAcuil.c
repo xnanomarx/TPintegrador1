@@ -1,6 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "TDAcuil.h"
+#include "util.h"
+
+cuilPtr crearCuil(char cuil[11]){
+    cuilPtr cuil=(cuilPtr)obtenerMemoria(sizeof(cuil));
+    cuil->cuil;
+}
+
+cuilPtr destruirCuil(cuilPtr cuil){
+    free(cuil->cuil);
+    free(cuil);
+}
 
 void validarCuil(char cuil[11]){
 
@@ -24,3 +35,16 @@ void validarCuil(char cuil[11]){
             printf("CUIT/CUIL invalido.");
         }
 }
+
+char* getCuil(cuilPtr cuil){
+    return cuil->cuil;
+}
+
+void setCuil(clientePtr cliente,cuilPtr cuil){
+    cliente->cuil=cuil;
+}
+
+void mostrarCuil(cuilPtr cuil){
+    printf("%s",cuil);
+}
+

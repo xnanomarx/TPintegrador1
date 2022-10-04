@@ -1,12 +1,13 @@
 #ifndef TDAREPARTO_INCLUDED
 #define TDAREPARTO_INCLUDED
-
-struct reparto{
+#include "TDAPila.h"
+#include "TDAhora.h"
+typedef struct reparto{
     char* direccEntrega;
     char* direccRetiro;
-    Pilaptr*;
-    horaSalidaPtr*;
-    horaLlegadaPtr*;
+    PtrPila pila;
+    horaPtr horaSalida;
+    horaPtr horaLlegada;
 }reparto;
 
 typedef reparto* repartoPtr;
@@ -21,7 +22,7 @@ typedef reparto* repartoPtr;
 // HoraSalida: TDAhoraSalida representa la hora de salida del paquete
 // HoraLlegada: TDAhoraLlegada representa la hora de Llegada del paquete
 // Devuelve un puntero a la estructura Reparto
-repartoPtr crearReparto(char* direccEntrega, char* direccRetiro, Pilaptr*, horaSalidaPtr*, horaLlegadaPtr*);
+repartoPtr crearReparto(char* direccEntrega, char* direccRetiro, PtrPila pila, horaPtr horaSalida, horaPtr horaLlegada);
 
 
 // Operación de destrucción (Destructor)

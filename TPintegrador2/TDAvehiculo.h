@@ -1,14 +1,14 @@
 #ifndef TDAVEHICULO_INCLUDED
 #define TDAVEHICULO_INCLUDED
 
-struct vehiculo{
+typedef struct vehiculo{
     char* tipo;
     char* marca;
     char* modelo;
     char* patente;
 }vehiculo;
 
-typedef vehiculo vehiculoPtr;
+typedef vehiculo* vehiculoPtr;
 
 // Operación de creación (Constructor)
 // Precondición: El vehiculo no ha sido creado

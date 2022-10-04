@@ -8,7 +8,7 @@ domicilioPtr crearDomicilio(char* calle, int numero, char* localidad){
     domicilio->calle=calle;
     domicilio->localidad=localidad;
     domicilio->numero=numero;
-    return cliente;
+    return domicilio;
 }
 
 domicilioPtr destruirDomicilio(domicilioPtr domicilio){

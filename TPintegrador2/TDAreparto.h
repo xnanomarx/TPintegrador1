@@ -87,7 +87,7 @@ void* setDireccRetiro (repartoPtr reparto, char* direccRetiro);
 // Paràmetros:
 //   HoraEntrega: TDAHoraEntrega que cambia el valor de la hora de entrega
 // No devuelve nada
-///*void* setHoraEntrega(repartoPtr reparto, HoraEntrega);*///
+/*void* setHoraEntrega(repartoPtr reparto, HoraEntrega);
 
 // Operaciòn de asignaciòn de hora de llegada de reparto
 // Precondiciòn: Reparto debe haberse creado
@@ -95,6 +95,6 @@ void* setDireccRetiro (repartoPtr reparto, char* direccRetiro);
 // Paràmetros:
 //  HoraLlegada: TDAHoraLlegada donde se asigna el nuevo valor de HoraLlegada
 // No devuelve nada
-///*void* setHoraLlegada (repartoPtr reparto, HoraLlegada);*///
+void* setHoraLlegada (repartoPtr reparto, HoraLlegada);*/
 
 #endif // TDAREPARTO_INCLUDED

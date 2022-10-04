@@ -162,3 +162,111 @@
 
 1664830826 c:\users\santi\documents\github\tpintegrador1\tpintegrador2\tdadimension.h
 
+1664841664 source:e:\tp1marsan\tpintegrador1\tpintegrador2\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1664841672 source:e:\tp1marsan\tpintegrador1\tpintegrador2\tdadimension.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"TDAdimension.h"
+	"util.h"
+
+1664841672 e:\tp1marsan\tpintegrador1\tpintegrador2\tdadimension.h
+
+1664841664 e:\tp1marsan\tpintegrador1\tpintegrador2\util.h
+
+1664841664 source:e:\tp1marsan\tpintegrador1\tpintegrador2\tdadomicilio.c
+	<stdio.h>
+	<stdlib.h>
+	"TDAdomicilio.h"
+	"util.h"
+
+1664841664 e:\tp1marsan\tpintegrador1\tpintegrador2\tdadomicilio.h
+
+1664841664 source:e:\tp1marsan\tpintegrador1\tpintegrador2\tdafecha.c
+	<stdio.h>
+	<stdlib.h>
+
+1664841664 source:e:\tp1marsan\tpintegrador1\tpintegrador2\tdafechaentrega.c
+	<stdio.h>
+	<stdlib.h>
+
+1664841783 source:e:\tp1marsan\tpintegrador1\tpintegrador2\tdachofer.c
+	<stdio.h>
+	<stdlib.h>
+	"TDAchofer.h"
+	"TDAdomicilio.h"
+
+1664841664 e:\tp1marsan\tpintegrador1\tpintegrador2\tdachofer.h
+	"TDAdomicilio.h"
+	"TDAcuil.h"
+	"util.h"
+
+1664841664 e:\tp1marsan\tpintegrador1\tpintegrador2\tdacuil.h
+
+1664841664 source:e:\tp1marsan\tpintegrador1\tpintegrador2\tdafechasalida.c
+	<stdio.h>
+	<stdlib.h>
+
+1664841664 source:e:\tp1marsan\tpintegrador1\tpintegrador2\tdahora.c
+	<stdio.h>
+	<stdlib.h>
+
+1664841664 source:e:\tp1marsan\tpintegrador1\tpintegrador2\tdareparto.c
+	<stdio.h>
+	<stdlib.h>
+
+1664841664 source:e:\tp1marsan\tpintegrador1\tpintegrador2\tdavehiculo.c
+	<stdio.h>
+	<stdlib.h>
+
+1664841896 source:e:\tp1marsan\tpintegrador1\tpintegrador2\tdacuil.c
+	"TDAcuil.h"
+
+1664841664 source:e:\tp1marsan\tpintegrador1\tpintegrador2\util.c
+	<stdio.h>
+	<stdlib.h>
+	"util.h"
+
+1664842153 source:e:\tp1marsan\tpintegrador1\tpintegrador2\tdacliente.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"TDAcliente.h"
+	"util.h"
+	"TDAcuil.h"
+	"TDAdomicilio.h"
+
+1664841944 e:\tp1marsan\tpintegrador1\tpintegrador2\tdacliente.h
+	"TDAdomicilio.h"
+	"TDAcuil.h"
+
+1664842107 source:e:\tp1marsan\tpintegrador1\tpintegrador2\tdapaquete.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdbool.h>
+	"TDApaquete.h"
+	"TDAfecha.h"
+	"TDAfechaSalida.h"
+	"TDAfechaEntrega.h"
+	"TDAdimension.h"
+	"util.h"
+
+1664842085 e:\tp1marsan\tpintegrador1\tpintegrador2\tdapaquete.h
+	"TDAdimension.h"
+	"TDAfechaSalida.h"
+	"TDAfechaEntrega.h"
+
+1664841672 e:\tp1marsan\tpintegrador1\tpintegrador2\tdafechasalida.h
+	"TDAfecha.h"
+
+1664841672 e:\tp1marsan\tpintegrador1\tpintegrador2\tdafecha.h
+	"TDAhora.h"
+
+1664842041 e:\tp1marsan\tpintegrador1\tpintegrador2\tdahora.h
+
+1664841672 e:\tp1marsan\tpintegrador1\tpintegrador2\tdafechaentrega.h
+

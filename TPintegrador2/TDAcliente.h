@@ -10,7 +10,7 @@ typedef struct cliente {
     char* apellido;
     domicilioPtr domicilio;
     cuilPtr cuil;
-} cliente;
+}cliente;
 
 typedef cliente* clientePtr;
 
@@ -23,7 +23,7 @@ typedef cliente* clientePtr;
 //   domicilio: TDAdomicilio que se crea al cliente
 //   cuil: TDAcuilque se crea al cliente
 // Devuelve un puntero a la estructura Cliente en memoria dinámica.
-clientePtr crearCliente (char* nombre,char* apellido,domicilio,cuil);
+clientePtr crearCliente (char* nombre,char* apellido,domicilioPtr domicilio,cuilPtr cuil);
 
 // Operación de destrucción (Destructor)
 // Precondición: Cliente debe haber sido creado

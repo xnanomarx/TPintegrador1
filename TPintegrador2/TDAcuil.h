@@ -13,7 +13,7 @@ typedef cuil* cuilPtr;
 // Parámetros:
 // dni: recibe un vector con el dni del cliente
 // genero: recibe un char indicando el genero
-cuilPtr crearCuil(char cuil[11]);
+cuilPtr crearCuil(char* cuil);
 
 // Operación de destrucción (Destructor)
 // Precondición: dimension debe haberse creado con crearCuil

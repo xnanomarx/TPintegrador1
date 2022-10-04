@@ -29,3 +29,27 @@ paquetePtr destruirPaquete(paquetePtr paquete){
     free(paquete);
     return NULL;
 }
+
+char* getmotivo(paquetePtr Paquete){
+    return Paquete->motivo;
+}
+
+bool getEstadoEntrega(paquetePtr paquete){
+    return paquete->estadoEntrega;
+}
+
+int getCodigo(paquetePtr paquete){
+    return paquete->codigo;
+}
+
+void setmotivo(paquetePtr paquete, char* motivo){
+    paquete->motivo=motivo;
+}
+
+void setEstadoEntrega(paquetePtr paquete, bool estadoEntrega){
+    paquete->estadoEntrega=estadoEntrega;
+}
+
+void setCodigo(paquetePtr paquete, int codigo){
+    paquete->codigo=codigo;
+}

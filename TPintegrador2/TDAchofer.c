@@ -33,5 +33,11 @@ char* getApellidoChofer(choferPtr chofer){
 char* getDomicilioChofer(choferPtr chofer){
     return chofer->domicilio;
 }
+void setNombreChofer(choferPtr chofer, char* nombre){
+    chofer->nombre=nombre;
+}
 
+void setApellidoChofer(choferPtr chofer, char* apellido){
+    chofer->apellido=apellido;
+}
 

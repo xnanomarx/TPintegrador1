@@ -3,7 +3,7 @@
 	<stdio.h>
 	<stdlib.h>
 
-1664850148 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdacliente.c
+1664851177 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdacliente.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -43,7 +43,7 @@
 	<stdlib.h>
 	"TDAhora.h"
 
-1664846335 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdapaquete.c
+1664851133 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdapaquete.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -73,10 +73,11 @@
 
 1664228425 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\util.h
 
-1664849321 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdacuil.c
-	<stdio.h>
+1664850929 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdacuil.c
 	<stdlib.h>
 	"TDAcuil.h"
+	"util.h"
+	<string.h>
 
 1664846421 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdadomicilio.h
 
@@ -133,7 +134,7 @@
 
 1664220856 c:\users\rukys\documents\github\tpintegrador1\tpintegrador2\util.h
 
-1664846311 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdachofer.c
+1664851296 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdachofer.c
 	<stdio.h>
 	<stdlib.h>
 	"TDAchofer.h"
@@ -145,7 +146,7 @@
 	"TDAcuil.h"
 	"util.h"
 
-1664850273 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdacuil.h
+1664850847 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdacuil.h
 
 1664820178 source:e:\downloads\tpintegrador2\main.c
 	<stdio.h>

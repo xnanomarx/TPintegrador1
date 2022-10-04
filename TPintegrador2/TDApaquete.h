@@ -8,9 +8,9 @@ typedef struct paquete{
     char* motivo;
     bool estadoEntrega;
     int codigo;
-    FechaSalidaPtr*;
-    FechaEntregaPtr*;
-    dimensionPtr*;
+    FechaSalidaPtr FechaSalida;
+    FechaEntregaPtr FechaEntrega;
+    dimensionPtr dimension;
 } paquete;
 
 typedef paquete* paquetePtr;

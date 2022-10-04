@@ -13,9 +13,9 @@ paquetePtr crearPaquete(char* motivo, bool estadoEntrega, int codigo, FechaSalid
     paquetePtr paq=(paquetePtr)obtenerMemoria(sizeof(paquete));
     char* moti=(char*)obtenerMemoria(sizeof(char)*(strlen(motivo)+1));
     strcpy(moti,motivo);
-    paquete->FechaSalida=FechaSalida;
-    paquete->FechaEntrega=FechaEntrega;
-    paquete->dimension=dimension;
+    paq->FechaSalida=FechaSalida;
+    paq->FechaEntrega=FechaEntrega;
+    paq->dimension=dimension;
     paq->estadoEntrega=estadoEntrega, codigo=codigo;
     return paq;
 }

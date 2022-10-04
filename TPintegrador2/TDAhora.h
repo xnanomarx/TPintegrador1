@@ -4,7 +4,7 @@
 typedef struct hora{
     int horas;
     int minutos;
-}Hora;
+}hora;
 
 typedef hora* horaPtr;
 

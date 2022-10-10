@@ -60,6 +60,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="TDAhora.h" />
+		<Unit filename="TDAmenu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="TDAmenu.h" />
 		<Unit filename="TDApaquete.c">
 			<Option compilerVar="CC" />
 		</Unit>

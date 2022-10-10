@@ -3,11 +3,11 @@
 #include "Nodo.h"
 #include "Util.h"
 const void* SinNodoSgte=NULL;
-PtrNodo crearNodo(PtrDato dato){
-PtrNodo nodo=(PtrNodo)obtenerMemoria(sizeof(Nodo));
-nodo->dato=dato;
-nodo->sgte=SinNodoSgte;
-return nodo;
+    PtrNodo crearNodo(PtrDato dato){
+    PtrNodo nodo=(PtrNodo)obtenerMemoria(sizeof(Nodo));
+    nodo->dato=dato;
+    nodo->sgte=SinNodoSgte;
+    return nodo;
 }
 // Operación de destruccion (desstructor)
 // Precondicion: El nodo debe haberse creado
@@ -17,7 +17,7 @@ return nodo;
 // Devuelve NULL
 PtrNodo destruirNodo(PtrNodo nodo){
 // la destrucción del dato queda por cuenta del usuario
-free(nodo);
+    free(nodo);
 return SinNodoSgte;
 }
 // Operación de establecimiento de datos

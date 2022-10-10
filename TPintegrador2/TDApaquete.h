@@ -1,5 +1,6 @@
 #ifndef TDAPAQUETE_INCLUDED
 #define TDAPAQUETE_INCLUDED
+#include <stdbool.h>
 #include "TDAdimension.h"
 #include "TDAfechaSalida.h"
 #include "TDAfechaEntrega.h"

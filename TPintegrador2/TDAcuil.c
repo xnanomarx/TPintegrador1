@@ -1,4 +1,4 @@
-/*#include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include "TDAcuil.h"
 #include "util.h"
@@ -48,4 +48,4 @@ void setCuil(clientePtr cliente,cuilPtr cuil){
 void mostrarCuil(cuilPtr cuil){
     printf("%s",cuil);
 }
-*/
+

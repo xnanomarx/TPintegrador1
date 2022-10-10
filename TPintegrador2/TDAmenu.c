@@ -97,7 +97,7 @@ int menuBorrarReparto(int seleccion){
     scanf("%d",&reparto);
     return reparto;
 }
-int menuPila(int seleccion){
+int menuPaquete(int seleccion){
     system("cls");
     int opcion;
     printf("\r\n\r\n"); // inicio

@@ -3,7 +3,7 @@
 #include "Nodo.h"
 #include "Util.h"
 const void* SinNodoSgte=NULL;
-    PtrNodo crearNodo(PtrDato dato){
+PtrNodo crearNodo(PtrDato dato){
     PtrNodo nodo=(PtrNodo)obtenerMemoria(sizeof(Nodo));
     nodo->dato=dato;
     nodo->sgte=SinNodoSgte;

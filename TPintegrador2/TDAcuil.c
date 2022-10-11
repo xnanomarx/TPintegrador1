@@ -1,12 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "TDAcuil.h"
+#include "TDAcliente.h"
 #include "util.h"
 #include <string.h>
 
 cuilPtr crearCuil(char* cuil){
-    char* cuil=(char)obtenerMemoria(sizeof(char)*(strlen(cuil)+1));
-    cuil->cuil;
+    char* cui=(char)obtenerMemoria(sizeof(char)*(strlen(cuil)+1));
+    strcpy(cui,cuil);
 }
 
 cuilPtr destruirCuil(cuilPtr cuil){
@@ -41,8 +42,8 @@ char* getCuil(cuilPtr cuil){
     return cuil->cuil;
 }
 
-void setCuil(clientePtr cliente,cuilPtr cuil){
-    cliente->cuil=cuil;
+void setCuil(cuilPtr cuil){
+    cuil=cuil;
 }
 
 void mostrarCuil(cuilPtr cuil){

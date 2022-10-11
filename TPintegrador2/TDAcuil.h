@@ -2,7 +2,7 @@
 #define TDACUIL_H_INCLUDED
 
 typedef struct cuil{
-    int cuil;
+    char cuil[11];
 }cuil;
 
 typedef cuil* cuilPtr;
@@ -13,7 +13,15 @@ typedef cuil* cuilPtr;
 // Parámetros:
 // dni: recibe un vector con el dni del cliente
 // genero: recibe un char indicando el genero
-cuilPtr crearCuil(int cuil);
+cuilPtr crearCuil(char* cuil);
+
+// Operación de destrucción (Destructor)
+// Precondición: dimension debe haberse creado con crearCuil
+// Postcondición: se destruye cuil y se libera la memoria ocupada
+// Parámetros:
+// dimension: TDAcuil a destruir
+// Devuelve NULL
+cuilPtr destruirCuil(cuilPtr cuil);
 
 // Función de validar cuil
 // Precondicion: debe haberse creado cuil
@@ -21,7 +29,31 @@ cuilPtr crearCuil(int cuil);
 // Parámetros:
 // cuil: recibe
 // genero: recibe un char indicando el genero
-cuilPtr validarCuil(int cuil, char genero);
+void validarCuil(char cuil[11]);
+
+// Operaciòn de asignaciòn de cuil
+// Precondiciòn: cuil debe haberse creado
+// Postcondiciòn: cuil cambia con el nuevo valor de tipo
+// Paràmetros:
+//  cuil: string representando el cuil del usuario
+// No devuelve nada
+void* setCuil(cuilPtr cuil);
+
+// Operación de obtención de cuil
+// Precondición: cuil debe haberse creado
+// Postcondición: se obtiene el cuil
+// Parámetros:
+// cuil: TDAcuil del que se obtiene el cuil
+// Devuelve un puntero char representando el cuil
+char* getCuil(cuilPtr cuil);
+
+// Operación de mostrar cuil
+// Precondición: cuil debe haberse creado
+// Postcondición: se imprime el cuil
+// Parámetros:
+// cuil: TDAcuil del que se obtiene el cuil
+// No devuelve nada, imprime el valor de cuil
+void mostrarCuil(cuilPtr cuil);
 
 
 

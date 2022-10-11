@@ -11,6 +11,11 @@ dimensionPtr crearDimension(int altura, int ancho, int largo, int peso){
 }
 
 dimensionPtr destruirDimension(dimensionPtr dimension){
+    free(dimension->altura);
+    free(dimension->ancho);
+    free(dimension->ancho);
+    free(dimension->peso);
+
     free(dimension);
     return NULL;
 }

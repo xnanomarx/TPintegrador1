@@ -17,7 +17,7 @@ typedef domicilio* domicilioPtr;
 //Localidad: Representando la localidad
 //Numero: Representando el numero del domicilio
 // Devuelve un puntero a la estructura domicilio
-domicilioPtr crearDomicilio(char*Calle, char*Localidad, int Numero);
+domicilioPtr crearDomicilio(char*Calle, int Numero, char*Localidad);
 
 
 // Operación de destrucción (Destructor)
@@ -59,7 +59,7 @@ int getNumero(domicilioPtr domicilio);
 // Paràmetros:
 //  calle: puntero a char repreasentando el valor de calle
 // No devuelve nada
-void* setCalle (domicilioPtr calle);
+void* setCalle (domicilioPtr domicilio, char* calle);
 
 // Operaciòn de asignaciòn de numero de domicilio
 // Precondiciòn: Domicilio debe haberse creado
@@ -67,7 +67,7 @@ void* setCalle (domicilioPtr calle);
 // Paràmetros:
 //  numero: entero representando el valor de calle
 // No devuelve nada
-void* setNumero (domicilioPtr numero);
+void* setNumero (domicilioPtr domicilio, int numero);
 
 // Operaciòn de asignaciòn de localidad de domicilio
 // Precondiciòn: Domicilio debe haberse creado
@@ -75,7 +75,7 @@ void* setNumero (domicilioPtr numero);
 // Paràmetros:
 //  localidad: puntero a char representando el valor de localidad
 // No devuelve nada
-void* setLocalidad (domicilioPtr localidad);
+void* setLocalidad (domicilioPtr domicilio, char* localidad);
 
 
 #endif // TDADOMICILIO_INCLUDED

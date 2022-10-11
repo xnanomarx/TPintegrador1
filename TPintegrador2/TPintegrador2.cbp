@@ -31,6 +31,7 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="TDAPila.h" />
 		<Unit filename="TDAchofer.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -55,22 +56,21 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="TDAfecha.h" />
-		<Unit filename="TDAfechaEntrega.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="TDAfechaEntrega.h" />
-		<Unit filename="TDAfechaSalida.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="TDAfechaSalida.h" />
 		<Unit filename="TDAhora.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="TDAhora.h" />
+		<Unit filename="TDAmenu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="TDAmenu.h" />
 		<Unit filename="TDApaquete.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="TDApaquete.h" />
+		<Unit filename="TDApila.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="TDAreparto.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -82,6 +82,10 @@
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="nodo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="nodo.h" />
 		<Unit filename="util.c">
 			<Option compilerVar="CC" />
 		</Unit>

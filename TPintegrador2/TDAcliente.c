@@ -33,13 +33,13 @@ void mostrarCliente(clientePtr cliente){
     printf("Nombre y Apellido: %s, %s\n",cliente->nombre, cliente->apellido);
     printf("Domicilio:%s, %s, %d\n",cliente->domicilio->calle, cliente->domicilio->localidad,cliente->domicilio->numero);
     printf("Cuil:");
-    mostrarCuil;
+    mostrarCuil();
 }
 
 void setNombreCliente(clientePtr cliente, char* nombre){
     strcpy(cliente->nombre,nombre);
 }
-void setApellidoCliente(clientePtr cliente, char* Apellido){
+void setApellidoCliente(clientePtr cliente, char* apellido){
     strcpy(cliente->apellido,apellido);
 }
 
@@ -60,8 +60,3 @@ char* getApellido(clientePtr cliente){
 domicilioPtr getDomicilio(clientePtr cliente){
     return cliente->domicilio;
 }
-cuilPtr getCuil(clientePtr cliente){
-    return cliente->cuil;
-}
-
-

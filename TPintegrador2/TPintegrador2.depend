@@ -486,7 +486,7 @@
 1665440168 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdamenu.c
 	"TDApaquete.h"
 
-1665447744 source:c:\users\santi\documents\github\tpintegrador1\tpintegrador2\nodo.c
+1665456424 source:c:\users\santi\documents\github\tpintegrador1\tpintegrador2\nodo.c
 	<stdio.h>
 	<stdlib.h>
 	"Nodo.h"
@@ -637,7 +637,7 @@
 	"TDAvehiculo.c"
 	"util.c"
 
-1665455910 c:\users\santi\documents\github\tpintegrador1\tpintegrador2\nodo.c
+1665456424 c:\users\santi\documents\github\tpintegrador1\tpintegrador2\nodo.c
 	<stdio.h>
 	<stdlib.h>
 	"Nodo.h"

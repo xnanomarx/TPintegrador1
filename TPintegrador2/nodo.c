@@ -53,7 +53,7 @@ void setSiguiente(PtrNodo esteNodo, PtrNodo siguienteNodo){
 // Postcondición: se obtiene el nodo siguiente al actual
 // Parámetros:
 // nodo: puntero al nodo
-// No devuelve valor
+// No devuelve valor ACA HICE UN CAMBIO
 PtrNodo getSiguiente(PtrNodo nodo){
     return nodo->sgte;
 }

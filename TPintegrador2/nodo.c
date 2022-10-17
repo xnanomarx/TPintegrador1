@@ -1,15 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "Nodo.h"
-#include "Util.h"
+#include "nodo.h"
+#include "util.c"
 const void* SinNodoSgte=NULL;
-    PtrNodo crearNodo(PtrDato dato){
+PtrNodo crearNodo(PtrDato dato){
     PtrNodo nodo=(PtrNodo)obtenerMemoria(sizeof(Nodo));
     nodo->dato=dato;
     nodo->sgte=SinNodoSgte;
     return nodo;
 }
-// Operación de destruccion (desstructor)
+// Operación de destruccion (destructor)
 // Precondicion: El nodo debe haberse creado
 // Postcondición: Se Libera la memoria del nodo eliminado
 // Parámetros:
@@ -18,7 +18,7 @@ const void* SinNodoSgte=NULL;
 PtrNodo destruirNodo(PtrNodo nodo){
 // la destrucción del dato queda por cuenta del usuario
     free(nodo);
-return SinNodoSgte;
+    return SinNodoSgte;
 }
 // Operación de establecimiento de datos
 // Precondicion: nodo creado con crearNodo()
@@ -28,7 +28,7 @@ return SinNodoSgte;
 // PtrDato: Puntero al dato a almacenar
 // No devuelve valor
 void setDato(PtrNodo nodo, PtrDato dato){
-nodo->dato=dato;
+    nodo->dato=dato;
 }
 // Operación de obtención de datos
 // Precondicion: nodo creado con crearNodo()
@@ -37,7 +37,7 @@ nodo->dato=dato;
 // ptrNodo: puntero al nodo
 // Devuelve puntero al dato almacenado
 PtrDato getDato(PtrNodo nodo){
-return nodo->dato;
+    return nodo->dato;
 }
 // Operación de establecimiento del siguiente nodo
 // Precondicion: esteNodo creado con crearNodo()
@@ -46,14 +46,14 @@ return nodo->dato;
 // esteNodo: puntero al nodo
 // No devuelve valor
 void setSiguiente(PtrNodo esteNodo, PtrNodo siguienteNodo){
-esteNodo->sgte=siguienteNodo;
+    esteNodo->sgte=siguienteNodo;
 }
 // Operación de obtención del siguiente nodo
 // Precondicion: esteNodo creado con crearNodo()
 // Postcondición: se obtiene el nodo siguiente al actual
 // Parámetros:
 // nodo: puntero al nodo
-// No devuelve valor
+// No devuelve valor ACA HICE UN CAMBIO
 PtrNodo getSiguiente(PtrNodo nodo){
-return nodo->sgte;
+    return nodo->sgte;
 }

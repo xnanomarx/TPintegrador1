@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <conio.h>
 #include <stdbool.h>
+#include <string.h>
 #include "nodo.c"
 #include "TDAchofer.c"
 #include "TDAcliente.c"

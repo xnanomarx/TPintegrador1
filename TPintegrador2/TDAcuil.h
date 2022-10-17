@@ -37,7 +37,7 @@ void validarCuil(char cuil[11]);
 // Paràmetros:
 //  cuil: string representando el cuil del usuario
 // No devuelve nada
-void* setCuil(cuilPtr cuil);
+void setCuil(cuilPtr cuil);
 
 // Operación de obtención de cuil
 // Precondición: cuil debe haberse creado

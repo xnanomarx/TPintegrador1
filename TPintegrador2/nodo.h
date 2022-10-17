@@ -5,9 +5,9 @@
 typedef void* PtrDato;
 /* Tipo de Estructura de los Nodos de la Lista. */
 typedef struct Nodo {
-PtrDato dato; // dato almacenado
-struct Nodo *sgte; // puntero al siguiente
-} Nodo;
+    PtrDato dato; // dato almacenado
+    struct Nodo *sgte; // puntero al siguiente
+}Nodo;
 // puntero a nodo
 typedef Nodo* PtrNodo;
 // Terminador de nodo. En Nodo.c se asigna NULL

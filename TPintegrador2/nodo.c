@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "Nodo.h"
-#include "Util.h"
+#include "nodo.h"
+#include "util.c"
 const void* SinNodoSgte=NULL;
 PtrNodo crearNodo(PtrDato dato){
     PtrNodo nodo=(PtrNodo)obtenerMemoria(sizeof(Nodo));
@@ -9,7 +9,7 @@ PtrNodo crearNodo(PtrDato dato){
     nodo->sgte=SinNodoSgte;
     return nodo;
 }
-// Operación de destruccion (desstructor)
+// Operación de destruccion (destructor)
 // Precondicion: El nodo debe haberse creado
 // Postcondición: Se Libera la memoria del nodo eliminado
 // Parámetros:

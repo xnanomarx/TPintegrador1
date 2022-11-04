@@ -13,7 +13,7 @@ typedef FechaSalida* FechaSalidaPtr;
 // Parámetros:
 //   fecha: TDAFecha del que se obtiene la fecha
 // Devuelve un puntero a la estructura FechaSalida en memoria dinamica
-FechaSalidaPtr crearFechaSalida(fecha);
+FechaSalidaPtr crearFechaSalida();
 
 
 // Operación de destrucción (Destructor)

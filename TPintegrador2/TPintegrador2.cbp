@@ -31,6 +31,10 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="MenuCarga.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MenuCarga.h" />
 		<Unit filename="TDAPila.h" />
 		<Unit filename="TDAchofer.c">
 			<Option compilerVar="CC" />

@@ -41,3 +41,7 @@ void setApellidoChofer(choferPtr chofer, char* apellido){
     chofer->apellido=apellido;
 }
 
+void mostrarChofer(choferPtr chofer){
+    printf("%s, %s",chofer->apellido,chofer->nombre);
+}
+

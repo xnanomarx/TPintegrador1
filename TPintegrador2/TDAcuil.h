@@ -13,7 +13,7 @@ typedef cuil* cuilPtr;
 // Parámetros:
 // dni: recibe un vector con el dni del cliente
 // genero: recibe un char indicando el genero
-cuilPtr crearCuil(char* cuil);
+cuilPtr crearCuil(char cuil[11]);
 
 // Operación de destrucción (Destructor)
 // Precondición: dimension debe haberse creado con crearCuil
@@ -30,14 +30,6 @@ cuilPtr destruirCuil(cuilPtr cuil);
 // cuil: recibe
 // genero: recibe un char indicando el genero
 void validarCuil(char cuil[11]);
-
-// Operaciòn de asignaciòn de cuil
-// Precondiciòn: cuil debe haberse creado
-// Postcondiciòn: cuil cambia con el nuevo valor de tipo
-// Paràmetros:
-//  cuil: string representando el cuil del usuario
-// No devuelve nada
-void* setCuil(cuilPtr cuil);
 
 // Operación de obtención de cuil
 // Precondición: cuil debe haberse creado

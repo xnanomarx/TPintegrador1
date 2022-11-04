@@ -13,7 +13,7 @@ typedef FechaEntrega* FechaEntregaPtr;
 // Parámetros:
 //   fecha: TDAFecha del que se obtiene la fecha
 // Devuelve un puntero a la estructura FechaEntrega en memoria dinamica
-FechaEntregaPtr crearFechaEntrega(fecha);
+FechaEntregaPtr crearFechaEntrega(FechaPtr fecha);
 
 
 // Operación de destrucción (Destructor)

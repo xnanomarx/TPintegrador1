@@ -4,9 +4,12 @@
 #include "util.h"
 #include <string.h>
 
-cuilPtr crearCuil(char* cuil){
-    char* cuil=(char)obtenerMemoria(sizeof(char)*(strlen(cuil)+1));
-    cuil->cuil;
+cuilPtr crearCuil(char cuil[11]){
+    cuilPtr cuil2=(cuilPtr)obtenerMemoria(sizeof(cuil)+1);
+    char* cu=(char*)obtenerMemoria(sizeof(char)*(strlen(cuil)+1));
+    strcpy(cu,cuil);
+
+    return cuil;
 }
 
 cuilPtr destruirCuil(cuilPtr cuil){
@@ -39,10 +42,6 @@ void validarCuil(char cuil[11]){
 
 char* getCuil(cuilPtr cuil){
     return cuil->cuil;
-}
-
-void setCuil(clientePtr cliente,cuilPtr cuil){
-    cliente->cuil=cuil;
 }
 
 void mostrarCuil(cuilPtr cuil){

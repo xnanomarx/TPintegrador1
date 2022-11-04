@@ -1,7 +1,37 @@
-#ifndef TDAMENU_H_INCLUDED
-#define TDAMENU_H_INCLUDED
+#ifndef MENUCARGA_H_INCLUDED
+#define MENUCARGA_H_INCLUDED
 
-int seleccionAccion();
+// Función de mostrar menu de modificar
+// Precondicion: debe haberse ejecutado el menu principal
+// Postcondición: se obtiene la eleccion del usuario para seguir avanzando en el menu
+// Parámetros:
+// seleccion: entero con la opcion elegida por el usuario previamente
+//devuelve un numero con la opcion elegida por el usuario
+int menuSet();
+
+// Función de mostrar menu de modificacion de chofer
+// Precondicion: todos los tda deben haber sido cargados
+// Postcondición: se obtiene la eleccion del usuario para seguir avanzando en el menu
+// Parámetros:
+// seleccion: entero con la opcion elegida por el usuario previamente
+//devuelve un numero con la opcion elegida por el usuario
+int menuSetChofer();
+
+// Función de mostrar menu de modificacion de domicilio
+// Precondicion: todos los tda deben haber sido cargados
+// Postcondición: se obtiene la eleccion del usuario para seguir avanzando en el menu
+// Parámetros:
+// seleccion: entero con la opcion elegida por el usuario previamente
+//devuelve un numero con la opcion elegida por el usuario
+int menuSetDomicilio();
+
+// Función de mostrar menu de modificacion de
+// Precondicion: todos los tda deben haber sido cargados
+// Postcondición: se obtiene la eleccion del usuario para seguir avanzando en el menu
+// Parámetros:
+// seleccion: entero con la opcion elegida por el usuario previamente
+//devuelve un numero con la opcion elegida por el usuario
+int menuSetCliente();
 
 // Función de mostrar menu principal
 // Precondicion: todos los tda deben haber sido cargados
@@ -9,7 +39,7 @@ int seleccionAccion();
 // Parámetros:
 // seleccion: entero con la opcion elegida por el usuario previamente
 //devuelve un numero con la opcion elegida por el usuario
-int menuPrincipal();
+int menuReparto();
 
 // Función de mostrar menu principal
 // Precondicion: todos los tda deben haber sido cargados
@@ -17,7 +47,7 @@ int menuPrincipal();
 // Parámetros:
 // seleccion: entero con la opcion elegida por el usuario previamente
 //devuelve un numero con la opcion elegida por el usuario
-int menuInfo();
+int menuNuevoReparto();
 
 // Función de mostrar menu principal
 // Precondicion: todos los tda deben haber sido cargados
@@ -25,7 +55,7 @@ int menuInfo();
 // Parámetros:
 // seleccion: entero con la opcion elegida por el usuario previamente
 //devuelve un numero con la opcion elegida por el usuario
-int menuInfoChofer();
+int menuModifReparto();
 
 // Función de mostrar menu principal
 // Precondicion: todos los tda deben haber sido cargados
@@ -33,7 +63,7 @@ int menuInfoChofer();
 // Parámetros:
 // seleccion: entero con la opcion elegida por el usuario previamente
 //devuelve un numero con la opcion elegida por el usuario
-int menuInfoCliente();
+int menuBorrarReparto();
 
 // Función de mostrar menu principal
 // Precondicion: todos los tda deben haber sido cargados
@@ -41,7 +71,7 @@ int menuInfoCliente();
 // Parámetros:
 // seleccion: entero con la opcion elegida por el usuario previamente
 //devuelve un numero con la opcion elegida por el usuario
-int menuInfoReparto();
+int menuPila();
 
 // Función de mostrar menu principal
 // Precondicion: todos los tda deben haber sido cargados
@@ -49,7 +79,7 @@ int menuInfoReparto();
 // Parámetros:
 // seleccion: entero con la opcion elegida por el usuario previamente
 //devuelve un numero con la opcion elegida por el usuario
-int menuInfoPaquete();
+int menuNuevoPaquete();
 
 // Función de mostrar menu principal
 // Precondicion: todos los tda deben haber sido cargados
@@ -57,7 +87,7 @@ int menuInfoPaquete();
 // Parámetros:
 // seleccion: entero con la opcion elegida por el usuario previamente
 //devuelve un numero con la opcion elegida por el usuario
-int menuInfoPaquete2();
+int menuModifPaquete(int seleccion);
 
 // Función de mostrar menu principal
 // Precondicion: todos los tda deben haber sido cargados
@@ -65,14 +95,7 @@ int menuInfoPaquete2();
 // Parámetros:
 // seleccion: entero con la opcion elegida por el usuario previamente
 //devuelve un numero con la opcion elegida por el usuario
-int EstadoDeEntrega(int codigo,bool estadoEntrega);
-// Función de mostrar menu principal
-// Precondicion: todos los tda deben haber sido cargados
-// Postcondición: se obtiene la eleccion del usuario para seguir avanzando en el menu
-// Parámetros:
-// seleccion: entero con la opcion elegida por el usuario previamente
-//devuelve un numero con la opcion elegida por el usuario
-void EstadoDeEntrega2(int mostrar);
+int menuBorrarPaquete(int seleccion);
 
 // Función de mostrar menu principal
 // Precondicion: todos los tda deben haber sido cargados
@@ -80,6 +103,30 @@ void EstadoDeEntrega2(int mostrar);
 // Parámetros:
 // seleccion: entero con la opcion elegida por el usuario previamente
 //devuelve un numero con la opcion elegida por el usuario
-int menuCuil(char cuil[11]);
+int menuVehiculo(int seleccion);
 
-#endif // TDAMENU_H_INCLUDED
+// Función de mostrar menu principal
+// Precondicion: todos los tda deben haber sido cargados
+// Postcondición: se obtiene la eleccion del usuario para seguir avanzando en el menu
+// Parámetros:
+// seleccion: entero con la opcion elegida por el usuario previamente
+//devuelve un numero con la opcion elegida por el usuario
+int menuNuevoVehiculo(int seleccion);
+
+// Función de mostrar menu principal
+// Precondicion: todos los tda deben haber sido cargados
+// Postcondición: se obtiene la eleccion del usuario para seguir avanzando en el menu
+// Parámetros:
+// seleccion: entero con la opcion elegida por el usuario previamente
+//devuelve un numero con la opcion elegida por el usuario
+int menuModifVehiculo(int seleccion);
+
+// Función de mostrar menu principal
+// Precondicion: todos los tda deben haber sido cargados
+// Postcondición: se obtiene la eleccion del usuario para seguir avanzando en el menu
+// Parámetros:
+// seleccion: entero con la opcion elegida por el usuario previamente
+//devuelve un numero con la opcion elegida por el usuario
+int menuBorrarVehiculo(int seleccion);
+
+#endif // MENUCARGA_H_INCLUDED

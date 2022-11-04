@@ -12,6 +12,8 @@ clientePtr crearCliente (char* nombre,char* apellido,domicilioPtr domicilio,cuil
     char* ape=(char*)obtenerMemoria(sizeof(char)*(strlen(apellido)+1));
     strcpy(nom,nombre);
     strcpy(ape,apellido);
+    cliente->apellido=ape;
+    cliente->nombre=nom;
     cliente->domicilio=domicilio;
     cliente->cuil=cuil;
 
@@ -47,6 +49,9 @@ void setDomicilio(clientePtr cliente, domicilioPtr domicilio){
     cliente->domicilio=domicilio;
 }
 
+void setCuilCliente(clientePtr cliente,cuilPtr cuil){
+    cliente->cuil=cuil;
+}
 
 char* getNombreCliente(clientePtr cliente){
     return cliente->nombre;

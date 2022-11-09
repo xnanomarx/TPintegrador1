@@ -5,11 +5,11 @@
 #include "util.h"
 
 typedef struct chofer{
-   char* nombre;
-   char* apellido;
+   char* nombreCh;
+   char* apellidoCh;
    domicilioPtr domicilio;
    cuilPtr cuil;
-} chofer;
+}chofer;
 
 typedef chofer* choferPtr;
 

@@ -9,13 +9,17 @@
 //devuelve un numero con la opcion elegida por el usuario
 int menuSet();
 
+int menuModificar();
+
 // Función de mostrar menu de modificacion de chofer
 // Precondicion: todos los tda deben haber sido cargados
 // Postcondición: se obtiene la eleccion del usuario para seguir avanzando en el menu
 // Parámetros:
 // seleccion: entero con la opcion elegida por el usuario previamente
 //devuelve un numero con la opcion elegida por el usuario
-int menuSetChofer();
+int menuChofer();
+
+int listaModifChofer();
 
 // Función de mostrar menu de modificacion de domicilio
 // Precondicion: todos los tda deben haber sido cargados
@@ -87,7 +91,7 @@ int menuNuevoPaquete();
 // Parámetros:
 // seleccion: entero con la opcion elegida por el usuario previamente
 //devuelve un numero con la opcion elegida por el usuario
-int menuModifPaquete(int seleccion);
+int menuModifPaquete();
 
 // Función de mostrar menu principal
 // Precondicion: todos los tda deben haber sido cargados
@@ -95,7 +99,7 @@ int menuModifPaquete(int seleccion);
 // Parámetros:
 // seleccion: entero con la opcion elegida por el usuario previamente
 //devuelve un numero con la opcion elegida por el usuario
-int menuBorrarPaquete(int seleccion);
+int menuBorrarPaquete();
 
 // Función de mostrar menu principal
 // Precondicion: todos los tda deben haber sido cargados
@@ -103,7 +107,9 @@ int menuBorrarPaquete(int seleccion);
 // Parámetros:
 // seleccion: entero con la opcion elegida por el usuario previamente
 //devuelve un numero con la opcion elegida por el usuario
-int menuVehiculo(int seleccion);
+int menuVehiculo();
+
+
 
 // Función de mostrar menu principal
 // Precondicion: todos los tda deben haber sido cargados
@@ -111,15 +117,7 @@ int menuVehiculo(int seleccion);
 // Parámetros:
 // seleccion: entero con la opcion elegida por el usuario previamente
 //devuelve un numero con la opcion elegida por el usuario
-int menuNuevoVehiculo(int seleccion);
-
-// Función de mostrar menu principal
-// Precondicion: todos los tda deben haber sido cargados
-// Postcondición: se obtiene la eleccion del usuario para seguir avanzando en el menu
-// Parámetros:
-// seleccion: entero con la opcion elegida por el usuario previamente
-//devuelve un numero con la opcion elegida por el usuario
-int menuModifVehiculo(int seleccion);
+int menuModifVehiculo();
 
 // Función de mostrar menu principal
 // Precondicion: todos los tda deben haber sido cargados

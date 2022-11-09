@@ -5,10 +5,18 @@
 
 vehiculoPtr crearVehiculo(char*tipo, char*marca,char*modelo,char*patente){
     vehiculoPtr vehiculo=(vehiculoPtr)obtenerMemoria(sizeof(vehiculo));
-    vehiculo->tipo=tipo;
-    vehiculo->marca=marca;
-    vehiculo->modelo=modelo;
-    vehiculo->patente=patente;
+    char* tipoV=(char*)obtenerMemoria(sizeof(char)*(strlen(tipo)+1));
+    char* marcaV=(char*)obtenerMemoria(sizeof(char)*(strlen(marca)+1));
+    char* modeloV=(char*)obtenerMemoria(sizeof(char)*(strlen(modelo)+1));
+    char* patenteV=(char*)obtenerMemoria(sizeof(char)*(strlen(patente)+1));
+    strcpy(tipoV,tipo);
+    strcpy(marcaV,marca);
+    strcpy(modeloV,modelo);
+    strcpy(patenteV,patente);
+    vehiculo->tipo=tipoV;
+    vehiculo->marca=marcaV;
+    vehiculo->modelo=modeloV;
+    vehiculo->patente=patenteV;
 }
 
 vehiculoPtr destruirVehiculo(vehiculoPtr vehiculo){

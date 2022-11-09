@@ -35,6 +35,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="MenuCarga.h" />
+		<Unit filename="MenuCreacion.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="MenuCreacion.h" />
 		<Unit filename="TDAPila.h" />
 		<Unit filename="TDAchofer.c">
 			<Option compilerVar="CC" />
@@ -83,9 +87,25 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="TDAvehiculo.h" />
+		<Unit filename="cola.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="cola.h" />
+		<Unit filename="lista.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lista.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="menuCrear.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="menuCrear.h" />
+		<Unit filename="modificar.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="modificar.h" />
 		<Unit filename="nodo.c">
 			<Option compilerVar="CC" />
 		</Unit>

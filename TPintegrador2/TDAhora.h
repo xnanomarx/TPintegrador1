@@ -15,7 +15,7 @@ typedef hora* horaPtr;
 //   minutos: entero representando los minutos de la hora
 //   horas: entero representando la hora del dia
 // Devuelve puntero a la estructura Hora en memoria dinamica
-horaPtr crearHora(int horas, int minutos);
+horaPtr crearHora(int horaingr, int minutoingr);
 
 // Operación de destrucción (Destructor)
 // Precondición: Hora debe haberse creado con crearHora
@@ -48,7 +48,7 @@ int gethoras(horaPtr hora);
 //  Hora: TDAHora al que se asignara el nuevo valor de hora
 //  minutos: entero representando el nuevo valor de los minutos de hora
 // No devuelve un valor
-void setMinutos(horaPtr hora, int minutos);
+void setMinutos(horaPtr hora, int newminuto);
 
 // Operación de asignacion de las horas
 // Precondición: Hora debe haberse creado
@@ -57,6 +57,6 @@ void setMinutos(horaPtr hora, int minutos);
 //  Hora: TDAHora al que se asignara el nuevo valor de las horas
 //  horas: entero representando el nuevo valor de las horas
 // No devuelve un valor
-void sethoras(horaPtr hora, int horas);
+void sethoras(horaPtr hora, int newhora);
 
 #endif // TDAHORA_H_INCLUDED

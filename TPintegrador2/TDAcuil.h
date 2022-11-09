@@ -1,8 +1,8 @@
 #ifndef TDACUIL_H_INCLUDED
 #define TDACUIL_H_INCLUDED
-
+#include <stdbool.h>
 typedef struct cuil{
-    char cuil[11];
+    char cuilUsuario[12];
 }cuil;
 
 typedef cuil* cuilPtr;
@@ -13,7 +13,7 @@ typedef cuil* cuilPtr;
 // Parámetros:
 // dni: recibe un vector con el dni del cliente
 // genero: recibe un char indicando el genero
-cuilPtr crearCuil(char cuil[11]);
+cuilPtr crearCuil(char cuil[12]);
 
 // Operación de destrucción (Destructor)
 // Precondición: dimension debe haberse creado con crearCuil
@@ -29,7 +29,7 @@ cuilPtr destruirCuil(cuilPtr cuil);
 // Parámetros:
 // cuil: recibe
 // genero: recibe un char indicando el genero
-void validarCuil(char cuil[11]);
+bool validarCuil(char cuil[12]);
 
 // Operación de obtención de cuil
 // Precondición: cuil debe haberse creado

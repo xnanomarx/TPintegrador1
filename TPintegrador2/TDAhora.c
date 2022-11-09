@@ -1,15 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "TDAhora.h"
-horaPtr crearHora(int horas, int minutos){
-    horaPtr hora=(horaPtr)obtenerMemoria(sizeof(hora));
-    hora->horas=horas;
-    hora->minutos=minutos;
+#include "util.h"
+horaPtr crearHora(int horaingr, int minutoingr){
+    horaPtr hora1=(horaPtr)obtenerMemoria(sizeof(horaingr+minutoingr));
+    hora1->horas=horaingr;
+    hora1->minutos=minutoingr;
+    return hora1;
 }
 
 horaPtr destruirHora(horaPtr hora){
-    free(hora->horas);
-    free(hora->minutos);
     free(hora);
     return NULL;
 }
@@ -22,10 +22,10 @@ int gethoras(horaPtr hora){
     return hora->horas;
 }
 
-void setMinutos(horaPtr hora, int minutos){
-    hora->minutos;
+void setMinutos(horaPtr hora, int newminuto){
+    hora->minutos=newminuto;
 }
 
-void sethoras(horaPtr hora, int horas){
-    return hora->horas;
+void sethoras(horaPtr hora, int newhora){
+    hora->horas=newhora;
 }

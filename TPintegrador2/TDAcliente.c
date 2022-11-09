@@ -7,17 +7,17 @@
 #include "TDAdomicilio.h"
 
 clientePtr crearCliente (char* nombre,char* apellido,domicilioPtr domicilio,cuilPtr cuil){
-    clientePtr cliente=(clientePtr)obtenerMemoria(sizeof(cliente));
+    clientePtr cliente1=(clientePtr)obtenerMemoria(sizeof(cliente));
     char* nom=(char*)obtenerMemoria(sizeof(char)*(strlen(nombre)+1));
     char* ape=(char*)obtenerMemoria(sizeof(char)*(strlen(apellido)+1));
     strcpy(nom,nombre);
     strcpy(ape,apellido);
-    cliente->apellido=ape;
-    cliente->nombre=nom;
-    cliente->domicilio=domicilio;
-    cliente->cuil=cuil;
+    cliente1->apellido=ape;
+    cliente1->nombre=nom;
+    cliente1->domicilio=domicilio;
+    cliente1->cuil=cuil;
 
-    return cliente;
+    return cliente1;
 }
 
 clientePtr destruirCliente(clientePtr cliente){
@@ -45,7 +45,7 @@ void setApellidoCliente(clientePtr cliente, char* apellido){
     strcpy(cliente->apellido,apellido);
 }
 
-void setDomicilio(clientePtr cliente, domicilioPtr domicilio){
+void setDomicilioCliente(clientePtr cliente, domicilioPtr domicilio){
     cliente->domicilio=domicilio;
 }
 
@@ -57,7 +57,7 @@ char* getNombreCliente(clientePtr cliente){
     return cliente->nombre;
 }
 
-char* getApellido(clientePtr cliente){
+char* getApellidoCliente(clientePtr cliente){
     return cliente->apellido;
 }
 clientePtr getDomicilio(clientePtr cliente){

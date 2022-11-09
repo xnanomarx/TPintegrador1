@@ -1,28 +1,31 @@
 # depslib dependency file v1.0
-1667596980 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\main.c
+1668032866 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<conio.h>
 	<stdbool.h>
+	"cola.h"
+	"lista.h"
+	"TDAPila.h"
 	"nodo.h"
+	"TDAmenu.h"
+	"MenuCreacion.h"
+	"MenuCarga.h"
+	"modificar.h"
 	"TDAchofer.h"
 	"TDAcliente.h"
+	"TDAvehiculo.h"
 	"TDAcuil.h"
 	"TDAdimension.h"
 	"TDAdomicilio.h"
 	"TDAfecha.h"
 	"TDAhora.h"
-	"TDAmenu.h"
 	"TDApaquete.h"
-	"TDAPila.h"
 	"TDAreparto.h"
-	"TDAvehiculo.h"
 	"util.h"
-	"TDAmenu.h"
-	"MenuCarga.h"
 
-1666633163 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdacliente.c
+1668023443 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdacliente.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -57,10 +60,11 @@
 	<stdio.h>
 	<stdlib.h>
 
-1665440374 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdahora.c
+1668023435 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdahora.c
 	<stdio.h>
 	<stdlib.h>
 	"TDAhora.h"
+	"util.h"
 
 1665440374 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdapaquete.c
 	<stdio.h>
@@ -79,7 +83,7 @@
 	<stdlib.h>
 	"TDAreparto.h"
 
-1665440374 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdavehiculo.c
+1668021683 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdavehiculo.c
 	<stdio.h>
 	<stdlib.h>
 	"TDAvehiculo.h"
@@ -92,16 +96,17 @@
 
 1664228425 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\util.h
 
-1666635820 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdacuil.c
+1668022260 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdacuil.c
 	<stdio.h>
 	<stdlib.h>
 	"TDAcuil.h"
 	"util.h"
 	<string.h>
+	<stdbool.h>
 
 1665440374 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdadomicilio.h
 
-1665440374 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdahora.h
+1668022945 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdahora.h
 
 1664218743 source:c:\users\rukys\documents\github\tpintegrador1\tpintegrador2\main.c
 	<stdio.h>
@@ -154,19 +159,22 @@
 
 1664220856 c:\users\rukys\documents\github\tpintegrador1\tpintegrador2\util.h
 
-1667594693 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdachofer.c
+1668035456 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdachofer.c
 	<stdio.h>
 	<stdlib.h>
+	<string.h>
 	"TDAchofer.h"
-	"TDAdomicilio.h"
-	"TDAcuil.h"
-
-1667594875 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdachofer.h
 	"TDAdomicilio.h"
 	"TDAcuil.h"
 	"util.h"
 
-1666635398 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdacuil.h
+1668023264 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdachofer.h
+	"TDAdomicilio.h"
+	"TDAcuil.h"
+	"util.h"
+
+1668020339 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdacuil.h
+	<stdbool.h>
 
 1664820178 source:e:\downloads\tpintegrador2\main.c
 	<stdio.h>
@@ -349,7 +357,7 @@
 
 1664841672 e:\tp1marsan\tpintegrador1\tpintegrador2\tdafechaentrega.h
 
-1666631450 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdacliente.h
+1668019856 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdacliente.h
 	"TDAdomicilio.h"
 	"TDAcuil.h"
 
@@ -486,7 +494,7 @@
 	<stdlib.h>
 	"util.h"
 
-1667597207 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdamenu.c
+1668035706 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdamenu.c
 	<stdlib.h>
 	<stdio.h>
 	<stdbool.h>
@@ -495,14 +503,303 @@
 	"TDApaquete.h"
 	"TDAchofer.h"
 
-1667596825 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdamenu.h
+1667796634 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdamenu.h
 
-1667593677 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\menucarga.c
+1668035136 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\menucarga.c
 	<stdlib.h>
 	<stdio.h>
 	<stdbool.h>
 	"TDAmenu.h"
+	"MenuCarga.h"
+	"TDApaquete.h"
+	"lista.h"
+
+1668035117 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\menucarga.h
+
+1667614184 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\cola.c
+	<stdbool.h>
+	"Cola.h"
+	"Util.h"
+
+1667614184 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\cola.h
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	"Nodo.h"
+
+1668032866 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\lista.c
+	<stdbool.h>
+	"Lista.h"
+	"Util.h"
+	"Nodo.h"
+	"TDAcliente.h"
+
+1667967367 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\lista.h
+	<stdbool.h>
+	"Nodo.h"
+	"Util.h"
+
+1668028999 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\menucreacion.c
+	<stdlib.h>
+	<stdio.h>
+	<stdbool.h>
+	"MenuCreacion.h"
+	"TDAmenu.h"
+	"MenuCarga.h"
+	"TDApaquete.h"
+	"TDAchofer.h"
+	"TDAdomicilio.h"
+	"TDAcuil.h"
+	"TDAcliente.h"
+	"util.h"
+	"TDAcuil.h"
+	"TDAvehiculo.h"
+	"lista.h"
+
+1667972895 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\menucreacion.h
+	"lista.h"
+
+1667777776 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\menucrear.c
+
+1667614184 source:e:\documents\tpintegrador2\cola.c
+	<stdbool.h>
+	"Cola.h"
+	"Util.h"
+
+1667614184 e:\documents\tpintegrador2\cola.h
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	"Nodo.h"
+
+1667005022 e:\documents\tpintegrador2\nodo.h
+	<stdio.h>
+	<stdlib.h>
+
+1664228425 e:\documents\tpintegrador2\util.h
+
+1667614232 source:e:\documents\tpintegrador2\lista.c
+	<stdbool.h>
+	"Lista.h"
+	"Util.h"
+	"Nodo.h"
+
+1667614232 e:\documents\tpintegrador2\lista.h
+	<stdbool.h>
+	"Nodo.h"
+	"Util.h"
+
+1667863026 source:e:\documents\tpintegrador2\menucreacion.c
+	<stdlib.h>
+	<stdio.h>
+	<stdbool.h>
+	"MenuCreacion.h"
+	"TDAmenu.h"
+	"MenuCarga.h"
+	"TDApaquete.h"
+	"TDAchofer.h"
+	"TDAdomicilio.h"
+	"TDAcuil.h"
+	"TDAcliente.h"
+	"util.h"
+	"TDAcuil.h"
+	"TDAvehiculo.h"
+
+1667862784 e:\documents\tpintegrador2\menucreacion.h
+
+1667796634 e:\documents\tpintegrador2\tdamenu.h
+
+1667862529 e:\documents\tpintegrador2\menucarga.h
+
+1665440374 e:\documents\tpintegrador2\tdapaquete.h
+	<stdbool.h>
+	"TDAdimension.h"
+	"TDAfechaSalida.h"
+	"TDAfechaEntrega.h"
+
+1665440374 e:\documents\tpintegrador2\tdadimension.h
+
+1667186065 e:\documents\tpintegrador2\tdafechasalida.h
+	"TDAfecha.h"
+
+1665440374 e:\documents\tpintegrador2\tdafecha.h
+	"TDAhora.h"
+
+1665440374 e:\documents\tpintegrador2\tdahora.h
+
+1667588969 e:\documents\tpintegrador2\tdafechaentrega.h
+
+1667594875 e:\documents\tpintegrador2\tdachofer.h
+	"TDAdomicilio.h"
+	"TDAcuil.h"
+	"util.h"
+
+1665440374 e:\documents\tpintegrador2\tdadomicilio.h
+
+1667860687 e:\documents\tpintegrador2\tdacuil.h
+	<stdbool.h>
+
+1666631450 e:\documents\tpintegrador2\tdacliente.h
+	"TDAdomicilio.h"
+	"TDAcuil.h"
+
+1667777776 source:e:\documents\tpintegrador2\menucrear.c
+
+1667006187 source:e:\documents\tpintegrador2\nodo.c
+	<stdio.h>
+	<stdlib.h>
+	"Nodo.h"
+	"Util.h"
+
+1667594693 source:e:\documents\tpintegrador2\tdachofer.c
+	<stdio.h>
+	<stdlib.h>
+	"TDAchofer.h"
+	"TDAdomicilio.h"
+	"TDAcuil.h"
+
+1666633163 source:e:\documents\tpintegrador2\tdacliente.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"TDAcliente.h"
+	"util.h"
+	"TDAcuil.h"
+	"TDAdomicilio.h"
+
+1667862158 source:e:\documents\tpintegrador2\tdacuil.c
+	<stdio.h>
+	<stdlib.h>
+	"TDAcuil.h"
+	"util.h"
+	<string.h>
+	<stdbool.h>
+
+1665440374 source:e:\documents\tpintegrador2\tdadimension.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"TDAdimension.h"
+	"util.h"
+
+1665440374 source:e:\documents\tpintegrador2\tdadomicilio.c
+	<stdio.h>
+	<stdlib.h>
+	"TDAdomicilio.h"
+	"util.h"
+
+1665440374 source:e:\documents\tpintegrador2\tdafecha.c
+	<stdio.h>
+	<stdlib.h>
+	"TDAfecha.h"
+
+1665440374 source:e:\documents\tpintegrador2\tdahora.c
+	<stdio.h>
+	<stdlib.h>
+	"TDAhora.h"
+
+1667858531 source:e:\documents\tpintegrador2\tdamenu.c
+	<stdlib.h>
+	<stdio.h>
+	<stdbool.h>
+	"TDAmenu.h"
+	"MenuCarga.h"
+	"TDApaquete.h"
+	"TDAchofer.h"
+
+1665440374 source:e:\documents\tpintegrador2\tdapaquete.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdbool.h>
+	"TDApaquete.h"
+	"TDAfecha.h"
+	"TDAfechaSalida.h"
+	"TDAfechaEntrega.h"
+	"TDAdimension.h"
+	"util.h"
+
+1667592919 source:e:\documents\tpintegrador2\tdapila.c
+	<stdio.h>
+	<stdlib.h>
+	"TDAPila.h"
+	"Util.h"
+
+1665440374 e:\documents\tpintegrador2\tdapila.h
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	"Nodo.h"
+
+1665440374 source:e:\documents\tpintegrador2\tdareparto.c
+	<stdio.h>
+	<stdlib.h>
+	"TDAreparto.h"
+
+1665440374 e:\documents\tpintegrador2\tdareparto.h
+	"TDAPila.h"
+	"TDAhora.h"
+
+1665440374 source:e:\documents\tpintegrador2\tdavehiculo.c
+	<stdio.h>
+	<stdlib.h>
+	"TDAvehiculo.h"
+	"util.h"
+
+1665440374 e:\documents\tpintegrador2\tdavehiculo.h
+
+1664228425 source:e:\documents\tpintegrador2\util.c
+	<stdio.h>
+	<stdlib.h>
+	"util.h"
+
+1667863085 source:e:\documents\tpintegrador2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	<stdbool.h>
+	"MenuCreacion.h"
+	"lista.h"
+	"nodo.h"
+	"TDAchofer.h"
+	"TDAcliente.h"
+	"TDAcuil.h"
+	"TDAdimension.h"
+	"TDAdomicilio.h"
+	"TDAfecha.h"
+	"TDAhora.h"
+	"TDAmenu.h"
+	"TDApaquete.h"
+	"TDAPila.h"
+	"TDAreparto.h"
+	"TDAvehiculo.h"
+	"util.h"
+	"TDAmenu.h"
+	"MenuCarga.h"
+
+1667862529 source:e:\documents\tpintegrador2\menucarga.c
+	<stdlib.h>
+	<stdio.h>
+	<stdbool.h>
+	"TDAmenu.h"
+	"MenuCarga.h"
 	"TDApaquete.h"
 
-1667592776 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\menucarga.h
+1668035143 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\modificar.c
+	"MenuCreacion.h"
+	"TDAmenu.h"
+	"MenuCarga.h"
+	"TDApaquete.h"
+	"TDAchofer.h"
+	"TDAdomicilio.h"
+	"TDAcuil.h"
+	"TDAcliente.h"
+	"util.h"
+	"TDAcuil.h"
+	"TDAvehiculo.h"
+	"lista.h"
+
+1668025763 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\modificar.h
+	"lista.h"
 

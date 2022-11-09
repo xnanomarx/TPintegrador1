@@ -1,7 +1,7 @@
 #ifndef TDAMENU_H_INCLUDED
 #define TDAMENU_H_INCLUDED
 
-int seleccionAccion();
+int seleccionAccion(int seleccion);
 
 // Función de mostrar menu principal
 // Precondicion: todos los tda deben haber sido cargados

@@ -40,7 +40,7 @@ clientePtr destruirCLiente(clientePtr cliente);
 // Parámetros:
 //   nombre: TDAcliente del que se obtiene el nombre
 // Devuelve un puntero a char representando el nombre del cliente
-char* getNombre(clientePtr nombre);
+char* getNombreCliente(clientePtr nombre);
 
 // Operación de obtención de apellido de cliente
 // Precondición: Cliente debe haber sido creado.
@@ -48,7 +48,7 @@ char* getNombre(clientePtr nombre);
 // Parámetros:
 //   apellido: TDAcliente del que se obtiene el apellido
 // Devuelve un puntero a char representando el apellido del cliente
-char* getApellido(clientePtr apellido);
+char* getApellidoCliente(clientePtr apellido);
 
 // Operacion de asignacion de nombre del cliente
 // Precondicion: cliente debe haberse creado

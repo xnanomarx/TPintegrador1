@@ -91,7 +91,7 @@ int menuReparto(){
     int opcion;
     printf("-----------------------------\n|       Menu reparto      |\r\n");
     printf("-----------------------------\r\n");
-    printf("\r\n\n->REPARTO\nSeleccione accion a realizar\n");
+    printf("->REPARTO\nSeleccione accion a realizar\n");
     printf("1 - Nuevo reparto\n2 - Modificar reparto\n3 - Eliminar reparto\n9 - Volver\n0 - Salir del programa\n");
     scanf("%d",&opcion);
     opcion+=40;

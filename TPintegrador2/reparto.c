@@ -30,8 +30,8 @@ int menuNuevoReparto(){
     int opcion;
     printf("-----------------------------\n|      Modificar datos      |\r\n");
     printf("-----------------------------\r\n");
-    printf("\r\n\n->NUEVO REPARTO\nSeleccione dato a ingresar\n");
-    printf("1 - Pila de reparto \n2 - Direccion de retiro \n3 - direccion de entrega \n4 - Hora de salida\n5 - Hora de llegada\n6 - Vehiculo\n9 - Volver\n0 - Salir del programa\n");
+    printf("->NUEVO REPARTO\nSeleccione dato a ingresar\n");
+    printf("1 - Pila de reparto \n2 - Direccion de retiro \n3 - Direccion de entrega \n4 - Hora de salida\n5 - Hora de llegada\n6 - Vehiculo\n9 - Volver al inicio\n0 - Salir del programa\n");
     scanf("%d",&opcion);
     return opcion;
 }
@@ -41,7 +41,7 @@ int menuModifReparto(){
     printf("-----------------------------\n|      Modificar datos      |\r\n");
     printf("-----------------------------\r\n");
     printf("\r\n\n->MODIFICAR REPARTO\nSeleccione dato a modificar\n");
-    printf("1 - Pila de reparto \n2 - Direccion de retiro \n3 - direccion de entrega \n4 - Hora de salida\n5 - Hora de llegada\n6 - Vehiculo\n9 - Volver\n0 - Salir del programa\n");
+    printf("1 - Pila de reparto \n2 - Direccion de retiro \n3 - direccion de entrega \n4 - Hora de salida\n5 - Hora de llegada\n6 - Vehiculo\n9 - Volver al inicio\n0 - Salir del programa\n");
     scanf("%d",&opcion);
     return opcion;
 }
@@ -58,7 +58,7 @@ int menuPila(){
     printf("-----------------------------\n|      Modificar datos      |\r\n");
     printf("-----------------------------\r\n");
     printf("\r\n\n->PILA DE REPARTO\nSeleccione accion a realizar\n");
-    printf("1 - Agregar paquete \n2 - Modificar paquete \n3 - Borrar paquete\n9 - Volver\n0 - Salir del programa\n");
+    printf("1 - Agregar paquete \n2 - Modificar paquete \n3 - Borrar paquete\n9 - Volver al inicio\n0 - Salir del programa\n");
     scanf("%d",&opcion);
     return opcion;
 }
@@ -68,7 +68,7 @@ int menuNuevoPaquete(){
     printf("-----------------------------\n|      Modificar datos      |\r\n");
     printf("-----------------------------\r\n");
     printf("\r\n\n->NUEVO PAQUETE\nSeleccione dato a ingresar\n");
-    printf("1 - Codigo \n2 - Altura \n3 - Ancho \n4 - Largo\n5 - Peso\n9 - Volver\n0 - Salir del programa\n");
+    printf("1 - Codigo \n2 - Altura \n3 - Ancho \n4 - Largo\n5 - Peso\n9 - Volver al inicio \n0 - Salir del programa\n");
     scanf("%d",&opcion);
     return opcion;
 }
@@ -78,36 +78,7 @@ int menuModifPaquete(){
     printf("-----------------------------\n|      Modificar datos      |\r\n");
     printf("-----------------------------\r\n");
     printf("\r\n\n->MODIFICAR PAQUETE\nSeleccione dato a ingresar\n");
-    printf("1 - Codigo \n2 - Altura \n3 - Ancho \n4 - Largo\n5 - Peso\n9 - Volver\n0 - Salir del programa\n");
+    printf("1 - Codigo \n2 - Altura \n3 - Ancho \n4 - Largo\n5 - Peso\n9 - Volver al inicio \n0 - Salir del programa\n");
     scanf("%d",&opcion);
     return opcion;
-}
-int menuBorrarPaquete(){
-    system("cls");
-    int paquete;
-    printf("-----------------------------\n|      Modificar datos      |\r\n");
-    printf("-----------------------------\r\n");
-    printf("\r\n\n->ELIMINAR PAQUETE\nIngrese codigo de paquete a eliminar.\n");
-    scanf("%d",&paquete);
-    return paquete;
-}
-int menuVehiculo(){
-    system("cls");
-    int opcion;
-    printf("-----------------------------\n|      Modificar datos      |\r\n");
-    printf("-----------------------------\r\n");
-    printf("\r\n\n->VEHICULO\nSeleccione accion a realizar\n");
-    printf("1 - Agregar vehiculo \n2 - Modificar vehiculo \n3 - Borrar vehiculo\n9 - Volver\n0 - Salir del programa\n");
-    scanf("%d",&opcion);
-    return opcion;
-}
-
-int menuBorrarVehiculo(int seleccion){
-    system("cls");
-    int vehiculo;
-    printf("-----------------------------\n|      Modificar datos      |\r\n");
-    printf("-----------------------------\r\n");
-    printf("\r\n\n->ELIMINAR VEHICULO\nIngrese patente de vehiculo a eliminar.\n");
-    scanf("%d",&vehiculo);
-    return vehiculo;
 }

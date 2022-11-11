@@ -77,6 +77,15 @@ int main()
                     system("cls");
                     menuInfoVehiculo(vehiculos);
                     break;
+                case 41:
+                    menuNuevoReparto();
+                    break;
+                case 42:
+                    menuModifReparto();
+                    break;
+                case 43:
+                    menuBorrarReparto();
+                    break;
             }
 
 

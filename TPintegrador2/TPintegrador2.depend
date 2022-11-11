@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1668205474 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\main.c
+1668205977 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -497,7 +497,7 @@
 	<stdlib.h>
 	"util.h"
 
-1668205536 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdamenu.c
+1668205884 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdamenu.c
 	<stdlib.h>
 	<stdio.h>
 	<stdbool.h>
@@ -839,7 +839,7 @@
 	"cola.h"
 	"TDAPila.h"
 
-1668205474 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\reparto.c
+1668205977 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\reparto.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -866,5 +866,32 @@
 	"TDAreparto.h"
 	"util.h"
 
-1668205574 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\reparto.h
+1668205977 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\reparto.h
+
+1668205977 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\eliminar.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	<stdbool.h>
+	"mostrar.h"
+	"cola.h"
+	"lista.h"
+	"TDAPila.h"
+	"nodo.h"
+	"TDAmenu.h"
+	"MenuCreacion.h"
+	"MenuCarga.h"
+	"modificar.h"
+	"TDAchofer.h"
+	"TDAcliente.h"
+	"TDAvehiculo.h"
+	"TDAcuil.h"
+	"TDAdimension.h"
+	"TDAdomicilio.h"
+	"TDAfecha.h"
+	"TDAhora.h"
+	"TDApaquete.h"
+	"TDAreparto.h"
+	"util.h"
 

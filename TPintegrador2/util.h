@@ -11,5 +11,6 @@
 
 void* obtenerMemoria(size_t tamanio);
 
+char* crearStringDinamico(char* literal);
 
 #endif // UTIL_H_INCLUDED

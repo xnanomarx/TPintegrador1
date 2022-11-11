@@ -57,7 +57,7 @@ char* getApellidoCliente(clientePtr apellido);
 //  cliente: TDAcliente al que se asigna un nuevo valor de nombre
 //  nombre: char representando el nombre del cliente
 // No devuelve valor.
-void setNombreCliente(clientePtr, char* nombre);
+void setNombreCliente(clientePtr,char* nombre);
 
 // Operacion de asignacion de apellido del cliente
 // Precondicion: cliente debe haberse creado
@@ -66,7 +66,7 @@ void setNombreCliente(clientePtr, char* nombre);
 //  cliente: TDAcliente al que se asigna un nuevo valor del apellido
 //  apellido: char representando el apellido del cliente
 // No devuelve valor.
-void setApellidoCliente(clientePtr, char* apellido);
+void setApellidoCliente(clientePtr,char* apellido);
 
 // Operaciòn de asignaciòn de cuil
 // Precondiciòn: cliente debe haberse creado

@@ -10,3 +10,9 @@ void* obtenerMemoria(size_t tamanio){
     }
     return ptr;
 }
+
+char* crearStringDinamico(char* literal){
+    char* buffer=(char*)obtenerMemoria(sizeof(literal));
+    strcpy(buffer,literal);
+    return buffer;
+}

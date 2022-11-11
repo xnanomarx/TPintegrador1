@@ -4,19 +4,19 @@
 #include "util.h"
 #include <string.h>
 #include <stdbool.h>
-cuilPtr crearCuil(char cuilCreado[12]){
-    cuilPtr cuil2=(cuilPtr)obtenerMemoria(sizeof(cuil)+1);
-    char* cu=(char*)obtenerMemoria(sizeof(char)*(strlen(cuilCreado)+1));
-    strcpy(cu,cuilCreado);
-    return cuilCreado;
+cuilPtr crearCuil(char* cuilCreado){
+    cuilPtr cuil2=(cuilPtr)obtenerMemoria(sizeof(cuil));
+    cuil2->cuilUsuario=crearStringDinamico(cuilCreado);
+    return cuil2;
 }
 
 cuilPtr destruirCuil(cuilPtr cuil){
     free(cuil->cuilUsuario);
     free(cuil);
+    return NULL;
 }
 
-bool validarCuil(char cuil[12]){
+bool validarCuil(char* cuil){
 
     bool validado;
     int calculo;        //suma de cada digito de xy12345678 + cada dígito de 5432765432
@@ -44,6 +44,6 @@ char* getCuil(cuilPtr cuil){
 }
 
 void mostrarCuil(cuilPtr cuil){
-    printf("%s",cuil);
+    printf("%s",cuil->cuilUsuario);
 }
 

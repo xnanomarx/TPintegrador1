@@ -151,8 +151,15 @@ PtrDato removerDeLista(PtrLista lista, int posicion){
     return dato;
 }
 
-/*void mostrarLista(PtrLista lista){
-    while(!listaVacia(lista)){
-        mostrarCliente(getDatoLista(lista));
+void imprimirLista(PtrLista lista){
+    PtrLista listaAux=crearLista();
+    agregarLista(listaAux,lista);
+    while(!listaVacia(listaAux)){
+        printf("%s  ",(char*)getCabecera(listaAux));
+        PtrLista listaADestruir=listaAux;
+        listaAux=getResto(listaAux);
+        destruirLista(listaADestruir,false);
     }
-}*/
+    destruirLista(listaAux,false);
+    printf("\n");
+}

@@ -106,6 +106,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="modificar.h" />
+		<Unit filename="mostrar.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mostrar.h" />
 		<Unit filename="nodo.c">
 			<Option compilerVar="CC" />
 		</Unit>

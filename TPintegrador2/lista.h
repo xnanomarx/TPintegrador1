@@ -123,6 +123,6 @@ PtrDato removerDeLista(PtrLista lista, int posicion);
 // Parámetros:
 //  lista: puntero a la lista
 // No devuelve valores
-void mostrarLista(PtrLista lista);
+void imprimirLista(PtrLista lista);
 
 #endif // LISTA_H_INCLUDED

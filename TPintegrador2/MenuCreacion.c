@@ -26,7 +26,7 @@ int menuCrear(){
     return opcion;
 }
 
-void menuNuevoChofer(PtrLista listaChoferes, PtrLista listaDomCh, PtrLista listaCuilCh){
+void menuNuevoChofer(PtrLista listaChoferes){
     fflush(stdin);
     system("cls");
     char* nomAuxChof=(char*)obtenerMemoria(sizeof(char)*(50));
@@ -35,7 +35,7 @@ void menuNuevoChofer(PtrLista listaChoferes, PtrLista listaDomCh, PtrLista lista
     char* localidadAuxChof=(char*)obtenerMemoria(sizeof(char)*(50));
     int alturaAuxChof;
     bool validoChof;
-    char cuilAuxChof[12];// inicio
+    char cuilAuxChof[12];                                                    // inicio
     printf("-----------------------------\n|      Modificar datos      |\r\n");
     printf("-----------------------------\r\n");
     printf("->NUEVO CHOFER\n");
@@ -57,12 +57,17 @@ void menuNuevoChofer(PtrLista listaChoferes, PtrLista listaDomCh, PtrLista lista
             printf("Cuil/Cuit no valido. Intente otra vez.\n");
         }
     }while(validoChof==false);
-    cuilPtr cuilChof=crearCuil(cuilAuxChof);
-    domicilioPtr domChof=crearDomicilio(calleAuxChof,alturaAuxChof,localidadAuxChof);
-    choferPtr chof=crearChofer(nomAuxChof,apeAuxChof,domChof,cuilChof);
+    domicilioPtr dom1=crearDomicilio(calleAuxChof,alturaAuxChof,localidadAuxChof);
+    cuilPtr cuil1=crearCuil(cuilAuxChof);
+    choferPtr chof1=crearChofer(nomAuxChof,apeAuxChof,dom1,cuil1);
+    agregarDatoLista(listaChoferes,chof1);
+    free(nomAuxChof);
+    free(apeAuxChof);
+    free(calleAuxChof);
+    free(localidadAuxChof);
 }
 
-void menuNuevoCliente(PtrLista listaClien, PtrLista listaDomCl, PtrLista listaCuilCl){
+void menuNuevoCliente(PtrLista listaClien){
     fflush(stdin);
     system("cls");
     bool validoClien=false;                                                               //flag
@@ -95,17 +100,15 @@ void menuNuevoCliente(PtrLista listaClien, PtrLista listaDomCl, PtrLista listaCu
     }while(validoClien==false);
     cuilPtr cuilCliente=crearCuil(cuilAuxClien);                                               //llamo a constructor
     domicilioPtr domCliente=crearDomicilio(calleAuxClien,alturaAuxClien,localidadAuxClien);
-    clientePtr client=crearCliente(nomAuxClien,apeAuxClien,domCliente,cuilAuxClien);
+    clientePtr client=crearCliente(nomAuxClien,apeAuxClien,domCliente,cuilCliente);
+    agregarDatoLista(listaClien,client);                                                        //Cargo a lista
     free(nomAuxClien);                                                                        //libero la memoria pedida
     free(apeAuxClien);
     free(calleAuxClien);
     free(localidadAuxClien);
-    agregarDatoLista(listaClien,client);                                                        //Cargo a lista
-    agregarDatoLista(listaDomCl,domCliente);
-    agregarDatoLista(listaCuilCl,cuilCliente);
 }
 
-void menuNuevoVehiculo(){
+void menuNuevoVehiculo(PtrLista listaVehic){
     fflush(stdin);
     system("cls");
     char* tipoAux=(char*)obtenerMemoria(sizeof(char)*(50));
@@ -124,4 +127,9 @@ void menuNuevoVehiculo(){
     printf("Ingrese patente (Formato AAA123 sin espacios ni guiones).\n");
     scanf(" %[^\n]%*c",tipoAux);
     vehiculoPtr vehic=crearVehiculo(tipoAux,marcaAux,modeloAux,patenteAux);
+    agregarDatoLista(listaVehic,vehic);
+    free(tipoAux);                                                                        //libero la memoria pedida
+    free(marcaAux);
+    free(modeloAux);
+    free(patenteAux);
 }

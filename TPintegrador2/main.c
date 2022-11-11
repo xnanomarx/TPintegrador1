@@ -3,6 +3,7 @@
 #include <string.h>
 #include <conio.h>
 #include <stdbool.h>
+#include "mostrar.h"
 #include "cola.h"
 #include "lista.h"
 #include "TDAPila.h"
@@ -29,25 +30,23 @@ int main()
     {
         PtrPila pilaPaquetes=crearPila();             //Se apila porque el último en acomodarse es el primer paquete en salir
         PtrCola colaEntregas=crearCola();             //La primer entrega es la primera en realizarse
-        PtrLista domicilios=crearLista();
-        PtrLista cuils=crearLista();
+
         PtrLista choferes=crearLista();
         PtrLista clientes=crearLista();
         PtrLista vehiculos=crearLista();
+
         int seleccion=0;
-
-
 
         do{
             seleccion=seleccionAccion(menuPrincipal());    //menu principal para elegir cargar datos o ver datos
             switch(seleccion){
                 case 11:
                     system("cls");
-                    menuNuevoChofer(clientes,domicilios,cuils);
+                    menuNuevoChofer(choferes);
                     break;
                 case 12:
                     system("cls");
-                    menuNuevoCliente(clientes,domicilios,cuils);
+                    menuNuevoCliente(clientes);
                     break;
                 case 13:
                     system("cls");
@@ -68,11 +67,11 @@ int main()
                     break;
                 case 31:
                     system("cls");
-                    menuInfoChofer();
+                    menuInfoChofer(choferes);
                     break;
                 case 32:
                     system("cls");
-                    menuInfoCliente();
+                    menuInfoCliente(clientes);
                     break;
             }
 

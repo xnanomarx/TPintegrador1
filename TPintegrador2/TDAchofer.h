@@ -59,7 +59,7 @@ char* getDomicilioChofer(choferPtr domicilio);
 //  chofer: TDAchofer al que se asignara un nuevo valor de nombre de chofer
 //   nombre: char representando el nuevo valor del chofer
 // No devuelve valor
-void setNombreChofer(choferPtr, char* nombre);
+void setNombreChofer(choferPtr,char* nombre);
 
 // Operacion de asignacion de apellido del chofer
 // Precondicion: chofer debe haberse creado
@@ -69,6 +69,6 @@ void setNombreChofer(choferPtr, char* nombre);
 //  apellido: char representando el apellido del chofer
 // No devuelve valor.
 void setApellidoChofer(choferPtr, char* apellido);
-void mostrarChofer(choferPtr chofer);
+void mostrarChofer(choferPtr chofer,int numChofer);
 
 #endif // TDACHOFER_INCLUDED

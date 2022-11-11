@@ -5,7 +5,7 @@
 #include "MenuCarga.h"
 #include "TDApaquete.h"
 #include "TDAchofer.h"
-
+#include "mostrar.h"
 
 int seleccionAccion(int seleccion){
     switch(seleccion){
@@ -40,88 +40,6 @@ int menuInfo(){
         printf("Seleccione campo a solicitar\n");
         printf("1 - Lista de choferes \n2 - Lista de clientes \n3 - Repartos \n0 - Salir del programa\n");
         scanf("%d",&opcion);
-        switch(opcion){
-            case 1:
-                system("cls");
-                opcion=menuInfoChofer();
-                break;
-            case 2:
-                system("cls");
-                opcion=menuInfoCliente();
-                break;
-            case 3:
-                system("cls");
-                opcion=menuInfoReparto();
-                break;
-        }
+        opcion+=30;
     return opcion;
 }
-int menuInfoChofer(){
-        system("cls");
-        int opcion;// inicio
-        printf("-----------------------------\n|      Solicitar datos      |\r\n");
-        printf("-----------------------------\r\n");
-        printf("->CHOFER\nLista de choferes\n");
-        printf("");  //lista
-        scanf("%d",&opcion);
-        return opcion;
-}
-int menuInfoCliente(){
-    system("cls");
-    int opcion;
-    printf("-----------------------------\n|      Solicitar datos      |\r\n");
-    printf("-----------------------------\r\n");
-    printf("->CLIENTE\nSeleccione dato a solicitar\n");
-    printf("1 - Nombre y apellido \n2 - Domicilio \n3 - CUIL/CUIT \n9 - Volver\n0 - Salir del programa\n");
-    scanf("%d",&opcion);
-    return opcion;
-}
-int menuInfoReparto(){
-    system("cls");
-    int opcion;
-    printf("-----------------------------\n|      Solicitar datos      |\r\n");
-    printf("-----------------------------\r\n");
-    printf("->REPARTO\nSeleccione dato a solicitar\n");
-    printf("1 - Pila de reparto \n2 - Direccion de retiro \n3 - direccion de entrega \n4 - Hora de salida\n5 - Hora de llegada\n6 - Vehiculo\n9 - Volver\n0 - Salir del programa\n");
-    scanf("%d",&opcion);
-    return opcion;
-}
-int menuInfoPaquete(){
-    system("cls");
-    int codigo;
-    printf("-----------------------------\n|      Solicitar datos      |\r\n");
-    printf("-----------------------------\r\n");
-    printf("->PAQUETE\nIngrese codigo de paquete.\n");
-    scanf("%d",&codigo);
-    return codigo;
-}
-int menuInfoPaquete2(){
-    system("cls");
-    int opcion;
-    printf("-----------------------------\n|      Solicitar datos      |\r\n");
-    printf("-----------------------------\r\n");
-    printf("->PAQUETE\nSeleccione dato a solicitar\n");
-    printf("1 - Codigo \n2 - Altura \n3 - Ancho \n4 - Largo\n5 - Peso\n9 - Volver\n0 - Salir del programa\n");
-    scanf("%d",&opcion);
-    return opcion;
-}
-int EstadoDeEntrega(int codigo,bool estadoEntrega){
-    system("cls");
-    int verMotivo=0;
-    printf("-----------------------------\n|      Solicitar datos      |\r\n");
-    printf("-----------------------------\r\n");
-    if(estadoEntrega==true){
-        printf("El paquete %d fue entregado con éxito.\n",codigo);
-    }
-    else{
-        printf("El paquete %d no fue entregado.\n",codigo);
-        printf("Desea ver el motivo?\n1 - Si\n2 - No\n");
-        scanf("%d",&verMotivo);
-    }
-    return verMotivo;
-}
-//void EstadoDeEntrega2(int mostrar){
-//    if(mostrar==1){
-//        printf("%s",getmotivo());
-//    }
-//}

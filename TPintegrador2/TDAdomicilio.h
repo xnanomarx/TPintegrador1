@@ -1,11 +1,11 @@
 #ifndef TDADOMICILIO_INCLUDED
 #define TDADOMICILIO_INCLUDED
 
-typedef struct domicilio{
+typedef struct domicilio {
     char* calle;
     char* localidad;
     int numero;
-}domicilio;
+} domicilio;
 
 typedef domicilio* domicilioPtr;
 

@@ -14,6 +14,16 @@ int seleccionAccion(int seleccion);
 //devuelve un numero con la opcion elegida por el usuario
 int menuPrincipal();
 
+// Función de mostrar menu de modificar
+// Precondicion: debe haberse ejecutado el menu principal
+// Postcondición: se obtiene la eleccion del usuario para seguir avanzando en el menu
+// Parámetros:
+// seleccion: entero con la opcion elegida por el usuario previamente
+//devuelve un numero con la opcion elegida por el usuario
+int menuSet();
+
+int menuModificar();
+
 // Función de mostrar menu principal
 // Precondicion: todos los tda deben haber sido cargados
 // Postcondición: se obtiene la eleccion del usuario para seguir avanzando en el menu
@@ -22,6 +32,12 @@ int menuPrincipal();
 //devuelve un numero con la opcion elegida por el usuario
 int menuInfo();
 
-
+// Función de mostrar menu principal
+// Precondicion: todos los tda deben haber sido cargados
+// Postcondición: se obtiene la eleccion del usuario para seguir avanzando en el menu
+// Parámetros:
+// seleccion: entero con la opcion elegida por el usuario previamente
+//devuelve un numero con la opcion elegida por el usuario
+int menuReparto();
 
 #endif // TDAMENU_H_INCLUDED

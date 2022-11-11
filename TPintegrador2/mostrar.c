@@ -69,6 +69,33 @@ void mostrarListaClientes(PtrLista lista){
     printf("\n");
 }
 
+void menuInfoVehiculo(PtrLista listaVehiculo){
+        system("cls");
+        int opcion;
+        printf("-----------------------------\n|      Solicitar datos      |\r\n");
+        printf("-----------------------------\r\n");
+        printf("->VEHICULO\nLista de vehiculos:\n\n");
+        mostrarListaVehiculo(listaVehiculo);
+        printf("Ingrese cualquier tecla para volver.");  //lista
+        scanf("%d",&opcion);
+}
+
+void mostrarListaVehiculo(PtrLista lista){
+    int codigoVehiculo=1;
+    PtrLista listaAux=crearLista();
+    agregarLista(listaAux,lista);
+    while(!listaVacia(listaAux)){
+        mostrarVehiculo((vehiculoPtr)getCabecera(listaAux),codigoVehiculo);
+        PtrLista listaADestruir=listaAux;
+        listaAux=getResto(listaAux);
+        destruirLista(listaADestruir,false);
+        codigoVehiculo++;
+    }
+    destruirLista(listaAux,false);
+    printf("\n");
+}
+
+
 void menuInfoReparto(PtrCola colaReparto){
     system("cls");
     int opcion;

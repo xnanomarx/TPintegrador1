@@ -35,7 +35,7 @@ void menuNuevoChofer(PtrLista listaChoferes){
     char* localidadAuxChof=(char*)obtenerMemoria(sizeof(char)*(50));
     int alturaAuxChof;
     bool validoChof;
-    char cuilAuxChof[12];                                                    // inicio
+    char* cuilAuxChof=(char*)obtenerMemoria(sizeof(char)*(12));
     printf("-----------------------------\n|      Modificar datos      |\r\n");
     printf("-----------------------------\r\n");
     printf("->NUEVO CHOFER\n");
@@ -61,10 +61,11 @@ void menuNuevoChofer(PtrLista listaChoferes){
     cuilPtr cuil1=crearCuil(cuilAuxChof);
     choferPtr chof1=crearChofer(nomAuxChof,apeAuxChof,dom1,cuil1);
     agregarDatoLista(listaChoferes,chof1);
-    free(nomAuxChof);
+   /* free(nomAuxChof);
     free(apeAuxChof);
     free(calleAuxChof);
     free(localidadAuxChof);
+    free(cuilAuxChof);*/
 }
 
 void menuNuevoCliente(PtrLista listaClien){
@@ -76,7 +77,7 @@ void menuNuevoCliente(PtrLista listaClien){
     char* calleAuxClien=(char*)obtenerMemoria(sizeof(char)*(50));
     char* localidadAuxClien=(char*)obtenerMemoria(sizeof(char)*(50));
     int alturaAuxClien;
-    char cuilAuxClien[12];// inicio
+    char* cuilAuxClien=(char*)obtenerMemoria(sizeof(char)*(12));
     printf("-----------------------------\n|      Modificar datos      |\r\n");
     printf("-----------------------------\r\n");
     printf("->NUEVO CLIENTE\n");
@@ -102,10 +103,10 @@ void menuNuevoCliente(PtrLista listaClien){
     domicilioPtr domCliente=crearDomicilio(calleAuxClien,alturaAuxClien,localidadAuxClien);
     clientePtr client=crearCliente(nomAuxClien,apeAuxClien,domCliente,cuilCliente);
     agregarDatoLista(listaClien,client);                                                        //Cargo a lista
-    free(nomAuxClien);                                                                        //libero la memoria pedida
+  /*  free(nomAuxClien);                                                                        //libero la memoria pedida
     free(apeAuxClien);
     free(calleAuxClien);
-    free(localidadAuxClien);
+    free(localidadAuxClien);*/
 }
 
 void menuNuevoVehiculo(PtrLista listaVehic){
@@ -123,9 +124,9 @@ void menuNuevoVehiculo(PtrLista listaVehic){
     printf("Ingrese marca.\n");
     scanf(" %[^\n]%*c",marcaAux);
     printf("Ingrese modelo.\n");
-    scanf(" %[^\n]%*c",tipoAux);
+    scanf(" %[^\n]%*c",modeloAux);
     printf("Ingrese patente (Formato AAA123 sin espacios ni guiones).\n");
-    scanf(" %[^\n]%*c",tipoAux);
+    scanf(" %[^\n]%*c",patenteAux);
     vehiculoPtr vehic=crearVehiculo(tipoAux,marcaAux,modeloAux,patenteAux);
     agregarDatoLista(listaVehic,vehic);
     free(tipoAux);                                                                        //libero la memoria pedida

@@ -69,6 +69,19 @@ void setNombreChofer(choferPtr,char* nombre);
 //  apellido: char representando el apellido del chofer
 // No devuelve valor.
 void setApellidoChofer(choferPtr, char* apellido);
-void mostrarChofer(choferPtr chofer,int numChofer);
+
+void setNombreChofer(choferPtr chofer, char* nombreset);
+
+void setApellidoChofer(choferPtr chofer, char* apellidoset);
+
+void setLocalidadChofer(choferPtr chofer, char* localidadset);
+
+void setCalleChofer(choferPtr chofer, char* calleset);
+
+void setAlturaChofer(choferPtr chofer, int alturaset);
+
+void setCuilChofer(choferPtr chofer, char* cuilset);
+
+void mostrarChofer(choferPtr chofer, int numChofer);
 
 #endif // TDACHOFER_INCLUDED

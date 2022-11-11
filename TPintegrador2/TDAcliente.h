@@ -68,13 +68,18 @@ void setNombreCliente(clientePtr,char* nombre);
 // No devuelve valor.
 void setApellidoCliente(clientePtr,char* apellido);
 
+void setLocalidadCliente(clientePtr cliente, char* localidadc);
+void setCalleCliente(clientePtr cliente, char* callec);
+void setAlturaCliente(clientePtr cliente, char* altura);
+
+
 // Operaciòn de asignaciòn de cuil
 // Precondiciòn: cliente debe haberse creado
 // Postcondiciòn: cuil cambia con el nuevo valor de tipo
 // Paràmetros:
 //  cuil: string representando el cuil del usuario
 // No devuelve nada
-void setCuilCliente(clientePtr cliente,cuilPtr cuil);
+void setCuilCliente(clientePtr cliente,char* cuilc);
 
 
 #endif // TDACLIENTE_INCLUDED

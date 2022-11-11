@@ -8,6 +8,6 @@ void menuNuevoCliente(PtrLista listaClien);
 
 void menuNuevoChofer(PtrLista listaChoferes);
 
-void menuNuevoVehiculo(PtrLista listaVehic)
+void menuNuevoVehiculo(PtrLista listaVehic);
 
 #endif // MENUCREACION_H_INCLUDED

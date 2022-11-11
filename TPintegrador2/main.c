@@ -12,6 +12,7 @@
 #include "MenuCreacion.h"
 #include "MenuCarga.h"
 #include "modificar.h"
+#include "reparto.h"
 #include "TDAchofer.h"
 #include "TDAcliente.h"
 #include "TDAvehiculo.h"
@@ -54,16 +55,15 @@ int main()
                     break;
                 case 21:
                     system("cls");
-
-             //     modifChofer(choferes,);
+                    menuModifChofer(choferes);
                     break;
                 case 22:
                     system("cls");
-                    menuModifCliente();
+                    menuModifCliente(clientes);
                     break;
                 case 23:
                     system("cls");
-                    menuModifVehiculo();
+                    menuModifVehiculo(vehiculos);
                     break;
                 case 31:
                     system("cls");
@@ -72,6 +72,10 @@ int main()
                 case 32:
                     system("cls");
                     menuInfoCliente(clientes);
+                    break;
+                case 33:
+                    system("cls");
+                    menuInfoVehiculo(vehiculos);
                     break;
             }
 

@@ -42,12 +42,22 @@ void setApellidoCliente(clientePtr cliente, char* apellido){
     strcpy(cliente->apellido,apellido);
 }
 
-void setDomicilioCliente(clientePtr cliente, domicilioPtr domicilio){
-    cliente->domicilio=domicilio;
+void setLocalidadCliente(clientePtr cliente, char* localidadc){
+    cliente->domicilio->localidad=localidadc;
 }
 
-void setCuilCliente(clientePtr cliente,cuilPtr cuil){
-    cliente->cuil=cuil;
+
+void setCalleCliente(clientePtr cliente, char* callec){
+    cliente->domicilio->calle=callec;
+}
+
+
+void setAlturaCliente(clientePtr cliente, char* altura){
+    cliente->domicilio->numero=altura;
+}
+
+void setCuilCliente(clientePtr cliente,char* cuilc){
+    cliente->cuil->cuilUsuario=cuilc;
 }
 
 char* getNombreCliente(clientePtr cliente){

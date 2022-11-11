@@ -1,8 +1,5 @@
-#ifndef MOSTRAR_H_INCLUDED
-#define MOSTRAR_H_INCLUDED
-#include "lista.h"
-#include "cola.h"
-#include "TDAPila.h"
+#ifndef REPARTO_H_INCLUDED
+#define REPARTO_H_INCLUDED
 
 // Función de mostrar menu principal
 // Precondicion: todos los tda deben haber sido cargados
@@ -10,7 +7,7 @@
 // Parámetros:
 // seleccion: entero con la opcion elegida por el usuario previamente
 //devuelve un numero con la opcion elegida por el usuario
-void menuInfoChofer(PtrLista listaChofer);
+int menuNuevoReparto();
 
 // Función de mostrar menu principal
 // Precondicion: todos los tda deben haber sido cargados
@@ -18,7 +15,7 @@ void menuInfoChofer(PtrLista listaChofer);
 // Parámetros:
 // seleccion: entero con la opcion elegida por el usuario previamente
 //devuelve un numero con la opcion elegida por el usuario
-void menuInfoCliente(PtrLista listaCliente);
+int menuModifReparto();
 
 // Función de mostrar menu principal
 // Precondicion: todos los tda deben haber sido cargados
@@ -26,7 +23,7 @@ void menuInfoCliente(PtrLista listaCliente);
 // Parámetros:
 // seleccion: entero con la opcion elegida por el usuario previamente
 //devuelve un numero con la opcion elegida por el usuario
-void menuInfoReparto(PtrCola colaReparto);
+int menuBorrarReparto();
 
 // Función de mostrar menu principal
 // Precondicion: todos los tda deben haber sido cargados
@@ -34,7 +31,7 @@ void menuInfoReparto(PtrCola colaReparto);
 // Parámetros:
 // seleccion: entero con la opcion elegida por el usuario previamente
 //devuelve un numero con la opcion elegida por el usuario
-void menuInfoPaquete(PtrPila pilaReparto);
+int menuPila();
 
 // Función de mostrar menu principal
 // Precondicion: todos los tda deben haber sido cargados
@@ -42,17 +39,39 @@ void menuInfoPaquete(PtrPila pilaReparto);
 // Parámetros:
 // seleccion: entero con la opcion elegida por el usuario previamente
 //devuelve un numero con la opcion elegida por el usuario
-int EstadoDeEntrega(int codigo,bool estadoEntrega);
+int menuNuevoPaquete();
+
 // Función de mostrar menu principal
 // Precondicion: todos los tda deben haber sido cargados
 // Postcondición: se obtiene la eleccion del usuario para seguir avanzando en el menu
 // Parámetros:
 // seleccion: entero con la opcion elegida por el usuario previamente
 //devuelve un numero con la opcion elegida por el usuario
-void EstadoDeEntrega2(int mostrar);
+int menuModifPaquete();
 
-void mostrarListaChoferes(PtrLista lista);
-void mostrarListaClientes(PtrLista lista);
-void menuInfoVehiculo(PtrLista listaVehiculo);
-void mostrarListaVehiculo(PtrLista lista);
-#endif // MOSTRAR_H_INCLUDED
+// Función de mostrar menu principal
+// Precondicion: todos los tda deben haber sido cargados
+// Postcondición: se obtiene la eleccion del usuario para seguir avanzando en el menu
+// Parámetros:
+// seleccion: entero con la opcion elegida por el usuario previamente
+//devuelve un numero con la opcion elegida por el usuario
+int menuBorrarPaquete();
+
+// Función de mostrar menu principal
+// Precondicion: todos los tda deben haber sido cargados
+// Postcondición: se obtiene la eleccion del usuario para seguir avanzando en el menu
+// Parámetros:
+// seleccion: entero con la opcion elegida por el usuario previamente
+//devuelve un numero con la opcion elegida por el usuario
+int menuVehiculo();
+
+
+// Función de mostrar menu principal
+// Precondicion: todos los tda deben haber sido cargados
+// Postcondición: se obtiene la eleccion del usuario para seguir avanzando en el menu
+// Parámetros:
+// seleccion: entero con la opcion elegida por el usuario previamente
+//devuelve un numero con la opcion elegida por el usuario
+int menuBorrarVehiculo(int seleccion);
+
+#endif // REPARTO_H_INCLUDED

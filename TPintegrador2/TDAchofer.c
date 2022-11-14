@@ -42,6 +42,17 @@ char* getCalleChofer(choferPtr chofer){
     return chofer->domicilio->calle;
 }
 
+int getAlturaChofer(choferPtr chofer){
+    return chofer->domicilio->numero;
+}
+
+char* getLocalidadChofer(choferPtr chofer){
+    return chofer->domicilio->localidad;
+}
+
+char* getCuilChofer(choferPtr chofer){
+    return chofer->cuil->cuilUsuario;
+}
 void setNombreChofer(choferPtr chofer, char* nombreset){
     chofer->nombreCh=nombreset;
 }
@@ -67,7 +78,7 @@ void setCuilChofer(choferPtr chofer, char* cuilset){
 }
 
 void mostrarChofer(choferPtr chofer, int numChofer){
-    printf("--------Chofer %d--------\n%s, %s\nCUIL/CUIT: %s\n",numChofer,chofer->apellidoCh,chofer->nombreCh,chofer->cuil->cuilUsuario);
-    printf("%s %d, %s\n------------------------\n\n",chofer->domicilio->calle,chofer->domicilio->numero,chofer->domicilio->localidad);
+    printf("--------Chofer %d--------\n%s, %s\nCUIL/CUIT: %s\n",numChofer,getApellidoChofer(chofer),getNombreChofer(chofer),getCuilChofer(chofer));
+    printf("%s %d, %s\n------------------------\n\n",getCalleChofer(chofer),getAlturaChofer(chofer),getLocalidadChofer(chofer));
 }
 

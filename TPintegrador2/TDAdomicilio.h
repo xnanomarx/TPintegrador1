@@ -9,6 +9,13 @@ typedef struct domicilio {
 
 typedef domicilio* domicilioPtr;
 
+typedef struct domicilioAux{
+    char* calleAux;
+    char* localidadAux;
+    int numeroAux;
+} domicilioAux;
+
+typedef domicilioAux* domicilioAuxPtr;
 // Operación de creación (Constructor)
 // Precondición: El domicilio no ha sido creado
 // Postcondición: Se crea un domicilio con calle, numero y localidad

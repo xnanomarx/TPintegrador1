@@ -1,16 +1,29 @@
 #ifndef TDAREPARTO_INCLUDED
 #define TDAREPARTO_INCLUDED
+#include "TDAfecha.h"
 #include "TDAPila.h"
 #include "TDAhora.h"
+#include "TDAchofer.h"
+#include "TDAvehiculo.h"
 typedef struct reparto{
-    char* direccEntrega;
-    char* direccRetiro;
+    choferPtr chofer;
+    vehiculoPtr vehiculo;
     PtrPila pila;
-    horaPtr horaSalida;
+    FechaPtr fechaSalida;
     horaPtr horaLlegada;
 }reparto;
 
 typedef reparto* repartoPtr;
+
+typedef struct repartoAux{
+    choferPtr choferAux;
+    vehiculoPtr vehiculoAux;
+    PtrPila pilaAux;
+    FechaPtr fechaSalidaAux;
+    horaPtr horaLlegadaAux;
+}repartoAux;
+
+typedef repartoAux* repartoAuxPtr;
 
 // Operación de creación (Constructor)
 // Precondición: El reparto no ha sido creado
@@ -22,7 +35,7 @@ typedef reparto* repartoPtr;
 // HoraSalida: TDAhoraSalida representa la hora de salida del paquete
 // HoraLlegada: TDAhoraLlegada representa la hora de Llegada del paquete
 // Devuelve un puntero a la estructura Reparto
-repartoPtr crearReparto(char* direccEntrega, char* direccRetiro, PtrPila pila, horaPtr horaSalida, horaPtr horaLlegada);
+repartoPtr crearReparto(choferPtr chof, vehiculoPtr vehic, PtrPila pil,FechaPtr fechaSalida);
 
 
 // Operación de destrucción (Destructor)
@@ -33,30 +46,13 @@ repartoPtr crearReparto(char* direccEntrega, char* direccRetiro, PtrPila pila, h
 // Devuelve NULL
 repartoPtr destruirReparto(repartoPtr reparto);
 
-
-// Operación de obtención de direccEntrega
-// Precondición: reparto debe haberse creado
-// Postcondición: se obtiene la direccion de entrega
-// Parámetros:
-// reparto: TDAreparto del que se obtiene la direccEntrega
-// Devuelve un puntero a char representando la direccion de entrega
-char* getDirrecEntrega(repartoPtr reparto);
-
-// Operación de obtención de direccRetiro
-// Precondición: reparto debe haberse creado
-// Postcondición: se obtiene la direccion de retiro
-// Parámetros:
-// reparto: TDAreparto del que se obtiene la direccRetiro
-// Devuelve un puntero a char representando la direccion de retiro
-char* getDireccRetiro(repartoPtr reparto);
-
 // Operación de obtención de HoraEntrega
 // Precondición: reparto debe haberse creado
 // Postcondición: se obtiene la hora de entrega
 // Parámetros:
 // reparto: TDAreparto del que se obtiene la hora de entrega
 // Devuelve un puntero al TDAreparto representando la hora de entrega
-int getHoraEntrega(repartoPtr reparto);
+horaPtr getHoraEntrega(repartoPtr reparto);
 
 // Operación de obtención de HoraLlegada
 // Precondición: reparto debe haberse creado
@@ -64,23 +60,7 @@ int getHoraEntrega(repartoPtr reparto);
 // Parámetros:
 // reparto: TDAreparto del que se obtiene la hora llegada
 // Devuelve un puntero al TDAreparto representando la hora de llegada
-int getHoraLlegada(repartoPtr reparto);
-
-// Operaciòn de asignaciòn de direccion de entrega de reparto
-// Precondiciòn: Reparto debe haberse creado
-// Postcondiciòn: Reparto cambia con el nuevo valor de direccEntrega
-// Paràmetros:
-//  direccEntrega: puntero a char representando el valor de direccEntrega
-// No devuelve nada
-void* setDireccEntrega (repartoPtr reparto, char* direccEntrega);
-
-// Operaciòn de asignaciòn de direccion de retiro de reparto
-// Precondiciòn: Reparto debe haberse creado
-// Postcondiciòn: Reparto cambia con el nuevo valor de direccRetiro
-// Paràmetros:
-//  direccRetiro: puntero a char representando el valor de direccRetiro
-// No devuelve nada
-void* setDireccRetiro (repartoPtr reparto, char* direccRetiro);
+horaPtr getHoraLlegada(repartoPtr reparto);
 
 // Operaciòn de asignaciòn de hora de entrega de reparto
 // Precondiciòn: Reparto debe haberse creado
@@ -88,7 +68,7 @@ void* setDireccRetiro (repartoPtr reparto, char* direccRetiro);
 // Paràmetros:
 //   HoraEntrega: TDAHoraEntrega que cambia el valor de la hora de entrega
 // No devuelve nada
-/*void* setHoraEntrega(repartoPtr reparto, HoraEntrega);
+void* setHoraSalida(repartoPtr reparto, horaPtr horaSalida);
 
 // Operaciòn de asignaciòn de hora de llegada de reparto
 // Precondiciòn: Reparto debe haberse creado
@@ -96,6 +76,8 @@ void* setDireccRetiro (repartoPtr reparto, char* direccRetiro);
 // Paràmetros:
 //  HoraLlegada: TDAHoraLlegada donde se asigna el nuevo valor de HoraLlegada
 // No devuelve nada
-void* setHoraLlegada (repartoPtr reparto, HoraLlegada);*/
+void* setHoraLlegada(repartoPtr reparto, horaPtr horaLlegada);
+
+void mostrarReparto(repartoPtr rep,int numEntr);
 
 #endif // TDAREPARTO_INCLUDED

@@ -4,9 +4,17 @@
 
 typedef struct Fecha {
     int diaJuliano;
+    horaPtr hora;
 } Fecha;
 
 typedef Fecha* FechaPtr;
+
+typedef struct FechaAux{
+    int diaJulianoAux;
+    horaPtr horaAux;
+} FechaAux;
+
+typedef FechaAux* FechaAuxPtr;
 
 // Operación de creación (Constructor)
 // Precondición: La fecha no ha sido creada.
@@ -17,7 +25,7 @@ typedef Fecha* FechaPtr;
 //   mes: entero representando el mes
 //   anio: entero representando el año
 // Devuelve puntero a la estructura Fecha en memoria dinamica
-FechaPtr crearFecha(int hora, int dia, int mes, int anio);
+FechaPtr crearFecha(horaPtr hora, int dia, int mes, int anio);
 
 // Operación de destrucción (Destructor)
 // Precondición: Fecha debe haberse creado con crearFecha
@@ -77,5 +85,9 @@ void setMes(FechaPtr fecha, int mes);
 //  anio: entero representando el nuevo valor del año
 // No devuelve un valor
 void setAnio(FechaPtr fecha, int anio);
+
+void mostrarFechaYHora(FechaPtr horaFecha);
+
+FechaPtr pedirFecha();
 
 #endif // TDAFECHA_H_INCLUDED

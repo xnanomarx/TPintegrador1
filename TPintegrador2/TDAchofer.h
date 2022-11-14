@@ -11,6 +11,15 @@ typedef struct chofer{
    cuilPtr cuil;
 }chofer;
 
+typedef struct choferAux{
+   char nombreChAux[50];
+   char apellidoChAux[50];
+   char calleAux[30];
+   char localidadAux[30];
+   int alturaAux;
+   char cuilAux[12];
+}choferAux;
+
 typedef chofer* choferPtr;
 
 // Operación de creación (Constructor)
@@ -51,6 +60,14 @@ char* getNombreChofer(choferPtr chofer);
 char* getApellidoChofer(choferPtr chofer);
 
 char* getDomicilioChofer(choferPtr domicilio);
+
+char* getCalleChofer(choferPtr chofer);
+
+int getAlturaChofer(choferPtr chofer);
+
+char* getLocalidadChofer(choferPtr chofer);
+
+char* getCuilChofer(choferPtr chofer);
 
 // Operacion de asignacion de nombre del chofer
 // Precondicion: chofer debe haberse creado

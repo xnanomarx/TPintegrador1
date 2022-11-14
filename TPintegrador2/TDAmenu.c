@@ -11,13 +11,17 @@ int seleccionAccion(int seleccion){
     switch(seleccion){
             case 1:
                 system("cls");
-                seleccion=menuSet();
+                seleccion=menuCrear();
                 break;
             case 2:
                 system("cls");
-                seleccion=menuInfo();
+                seleccion=menuModificar();
                 break;
             case 3:
+                system("cls");
+                seleccion=menuInfo();
+                break;
+            case 4:
                 system("cls");
                 seleccion=menuReparto();
                 break;
@@ -31,31 +35,23 @@ int menuPrincipal(){
         printf("-----------------------------\n|      Menu principal       |\r\n");
         printf("-----------------------------\r\n");
         printf("Seleccione accion a realizar\r\n\n");
-        printf("1 - Cargar datos \n2 - Solicitar datos \n3 - Armar reparto \n0 - Salir\n ");
+        printf("1 - Crear datos \n2 - Modificar datos \n3 - Solicitar datos \n4 - Armar reparto\n0 - Salir\n ");
         scanf("%d",&opcion);
     return opcion;
 }
 
-int menuSet(){
+int menuCrear(){
     system("cls");
     int opcion;
-    printf("-----------------------------\n|      Modificar datos      |\r\n");
+    printf("-----------------------------\n|           Crear           |\r\n");
     printf("-----------------------------\r\n");
-    printf("Seleccione accion a realizar\n");
-    printf("1 - Crear \n2 - Modificar \n0 - Salir del programa\n");
+    printf("Seleccione campo a crear\n");
+    printf("1 - Chofer \n2 - Cliente \n3 - Vehiculo \n4 - Paquete \n5 - Entrega \n0 - Salir del programa\n");
     scanf("%d",&opcion);
-    switch(opcion){
-    case 1:
-        system("cls");
-        opcion=menuCrear();
-        break;
-    case 2:
-        system("cls");
-        opcion=menuModificar();
-        break;
-    }
+    opcion=opcion+10;
     return opcion;
 }
+
 
 int menuModificar(){
     system("cls");
@@ -63,14 +59,11 @@ int menuModificar(){
     printf("-----------------------------\n|      Modificar datos      |\r\n");
     printf("-----------------------------\r\n");
     printf("Seleccione campo a modificar\n");
-    printf("1 - Chofer \n2 - Cliente \n3 - Vehiculo \n0 - Salir del programa\n");
+    printf("1 - Chofer \n2 - Cliente \n3 - Vehiculo \n4 - Paquete \n5 - Entrega \n0 - Salir del programa\n");
     scanf("%d",&opcion);
     opcion=opcion+20;
     return opcion;
 }
-
-
-
 
 int menuInfo(){
         system("cls");
@@ -78,13 +71,11 @@ int menuInfo(){
         printf("-----------------------------\n|      Solicitar datos      |\r\n");
         printf("-----------------------------\r\n");
         printf("Seleccione campo a solicitar\n");
-        printf("1 - Lista de choferes \n2 - Lista de clientes \n3 - Lista de vehiculos \n4 - Repartos \n0 - Salir del programa\n");
+        printf("1 - Lista de choferes \n2 - Lista de clientes \n3 - Lista de vehiculos \n4 - Deposito \n5 - Entregas disponibles \n6 - Entregas en curso \n7 - Entregas finalizadas \n8 - Repartos \n0 - Salir del programa\n");
         scanf("%d",&opcion);
         opcion+=30;
     return opcion;
 }
-
-
 
 int menuReparto(){
     system("cls");

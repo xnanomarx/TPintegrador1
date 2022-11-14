@@ -1,43 +1,32 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "TDAreparto.h"
+#include "TDAchofer.h"
+#include "TDAvehiculo.h"
+#include "TDAfecha.h"
+#include "TDAhora.h"
 
-repartoPtr crearReparto(char* direccEntrega, char* direccRetiro, PtrPila pila, horaPtr horaSalida, horaPtr horaLlegada){
-    repartoPtr reparto=(repartoPtr)obtenerMemoria(sizeof(reparto));
-    reparto->direccEntrega=direccEntrega;
-    reparto->direccRetiro=direccRetiro;
-    reparto->horaSalida=horaSalida;
-    reparto->horaLlegada=horaLlegada;
+repartoPtr crearReparto(choferPtr chof, vehiculoPtr vehic, PtrPila pil,FechaPtr fechaSalida){
+    repartoPtr repart=(repartoPtr)obtenerMemoria(sizeof(reparto));
+    repart->chofer=chof;
+    repart->vehiculo=vehic;
+    repart->pila=pil;
+    repart->fechaSalida=fechaSalida;
+    repart->horaLlegada=NULL;
+    return repart;
 }
 
 repartoPtr destruirReparto(repartoPtr reparto){
-    free(reparto->direccEntrega);
-    free(reparto->direccRetiro);
-    free(reparto->pila);
     free(reparto);
     return NULL;
 }
 
-char* getDirrecEntrega(repartoPtr reparto){
-    return reparto->direccEntrega;
-}
 
-char* getDireccRetiro(repartoPtr reparto){
-    return reparto->direccRetiro;
-}
 
-int getHoraEntrega(repartoPtr reparto){
-    return reparto->horaSalida;
-}
-
-int getHoraLlegada(repartoPtr reparto){
-    return reparto->horaLlegada;
-}
-
-void* setDireccEntrega (repartoPtr reparto, char* direccEntrega){
-    reparto->direccEntrega;
-}
-
-void* setDireccRetiro (repartoPtr reparto, char* direccRetiro){
-    reparto->direccRetiro;
+void mostrarReparto(repartoPtr rep,int numRep){
+    printf("--------Reparto %d--------\nFecha: ",numRep);
+    mostrarFechaYHora(rep->fechaSalida);
+    printf("\nVehiculo: %s. %s %s. Dominio %s",getTipo(rep->vehiculo),getMarca(rep->vehiculo),getModelo(rep->vehiculo),getPatente(rep->vehiculo));
+    printf("\nChofer: %s, %s. CUIL/CUIT %s\n",getApellidoChofer(rep->chofer),getNombreChofer(rep->chofer),rep->chofer->cuil->cuilUsuario);
 }

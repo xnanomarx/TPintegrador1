@@ -14,6 +14,7 @@
 #include "TDAvehiculo.h"
 #include "lista.h"
 #include "mostrar.h"
+#include "TDAentrega.h"
 
 void menuModifChofer(PtrLista lista){
     fflush(stdin);
@@ -40,13 +41,13 @@ void menuModifChofer(PtrLista lista){
             system("cls");
             printf("Ingrese nuevo nombre de chofer\n");
             scanf(" %[^\n]%*c",nomChof);
-            setNombreChofer(getDatoLista(lista,opcion),nomChof);
+            setNombreChofer((choferPtr)getDatoLista(lista,opcion),nomChof);
             break;
         case 2:
             system("cls");
             printf("Ingrese nuevo apellido de chofer\n");
             scanf(" %[^\n]%*c",apeChof);
-            setApellidoChofer(getDatoLista(lista,opcion),apeChof);
+            setApellidoChofer((choferPtr)getDatoLista(lista,opcion),apeChof);
             break;
         case 3:
             system("cls");
@@ -56,9 +57,9 @@ void menuModifChofer(PtrLista lista){
             scanf(" %[^\n]%*c",calleChof);
             printf("Ingrese nueva altura de calle de chofer\n");
             scanf(" %d",&alturaChof);
-            setLocalidadChofer(getDatoLista(lista,opcion),localidadChof);
-            setCalleChofer(getDatoLista(lista,opcion),calleChof);
-            setAlturaChofer(getDatoLista(lista,opcion),alturaChof);
+            setLocalidadChofer((choferPtr)getDatoLista(lista,opcion),localidadChof);
+            setCalleChofer((choferPtr)getDatoLista(lista,opcion),calleChof);
+            setAlturaChofer((choferPtr)getDatoLista(lista,opcion),alturaChof);
             break;
         case 4:
             system("cls");
@@ -70,7 +71,7 @@ void menuModifChofer(PtrLista lista){
                     printf("Cuil/Cuit no valido. Intente otra vez.\n");
                 }
             }while(validoChof==false);
-            setCuilChofer(getDatoLista(lista,opcion),cuilChof);
+            setCuilChofer((choferPtr)getDatoLista(lista,opcion),cuilChof);
             break;
     }
 }
@@ -100,13 +101,13 @@ void menuModifCliente(PtrLista lista){
             system("cls");
             printf("Ingrese nuevo nombre de cliente\n");
             scanf(" %[^\n]%*c",nomClien);
-            setNombreCliente(getDatoLista(lista,opcion),nomClien);
+            setNombreCliente((clientePtr)getDatoLista(lista,opcion),nomClien);
             break;
         case 2:
             system("cls");
             printf("Ingrese nuevo apellido de cliente\n");
             scanf(" %[^\n]%*c",apeClien);
-            setApellidoCliente(getDatoLista(lista,opcion),apeClien);
+            setApellidoCliente((clientePtr)getDatoLista(lista,opcion),apeClien);
             break;
         case 3:
             system("cls");
@@ -116,9 +117,9 @@ void menuModifCliente(PtrLista lista){
             scanf(" %[^\n]%*c",calleClien);
             printf("Ingrese nueva altura de calle de cliente\n");
             scanf(" %d",&alturaClien);
-            setLocalidadCliente(getDatoLista(lista,opcion),localidadClien);
-            setCalleCliente(getDatoLista(lista,opcion),calleClien);
-            setAlturaCliente(getDatoLista(lista,opcion),alturaClien);
+            setLocalidadCliente((clientePtr)getDatoLista(lista,opcion),localidadClien);
+            setCalleCliente((clientePtr)getDatoLista(lista,opcion),calleClien);
+            setAlturaCliente((clientePtr)getDatoLista(lista,opcion),alturaClien);
             break;
         case 4:
             system("cls");
@@ -130,7 +131,7 @@ void menuModifCliente(PtrLista lista){
                     printf("Cuil/Cuit no valido. Intente otra vez.\n");
                 }
             }while(validoClien==false);
-            setCuilCliente(getDatoLista(lista,opcion),cuilClien);
+            setCuilCliente((clientePtr)getDatoLista(lista,opcion),cuilClien);
             break;
     }
 }
@@ -156,26 +157,107 @@ void menuModifVehiculo(PtrLista listaVehic){
         case 1:
             printf("Ingrese nuevo tipo de vehiculo.\n");
             scanf(" %[^\n]%*c",tipoAux);
-            setTipo(getDatoLista(listaVehic,opcion),tipoAux);
+            setTipo((vehiculoPtr)getDatoLista(listaVehic,opcion),tipoAux);
             break;
         case 2:
             printf("Ingrese nueva marca.\n");
             scanf(" %[^\n]%*c",marcaAux);
-            setMarca(getDatoLista(listaVehic,opcion),marcaAux);
+            setMarca((vehiculoPtr)getDatoLista(listaVehic,opcion),marcaAux);
             break;
         case 3:
             printf("Ingrese nuevo modelo.\n");
             scanf(" %[^\n]%*c",modeloAux);
-            setModelo(getDatoLista(listaVehic,opcion),modeloAux);
+            setModelo((vehiculoPtr)getDatoLista(listaVehic,opcion),modeloAux);
             break;
         case 4:
             printf("Ingrese nueva patente (Formato AAA123 sin espacios ni guiones).\n");
             scanf(" %[^\n]%*c",patenteAux);
-            setPatente(getDatoLista(listaVehic,opcion),patenteAux);
+            setPatente((vehiculoPtr)getDatoLista(listaVehic,opcion),patenteAux);
             break;
     }
     /*free(tipoAux);                                                                        //libero la memoria pedida
     free(marcaAux);
     free(modeloAux);
     free(patenteAux);*/
+}
+
+void menuModifPaquete(PtrLista listaPaq){
+    fflush(stdin);
+    system("cls");
+    int opcion;
+    int modi;
+    int codNew;
+    int altNew;
+    int anchNew;
+    int larNew;
+    int pes0New;
+    printf("-----------------------------\n|      Modificar datos      |\r\n");
+    printf("-----------------------------\r\n");
+    printf("->MODIFICAR PAQUETE\nSeleccione numero de paquete a modificar:\n");
+    mostrarListaPaquete(listaPaq);
+    scanf("%d",&modi);
+    modi--;
+    printf("Que desea modificar?\n1 - Altura \n2 - Ancho \n3 - Largo\n4 - Peso \n5 - Domicilio \n9 - Volver al inicio \n0 - Salir del programa\n");
+    scanf("%d",&opcion);
+
+    switch(opcion){
+        case 1:
+            printf("Ingrese nueva altura.\n");
+            scanf(" %d",&altNew);
+            setAltura((paquetePtr)getDatoLista(listaPaq,modi),altNew);
+            break;
+        case 2:
+            printf("Ingrese nuevo ancho.\n");
+            scanf(" %d",&anchNew);
+            setAncho((paquetePtr)getDatoLista(listaPaq,modi),anchNew);
+            break;
+        case 3:
+            printf("Ingrese nuevo largo.\n");
+            scanf(" %d",&larNew);
+            setLargo((paquetePtr)getDatoLista(listaPaq,modi),larNew);
+            break;
+        case 4:
+            printf("Ingrese nuevo peso.\n");
+            scanf(" %d",&pes0New);
+            setPeso((paquetePtr)getDatoLista(listaPaq,modi),pes0New);
+            break;
+        case 5:
+            printf("Ingrese nuevo domicilio de retiro.\n");
+            setDomRPaq(listaPaq,ingresarDomicilio());
+            printf("Ingrese nuevo domicilio de entrega.\n");
+            setDomEPaq(listaPaq,ingresarDomicilio());
+            break;
+    }
+    return opcion;
+}
+
+
+void menuModifEstadoEntrega(PtrLista listaEntrega,PtrLista listaEntregasCompletadas,PtrLista deposito){
+    fflush(stdin);
+    system("cls");
+    char* motivo=(char*)obtenerMemoria(sizeof(char)*(100));
+    int opcion;
+    int estado;
+    bool completa;
+    printf("Seleccione la entrega a modificar estado\n");
+    mostrarListaEntregas(listaEntrega);
+    scanf(" %d",&opcion);
+    opcion--;
+    printf("La entrega se realizo con exito?\n1 - Si\n2 - No\n");
+    scanf(" %d",&estado);
+    if(estado==1){
+        completa=true;
+        setEstadoEntrega((entregaPtr)getDatoLista(listaEntrega,opcion),completa);
+        printf("Cuando se realizó la entrega?");
+        FechaPtr fechaEnt=pedirFecha();
+        setFechaEntrega((entregaPtr)getDatoLista(listaEntrega,opcion),fechaEnt);
+        agregarDatoLista(listaEntregasCompletadas,removerDeLista(listaEntrega,opcion));
+    }else{
+        printf("Motivo?");
+        scanf(" %[^\n]%*c",motivo);
+        setMotivo((entregaPtr)getDatoLista(listaEntrega,opcion),motivo);
+        paquetePtr paqDevuelto=getPaquete((entregaPtr)getDatoLista(listaEntrega,opcion));
+        agregarDatoLista(deposito,paqDevuelto);
+        agregarDatoLista(listaEntregasCompletadas,removerDeLista(listaEntrega,opcion));
+    }
 }

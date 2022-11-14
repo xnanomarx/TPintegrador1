@@ -14,6 +14,8 @@ int seleccionAccion(int seleccion);
 //devuelve un numero con la opcion elegida por el usuario
 int menuPrincipal();
 
+int menuCrear();
+
 // Función de mostrar menu de modificar
 // Precondicion: debe haberse ejecutado el menu principal
 // Postcondición: se obtiene la eleccion del usuario para seguir avanzando en el menu

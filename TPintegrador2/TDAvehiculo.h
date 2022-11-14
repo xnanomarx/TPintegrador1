@@ -10,6 +10,15 @@ typedef struct vehiculo{
 
 typedef vehiculo* vehiculoPtr;
 
+typedef struct vehiculoAux{
+    char* tipoAux;
+    char* marcaAux;
+    char* modeloAux;
+    char* patenteAux;
+}vehiculoAux;
+
+typedef vehiculoAux* vehiculoAuxPtr;
+
 // Operación de creación (Constructor)
 // Precondición: El vehiculo no ha sido creado
 // Postcondición: Se crea vechiculo con tipo, marca, modelo, patente

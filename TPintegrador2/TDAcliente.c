@@ -32,7 +32,7 @@ clientePtr destruirCliente(clientePtr cliente){
 
 void mostrarCliente(clientePtr cliente,int numCliente){
     printf("--------Cliente %d--------\n%s, %s\nCUIL/CUIT: %s\n",numCliente,cliente->apellido,cliente->nombre,cliente->cuil->cuilUsuario);
-    printf("%s %d, %s\n------------------------\n\n",cliente->domicilio->calle,cliente->domicilio->numero,cliente->domicilio->localidad);
+    printf("%s %d, %s\n------------------------\n",cliente->domicilio->calle,cliente->domicilio->numero,cliente->domicilio->localidad);
 }
 
 void setNombreCliente(clientePtr cliente, char* nombre){
@@ -52,7 +52,7 @@ void setCalleCliente(clientePtr cliente, char* callec){
 }
 
 
-void setAlturaCliente(clientePtr cliente, char* altura){
+void setAlturaCliente(clientePtr cliente, int altura){
     cliente->domicilio->numero=altura;
 }
 
@@ -67,6 +67,23 @@ char* getNombreCliente(clientePtr cliente){
 char* getApellidoCliente(clientePtr cliente){
     return cliente->apellido;
 }
+
+char* getCalleCliente(clientePtr cliente){
+    return cliente->domicilio->calle;
+}
+
+int getAlturaCliente(clientePtr cliente){
+    return cliente->domicilio->numero;
+}
+
+char* getLocalidadCliente(clientePtr cliente){
+    return cliente->domicilio->localidad;
+}
+
+char* getCuilCliente(clientePtr cliente){
+    return cliente->cuil->cuilUsuario;
+}
+
 domicilioPtr getDomicilio(clientePtr cliente){
     return cliente->domicilio;
 }

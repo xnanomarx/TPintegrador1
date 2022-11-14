@@ -1,55 +1,100 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <stdbool.h>
 #include "TDApaquete.h"
-#include "TDAfecha.h"
-#include "TDAfechaSalida.h"
-#include "TDAfechaEntrega.h"
-#include "TDAdimension.h"
 #include "util.h"
+#include "TDAdomicilio.h"
 
-paquetePtr crearPaquete(char* motivo, bool estadoEntrega, int codigo, FechaSalidaPtr FechaSalida, FechaEntregaPtr FechaEntrega, dimensionPtr dimension){
+paquetePtr crearPaquete(int altura, int ancho, int largo, int peso, domicilioPtr direccretiro, domicilioPtr direccEntrega){
+    srand(time(NULL));
     paquetePtr paq=(paquetePtr)obtenerMemoria(sizeof(paquete));
-    char* moti=(char*)obtenerMemoria(sizeof(char)*(strlen(motivo)+1));
-    strcpy(moti,motivo);
-    paq->FechaSalida=FechaSalida;
-    paq->FechaEntrega=FechaEntrega;
-    paq->dimension=dimension;
-    paq->estadoEntrega=estadoEntrega, codigo=codigo;
+    paq->codigo=rand()%1000;
+    paq->altura=altura;
+    paq->ancho=ancho;
+    paq->largo=largo;
+    paq->peso=peso;
+    paq->direccEntrega=direccEntrega;
+    paq->direccRetiro=direccretiro;
     return paq;
 }
 
-paquetePtr destruirPaquete(paquetePtr paquete){
-    free(paquete->motivo);
-    free(paquete->FechaSalida);
-    free(paquete->FechaEntrega);
-    free(paquete->dimension);
-
+paquetePtr destruirpaquete(paquetePtr paquete){
     free(paquete);
     return NULL;
-}
-
-char* getmotivo(paquetePtr Paquete){
-    return Paquete->motivo;
-}
-
-bool getEstadoEntrega(paquetePtr paquete){
-    return paquete->estadoEntrega;
 }
 
 int getCodigo(paquetePtr paquete){
     return paquete->codigo;
 }
 
-void setmotivo(paquetePtr paquete, char* motivo){
-    paquete->motivo=motivo;
+int getAltura (paquetePtr paquete){
+    return paquete->altura;
 }
 
-void setEstadoEntrega(paquetePtr paquete, bool estadoEntrega){
-    paquete->estadoEntrega=estadoEntrega;
+int getAncho (paquetePtr paquete){
+    return paquete->ancho;
 }
 
-void setCodigo(paquetePtr paquete, int codigo){
-    paquete->codigo=codigo;
+int getLargo (paquetePtr paquete){
+    return paquete->largo;
 }
+
+int getPeso (paquetePtr paquete){
+    return paquete->peso;
+}
+
+
+char* getLocalidadRetiroPaq(paquetePtr paquete){
+    return paquete->direccRetiro->localidad;
+}
+
+char* getCalleRetiroPaq(paquetePtr paquete){
+    return paquete->direccRetiro->calle;
+}
+
+char* getcalleEntregaPaq(paquetePtr paquete){
+    return paquete->direccEntrega->calle;
+}
+
+int getAlturaRetiroPaq(paquetePtr paquete){
+    return paquete->direccRetiro->numero;
+}
+
+int getAlturaEntregaPaq(paquetePtr paquete){
+    return paquete->direccEntrega->numero;
+}
+
+char* getLocalidadEntregaPaq(paquetePtr paquete){
+    return paquete->direccEntrega->localidad;
+}
+
+void setAltura(paquetePtr paquete, int altura){
+    paquete->altura=altura;
+}
+
+void setAncho(paquetePtr paquete, int ancho){
+    paquete->ancho=ancho;
+}
+
+void setLargo(paquetePtr paquete, int largo){
+    paquete->largo=largo;
+}
+
+void setPeso(paquetePtr paquete, int peso){
+    paquete->peso=peso;
+}
+
+void setDomEPaq(paquetePtr paquete,domicilioPtr domE){
+    paquete->direccEntrega=domE;
+}
+
+void setDomRPaq(paquetePtr paquete,domicilioPtr domR){
+    paquete->direccRetiro=domR;
+}
+
+void mostrarPaquete(paquetePtr paquete,int numero){
+    printf("--------Paquete %d--------\nCodigo: %d \nAltura: %d cm Ancho: %d cm\nLargo: %d cm Peso: %d kg\n",numero,paquete->codigo,paquete->altura,paquete->ancho,paquete->largo,paquete->peso);
+    printf("Domicilio de retiro: %s %d, %s\n",paquete->direccRetiro->calle,paquete->direccRetiro->numero,paquete->direccRetiro->localidad);
+    printf("Domicilio de entrega: %s %d, %s\n-------------------------\n",paquete->direccEntrega->calle,paquete->direccEntrega->numero,paquete->direccEntrega->localidad);
+}
+

@@ -44,3 +44,19 @@ void* setLocalidad (domicilioPtr domicilio, char* localidad){
 void* setNumero (domicilioPtr domicilio, int numero){
     domicilio->numero=numero;
 }
+
+domicilioPtr ingresarDomicilio(){
+    char* calleAux=(char*)obtenerMemoria(sizeof(char)*(50));
+    char* localidadAux=(char*)obtenerMemoria(sizeof(char)*(50));
+    int alturaAux;
+    printf("Ingrese localidad de domicilio.\n");
+    scanf(" %[^\n]%*c",localidadAux);
+    printf("Ingrese calle de domicilio.\n");
+    scanf(" %[^\n]%*c",calleAux);
+    printf("Ingrese altura de calle.\n");
+    scanf(" %d",&alturaAux);
+    domicilioPtr domic=crearDomicilio(calleAux,alturaAux,localidadAux);
+    return domic;
+    free(calleAux);
+    free(localidadAux);
+}

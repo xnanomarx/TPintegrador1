@@ -5,8 +5,12 @@ typedef struct cuil{
     char* cuilUsuario;
 }cuil;
 
-typedef cuil* cuilPtr;
+typedef struct cuilAux{
+    char* cuilUsuarioAux;
+}cuilAux;
 
+typedef cuil* cuilPtr;
+typedef cuilAux* cuilAuxPtr;
 // Función de creación de cuil
 // Precondicion: debe haberse creado Cliente
 // Postcondición: Se crea un cuil único

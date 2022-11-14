@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1668205977 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\main.c
+1668449868 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -19,15 +19,15 @@
 	"TDAcliente.h"
 	"TDAvehiculo.h"
 	"TDAcuil.h"
-	"TDAdimension.h"
+	"TDApaquete.h"
 	"TDAdomicilio.h"
 	"TDAfecha.h"
 	"TDAhora.h"
-	"TDApaquete.h"
+	"TDAentrega.h"
 	"TDAreparto.h"
 	"util.h"
 
-1668201751 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdacliente.c
+1668455427 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdacliente.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -43,16 +43,19 @@
 	"TDAdimension.h"
 	"util.h"
 
-1665440374 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdadomicilio.c
+1668231193 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdadomicilio.c
 	<stdio.h>
 	<stdlib.h>
 	"TDAdomicilio.h"
 	"util.h"
 
-1665440374 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdafecha.c
+1668370943 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdafecha.c
 	<stdio.h>
 	<stdlib.h>
 	"TDAfecha.h"
+	<stdbool.h>
+	"TDAhora.h"
+	"util.h"
 
 1664228425 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdafechaentrega.c
 	<stdio.h>
@@ -62,28 +65,30 @@
 	<stdio.h>
 	<stdlib.h>
 
-1668140520 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdahora.c
+1668306045 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdahora.c
 	<stdio.h>
 	<stdlib.h>
+	<stdbool.h>
 	"TDAhora.h"
 	"util.h"
 
-1665440374 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdapaquete.c
+1668459763 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdapaquete.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
-	<stdbool.h>
 	"TDApaquete.h"
-	"TDAfecha.h"
-	"TDAfechaSalida.h"
-	"TDAfechaEntrega.h"
-	"TDAdimension.h"
 	"util.h"
+	"TDAdomicilio.h"
 
-1665440374 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdareparto.c
+1668377592 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdareparto.c
 	<stdio.h>
 	<stdlib.h>
+	<string.h>
 	"TDAreparto.h"
+	"TDAchofer.h"
+	"TDAvehiculo.h"
+	"TDAfecha.h"
+	"TDAhora.h"
 
 1668190112 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdavehiculo.c
 	<stdio.h>
@@ -107,9 +112,9 @@
 	<string.h>
 	<stdbool.h>
 
-1668140520 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdadomicilio.h
+1668447461 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdadomicilio.h
 
-1668140520 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdahora.h
+1668447635 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdahora.h
 
 1664218743 source:c:\users\rukys\documents\github\tpintegrador1\tpintegrador2\main.c
 	<stdio.h>
@@ -162,7 +167,7 @@
 
 1664220856 c:\users\rukys\documents\github\tpintegrador1\tpintegrador2\util.h
 
-1668202342 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdachofer.c
+1668448972 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdachofer.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -171,12 +176,12 @@
 	"TDAcuil.h"
 	"util.h"
 
-1668202368 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdachofer.h
+1668455102 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdachofer.h
 	"TDAdomicilio.h"
 	"TDAcuil.h"
 	"util.h"
 
-1668140542 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdacuil.h
+1668447461 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdacuil.h
 	<stdbool.h>
 
 1664820178 source:e:\downloads\tpintegrador2\main.c
@@ -360,27 +365,24 @@
 
 1664841672 e:\tp1marsan\tpintegrador1\tpintegrador2\tdafechaentrega.h
 
-1668202368 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdacliente.h
+1668455646 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdacliente.h
 	"TDAdomicilio.h"
 	"TDAcuil.h"
 
 1665440374 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdadimension.h
 
-1665440374 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdapaquete.h
-	<stdbool.h>
-	"TDAdimension.h"
-	"TDAfechaSalida.h"
-	"TDAfechaEntrega.h"
+1668459825 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdapaquete.h
+	"TDAdomicilio.h"
 
 1668140520 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdafechasalida.h
 	"TDAfecha.h"
 
-1665440374 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdafecha.h
+1668447542 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdafecha.h
 	"TDAhora.h"
 
 1668140520 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdafechaentrega.h
 
-1668140520 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdapila.c
+1668388105 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdapila.c
 	<stdio.h>
 	<stdlib.h>
 	"TDAPila.h"
@@ -402,11 +404,14 @@
 	<stdbool.h>
 	"Nodo.h"
 
-1665440374 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdareparto.h
+1668447635 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdareparto.h
+	"TDAfecha.h"
 	"TDAPila.h"
 	"TDAhora.h"
+	"TDAchofer.h"
+	"TDAvehiculo.h"
 
-1665440374 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdavehiculo.h
+1668447635 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdavehiculo.h
 
 1667006187 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\nodo.c
 	<stdio.h>
@@ -497,7 +502,7 @@
 	<stdlib.h>
 	"util.h"
 
-1668205884 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdamenu.c
+1668449188 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdamenu.c
 	<stdlib.h>
 	<stdio.h>
 	<stdbool.h>
@@ -507,7 +512,7 @@
 	"TDAchofer.h"
 	"mostrar.h"
 
-1668205552 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdamenu.h
+1668296266 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdamenu.h
 	"lista.h"
 	"cola.h"
 	"TDAPila.h"
@@ -547,7 +552,7 @@
 	"Nodo.h"
 	"Util.h"
 
-1668201981 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\menucreacion.c
+1668453294 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\menucreacion.c
 	<stdlib.h>
 	<stdio.h>
 	<stdbool.h>
@@ -563,9 +568,12 @@
 	"TDAcuil.h"
 	"TDAvehiculo.h"
 	"lista.h"
+	"TDAentrega.h"
+	"archivosGuardar.h"
 
-1668188854 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\menucreacion.h
+1668451724 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\menucreacion.h
 	"lista.h"
+	"TDAcuil.h"
 
 1668140520 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\menucrear.c
 
@@ -794,7 +802,7 @@
 	"MenuCarga.h"
 	"TDApaquete.h"
 
-1668204742 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\modificar.c
+1668448269 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\modificar.c
 	<stdlib.h>
 	<stdio.h>
 	<stdbool.h>
@@ -811,10 +819,11 @@
 	"TDAvehiculo.h"
 	"lista.h"
 	"mostrar.h"
+	"TDAentrega.h"
 
-1668205313 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\modificar.h
+1668445933 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\modificar.h
 
-1668189347 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\mostrar.c
+1668452123 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\mostrar.c
 	<stdlib.h>
 	<stdio.h>
 	<stdbool.h>
@@ -833,13 +842,16 @@
 	"lista.h"
 	"cola.h"
 	"TDAPila.h"
+	"TDApaquete.h"
+	"TDAentrega.h"
+	"TDAreparto.h"
 
-1668189428 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\mostrar.h
+1668400215 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\mostrar.h
 	"lista.h"
 	"cola.h"
 	"TDAPila.h"
 
-1668205977 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\reparto.c
+1668449537 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\reparto.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -858,17 +870,18 @@
 	"TDAcliente.h"
 	"TDAvehiculo.h"
 	"TDAcuil.h"
-	"TDAdimension.h"
+	"TDApaquete.h"
 	"TDAdomicilio.h"
 	"TDAfecha.h"
 	"TDAhora.h"
 	"TDApaquete.h"
 	"TDAreparto.h"
+	"TDAentrega.h"
 	"util.h"
 
-1668205977 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\reparto.h
+1668449538 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\reparto.h
 
-1668205977 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\eliminar.c
+1668212390 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\eliminar.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -887,11 +900,87 @@
 	"TDAcliente.h"
 	"TDAvehiculo.h"
 	"TDAcuil.h"
-	"TDAdimension.h"
+	"TDApaquete.h"
 	"TDAdomicilio.h"
 	"TDAfecha.h"
 	"TDAhora.h"
 	"TDApaquete.h"
 	"TDAreparto.h"
 	"util.h"
+
+1668459402 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdaentrega.h
+	<stdbool.h>
+	"TDAcliente.h"
+	"TDApaquete.h"
+	"TDAfecha.h"
+
+1668459119 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\tdaentrega.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdbool.h>
+	"TDAentrega.h"
+	"TDAfecha.h"
+	"TDAentrega.h"
+	"util.h"
+
+1668455416 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\archivosleer.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	<stdbool.h>
+	"mostrar.h"
+	"cola.h"
+	"lista.h"
+	"TDAPila.h"
+	"nodo.h"
+	"TDAmenu.h"
+	"MenuCreacion.h"
+	"MenuCarga.h"
+	"modificar.h"
+	"reparto.h"
+	"TDAchofer.h"
+	"TDAcliente.h"
+	"TDAvehiculo.h"
+	"TDAcuil.h"
+	"TDApaquete.h"
+	"TDAdomicilio.h"
+	"TDAfecha.h"
+	"TDAhora.h"
+	"TDAentrega.h"
+	"TDAreparto.h"
+	"archivosGuardar.h"
+
+1668459788 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\archivosguardar.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	<stdbool.h>
+	"mostrar.h"
+	"cola.h"
+	"lista.h"
+	"TDAPila.h"
+	"nodo.h"
+	"TDAmenu.h"
+	"MenuCreacion.h"
+	"MenuCarga.h"
+	"modificar.h"
+	"reparto.h"
+	"TDAchofer.h"
+	"TDAcliente.h"
+	"TDAvehiculo.h"
+	"TDAcuil.h"
+	"TDApaquete.h"
+	"TDAdomicilio.h"
+	"TDAfecha.h"
+	"TDAhora.h"
+	"TDAentrega.h"
+	"TDAreparto.h"
+
+1668455102 c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\archivosguardar.h
+	"lista.h"
+
+1668453784 source:c:\users\admin\onedrive\documentos\github\tpintegrador1\tpintegrador2\archivoscargar.c
 

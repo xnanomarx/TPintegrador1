@@ -13,18 +13,8 @@
 #include "TDAcuil.h"
 #include "TDAvehiculo.h"
 #include "lista.h"
-
-int menuCrear(){
-    system("cls");
-    int opcion;
-    printf("-----------------------------\n|      Modificar datos      |\r\n");
-    printf("-----------------------------\r\n");
-    printf("Seleccione campo a crear\n");
-    printf("1 - Chofer \n2 - Cliente \n3 - Vehiculo \n0 - Salir del programa\n");
-    scanf("%d",&opcion);
-    opcion=opcion+10;
-    return opcion;
-}
+#include "TDAentrega.h"
+#include "archivosGuardar.h"
 
 void menuNuevoChofer(PtrLista listaChoferes){
     fflush(stdin);
@@ -36,9 +26,17 @@ void menuNuevoChofer(PtrLista listaChoferes){
     int alturaAuxChof;
     bool validoChof;
     char* cuilAuxChof=(char*)obtenerMemoria(sizeof(char)*(12));
-    printf("-----------------------------\n|      Modificar datos      |\r\n");
+    printf("-----------------------------\n|           Crear           |\r\n");
     printf("-----------------------------\r\n");
     printf("->NUEVO CHOFER\n");
+    printf("Ingrese cuil de chofer (Sin espacio ni guion)\n");
+    do{
+        scanf(" %[^\n]%*c",cuilAuxChof);
+        validoChof=validarCuil(cuilAuxChof);
+        if(validoChof==false){
+            printf("Cuil/Cuit no valido. Intente otra vez.\n");
+        }
+    }while(validoChof==false);
     printf("Ingrese nombre de chofer\n");
     scanf(" %[^\n]%*c",nomAuxChof);
     printf("Ingrese apellido de chofer\n");
@@ -49,24 +47,38 @@ void menuNuevoChofer(PtrLista listaChoferes){
     scanf(" %[^\n]%*c",calleAuxChof);
     printf("Ingrese altura de calle de chofer\n");
     scanf(" %d",&alturaAuxChof);
-    printf("Ingrese cuil de chofer (Sin espacio ni guion)\n");
-    do{
-        scanf(" %[^\n]%*c",cuilAuxChof);
-        validoChof=validarCuil(cuilAuxChof);
-        if(validoChof==false){
-            printf("Cuil/Cuit no valido. Intente otra vez.\n");
-        }
-    }while(validoChof==false);
+
     domicilioPtr dom1=crearDomicilio(calleAuxChof,alturaAuxChof,localidadAuxChof);
     cuilPtr cuil1=crearCuil(cuilAuxChof);
     choferPtr chof1=crearChofer(nomAuxChof,apeAuxChof,dom1,cuil1);
     agregarDatoLista(listaChoferes,chof1);
-   /* free(nomAuxChof);
+    free(nomAuxChof);
     free(apeAuxChof);
     free(calleAuxChof);
     free(localidadAuxChof);
-    free(cuilAuxChof);*/
+    free(cuilAuxChof);
+    printf("Guardar cambios?");
+
+
 }
+
+/*int cuilRepetidoChof(PtrLista lista,cuilPtr cuil){
+    int result=2;
+    if(!listaVacia(lista)){
+        choferPtr choferCheq;
+        int contador=0;
+        while(contador<longitudLista(lista)&&(result==2)){
+            choferCheq=(choferPtr)getDatoLista(lista,contador);
+            if(getCuilChofer(choferCheq)==cuil){
+                result=1;
+            }
+            contador++;
+        }
+        destruirChofer(choferCheq);
+    }
+
+    return result;
+}*/
 
 void menuNuevoCliente(PtrLista listaClien){
     fflush(stdin);
@@ -78,9 +90,17 @@ void menuNuevoCliente(PtrLista listaClien){
     char* localidadAuxClien=(char*)obtenerMemoria(sizeof(char)*(50));
     int alturaAuxClien;
     char* cuilAuxClien=(char*)obtenerMemoria(sizeof(char)*(12));
-    printf("-----------------------------\n|      Modificar datos      |\r\n");
+    printf("-----------------------------\n|           Crear           |\r\n");
     printf("-----------------------------\r\n");
     printf("->NUEVO CLIENTE\n");
+    printf("Ingrese cuil de cliente (Sin espacio ni guion)\n");
+    do{                                                                                      //verificador  de cuil
+        scanf(" %[^\n]%*c",cuilAuxClien);
+        validoClien=validarCuil(cuilAuxClien);
+        if(validoClien==false){
+            printf("Cuil/Cuit no valido. Intente otra vez.\n");
+        }
+    }while(validoClien==false);
     printf("Ingrese nombre de cliente\n");
     scanf(" %[^\n]%*c",nomAuxClien);
     printf("Ingrese apellido de cliente\n");
@@ -91,19 +111,11 @@ void menuNuevoCliente(PtrLista listaClien){
     scanf(" %[^\n]%*c",calleAuxClien);
     printf("Ingrese altura de calle de cliente\n");
     scanf(" %d",&alturaAuxClien);
-    printf("Ingrese cuil de cliente (Sin espacio ni guion)\n");
-    do{                                                                                      //verificador  de cuil
-        scanf(" %[^\n]%*c",cuilAuxClien);
-        validoClien=validarCuil(cuilAuxClien);
-        if(validoClien==false){
-            printf("Cuil/Cuit no valido. Intente otra vez.\n");
-        }
-    }while(validoClien==false);
     cuilPtr cuilCliente=crearCuil(cuilAuxClien);                                               //llamo a constructor
     domicilioPtr domCliente=crearDomicilio(calleAuxClien,alturaAuxClien,localidadAuxClien);
     clientePtr client=crearCliente(nomAuxClien,apeAuxClien,domCliente,cuilCliente);
     agregarDatoLista(listaClien,client);                                                        //Cargo a lista
-  /*  free(nomAuxClien);                                                                        //libero la memoria pedida
+ /*   free(nomAuxClien);                                                                        //libero la memoria pedida
     free(apeAuxClien);
     free(calleAuxClien);
     free(localidadAuxClien);*/
@@ -116,7 +128,7 @@ void menuNuevoVehiculo(PtrLista listaVehic){
     char* marcaAux=(char*)obtenerMemoria(sizeof(char)*(50));
     char* modeloAux=(char*)obtenerMemoria(sizeof(char)*(50));
     char* patenteAux=(char*)obtenerMemoria(sizeof(char)*(50));
-    printf("-----------------------------\n|      Modificar datos      |\r\n");
+    printf("-----------------------------\n|           Crear           |\r\n");
     printf("-----------------------------\r\n");
     printf("->NUEVO VEHICULO\n");
     printf("Ingrese tipo de vehiculo.\n");
@@ -133,4 +145,59 @@ void menuNuevoVehiculo(PtrLista listaVehic){
     free(marcaAux);
     free(modeloAux);
     free(patenteAux);
+}
+
+void menuNuevoPaquete(PtrLista listaPaquetes){
+    fflush(stdin);
+    system("cls");
+    int alt;
+    int anch;
+    int lar;
+    int pes0;
+    printf("-----------------------------\n|           Crear           |\r\n");
+    printf("-----------------------------\r\n");
+    printf("->NUEVO PAQUETE\n");
+    printf("Ingrese alto.\n");
+    scanf(" %d",&alt);
+    printf("Ingrese ancho.\n");
+    scanf(" %d",&anch);
+    printf("Ingrese ancho\n");
+    scanf(" %d",&lar);
+    printf("Ingrese peso.\n");
+    scanf(" %d",&pes0);
+    printf("Direccion de retiro:\n");
+    domicilioPtr domRet=ingresarDomicilio();
+    printf("Direccion de entrega:\n");
+    domicilioPtr domDest=ingresarDomicilio();
+
+    paquetePtr paque=crearPaquete(alt,anch,lar,pes0,domRet,domDest);
+    agregarDatoLista(listaPaquetes,paque);
+}
+
+void menuNuevaEntrega(PtrLista listaEntregas,PtrLista listaClientes,PtrLista listaPaquete){
+    fflush(stdin);
+    system("cls");
+    printf("-----------------------------\n|           Crear           |\r\n");
+    printf("-----------------------------\r\n");
+    printf("->NUEVA ENTREGA\n");
+    int selecClient;
+    int seleccPaq;
+    int salir;
+    printf("Quien solicita la entrega?\n");
+    mostrarListaClientes(listaClientes);
+    scanf(" %d",&selecClient);
+    selecClient--;
+    system("cls");
+    printf("Cual es su paquete?\n");
+    mostrarListaPaquete(listaPaquete);
+    scanf(" %d",&seleccPaq);
+    seleccPaq--;
+    entregaPtr entrega1=crearEntrega((paquetePtr)getDatoLista(listaPaquete,seleccPaq),(clientePtr)getDatoLista(listaClientes,selecClient));
+    agregarDatoLista(listaEntregas,entrega1);
+    system("cls");
+    printf("-----------------------------\n|           Crear           |\r\n");
+    printf("-----------------------------\r\n");
+    printf("->NUEVA ENTREGA\n");
+    printf("\nEntrega cargada con exito.\n\nIngrese cualquier numero para volver.\n");
+    scanf(" %d",&salir);
 }

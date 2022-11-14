@@ -17,26 +17,42 @@
 #include "TDAcliente.h"
 #include "TDAvehiculo.h"
 #include "TDAcuil.h"
-#include "TDAdimension.h"
+#include "TDApaquete.h"
 #include "TDAdomicilio.h"
 #include "TDAfecha.h"
 #include "TDAhora.h"
-#include "TDApaquete.h"
+#include "TDAentrega.h"
 #include "TDAreparto.h"
 #include "util.h"
 
-
-
 int main()
     {
-        PtrPila pilaPaquetes=crearPila();             //Se apila porque el último en acomodarse es el primer paquete en salir
-        PtrCola colaEntregas=crearCola();             //La primer entrega es la primera en realizarse
+        PtrPila pilaReparto=crearPila();             //Se apila porque el último en acomodarse es el primer paquete en salir
 
+        PtrLista repartosCompletados=crearLista();
         PtrLista choferes=crearLista();
         PtrLista clientes=crearLista();
         PtrLista vehiculos=crearLista();
+        PtrLista DepositoPaquetes=crearLista();
+        PtrLista entregas=crearLista();
+        PtrLista entregasFinalizadas=crearLista();
+        PtrLista repartosEnCurso=crearLista();
+ /*       int seleccion=1;
 
-        int seleccion=0;
+        do{
+            menuNuevoPaquete(DepositoPaquetes);
+            menuNuevoCliente(clientes);
+            apilar(pilaReparto,getCabecera(entregas));
+            scanf(" %d",&seleccion);
+        }while(seleccion!=0);
+
+        menuNuevaEntrega(entregas,clientes,DepositoPaquetes);
+        mostrarListaPaquete(DepositoPaquetes);
+        mostrarListaEntregas(entregas);
+
+        mostrarPila(pilaReparto);*/
+
+        int seleccion=1;
 
         do{
             seleccion=seleccionAccion(menuPrincipal());    //menu principal para elegir cargar datos o ver datos
@@ -53,6 +69,14 @@ int main()
                     system("cls");
                     menuNuevoVehiculo(vehiculos);
                     break;
+                case 14:
+                    system("cls");
+                    menuNuevoPaquete(DepositoPaquetes);
+                    break;
+                case 15:
+                    system("cls");
+                    menuNuevaEntrega(entregas,clientes,DepositoPaquetes);
+                    break;
                 case 21:
                     system("cls");
                     menuModifChofer(choferes);
@@ -64,6 +88,14 @@ int main()
                 case 23:
                     system("cls");
                     menuModifVehiculo(vehiculos);
+                    break;
+                case 24:
+                    system("cls");
+                    menuModifPaquete();
+                    break;
+                case 25:
+                    system("cls");
+                    menuModifEstadoEntrega(entregas,entregasFinalizadas,DepositoPaquetes);
                     break;
                 case 31:
                     system("cls");
@@ -77,8 +109,28 @@ int main()
                     system("cls");
                     menuInfoVehiculo(vehiculos);
                     break;
+                case 34:
+                    system("cls");
+                    menuInfoPaquete(DepositoPaquetes);
+                    break;
+                case 35:
+                    system("cls");
+                    menuInfoEntregas(entregas);
+                    break;
+                case 36:
+                    system("cls");
+                    menuInfoEntregasCurso(entregas);
+                    break;
+                case 37:
+                    system("cls");
+                    menuInfoEntregasFinalizadas(entregasFinalizadas);
+                    break;
+                case 38:
+                    system("cls");
+                    menuInfoReparto(repartosEnCurso);
+                    break;
                 case 41:
-                    menuNuevoReparto();
+                    menuNuevoReparto(vehiculos,choferes,entregas,pilaReparto,repartosEnCurso);
                     break;
                 case 42:
                     menuModifReparto();
@@ -88,34 +140,7 @@ int main()
                     break;
             }
 
-
-
-
-
-
-
-
         }while(seleccion!=0);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         return 0;
 }

@@ -12,6 +12,15 @@ typedef struct cliente {
     cuilPtr cuil;
 }cliente;
 
+typedef struct clienteAux{
+    char nombreAux[50];
+    char apellidoAux[50];
+    char calleAux[30];
+    char localidadAux[30];
+    int alturaAux;
+    char cuilAux[12];
+}clienteAux;
+
 typedef cliente* clientePtr;
 
 // Operación de creación (Constructor)
@@ -50,6 +59,15 @@ char* getNombreCliente(clientePtr nombre);
 // Devuelve un puntero a char representando el apellido del cliente
 char* getApellidoCliente(clientePtr apellido);
 
+char* getCalleCliente(clientePtr cliente);
+
+int getAlturaCliente(clientePtr cliente);
+
+char* getLocalidadCliente(clientePtr cliente);
+
+char* getCuilCliente(clientePtr cliente);
+
+
 // Operacion de asignacion de nombre del cliente
 // Precondicion: cliente debe haberse creado
 // Postcondicion: cliente cambia con el nuevo valor del nombre del cliente
@@ -70,7 +88,7 @@ void setApellidoCliente(clientePtr,char* apellido);
 
 void setLocalidadCliente(clientePtr cliente, char* localidadc);
 void setCalleCliente(clientePtr cliente, char* callec);
-void setAlturaCliente(clientePtr cliente, char* altura);
+void setAlturaCliente(clientePtr cliente, int altura);
 
 
 // Operaciòn de asignaciòn de cuil

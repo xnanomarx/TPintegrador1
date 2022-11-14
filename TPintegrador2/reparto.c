@@ -16,31 +16,58 @@
 #include "TDAcliente.h"
 #include "TDAvehiculo.h"
 #include "TDAcuil.h"
-#include "TDAdimension.h"
+#include "TDApaquete.h"
 #include "TDAdomicilio.h"
 #include "TDAfecha.h"
 #include "TDAhora.h"
 #include "TDApaquete.h"
 #include "TDAreparto.h"
+#include "TDAentrega.h"
 #include "util.h"
 
 
-int menuNuevoReparto(){
+void menuNuevoReparto(PtrLista vehic,PtrLista chofers,PtrLista listaEntr,PtrPila pilaEntregas,PtrLista repartos){
+    fflush(stdin);
     system("cls");
-    int opcion;
+    int agregar=1;
+    int selecVehic;
+    int selecChof;
+    int selecEntr=1;
     printf("-----------------------------\n|      Modificar datos      |\r\n");
     printf("-----------------------------\r\n");
-    printf("->NUEVO REPARTO\nSeleccione dato a ingresar\n");
-    printf("1 - Pila de reparto \n2 - Direccion de retiro \n3 - Direccion de entrega \n4 - Hora de salida\n5 - Hora de llegada\n6 - Vehiculo\n9 - Volver al inicio\n0 - Salir del programa\n");
-    scanf("%d",&opcion);
-    return opcion;
+    printf("->NUEVO REPARTO\n\n");
+    printf("Seleccione un vehiculo a asignar:\n\n");
+    mostrarListaVehiculo(vehic);
+    scanf(" %d",&selecVehic);
+    selecVehic--;
+    system("cls");
+    printf("Ingrese chofer a asignar:\n\n");
+    mostrarListaChoferes(chofers);
+    scanf(" %d",&selecChof);
+    selecChof--;
+    system("cls");
+    printf("Ingrese fecha y hora de salida\n");
+    FechaPtr fechaRepSalida=pedirFecha();
+    do{
+        system("cls");
+        printf("Seleccione entrega a asignar segun su numero.\n");
+        mostrarListaEntregas(listaEntr);
+        scanf(" %d",&selecEntr);
+        selecEntr--;
+        apilar(pilaEntregas,removerDeLista(listaEntr,selecEntr));
+        printf("Desea apilar mas?\n1 - Si\n2 - No\n");
+        scanf(" %d",&agregar);
+    }while((agregar==1)&&(!listaVacia(listaEntr)));
+    repartoPtr reparto1=crearReparto((choferPtr)getDatoLista(chofers,selecChof),(vehiculoPtr)getDatoLista(vehic,selecVehic),pilaEntregas,fechaRepSalida);
+    agregarDatoLista(repartos,reparto1);
 }
+
 int menuModifReparto(){
     system("cls");
     int opcion;
     printf("-----------------------------\n|      Modificar datos      |\r\n");
     printf("-----------------------------\r\n");
-    printf("\r\n\n->MODIFICAR REPARTO\nSeleccione dato a modificar\n");
+    printf("->MODIFICAR REPARTO\nSeleccione dato a modificar\n");
     printf("1 - Pila de reparto \n2 - Direccion de retiro \n3 - direccion de entrega \n4 - Hora de salida\n5 - Hora de llegada\n6 - Vehiculo\n9 - Volver al inicio\n0 - Salir del programa\n");
     scanf("%d",&opcion);
     return opcion;
@@ -52,33 +79,5 @@ int menuBorrarReparto(){
     scanf("%d",&reparto);
     return reparto;
 }
-int menuPila(){
-    system("cls");
-    int opcion;
-    printf("-----------------------------\n|      Modificar datos      |\r\n");
-    printf("-----------------------------\r\n");
-    printf("\r\n\n->PILA DE REPARTO\nSeleccione accion a realizar\n");
-    printf("1 - Agregar paquete \n2 - Modificar paquete \n3 - Borrar paquete\n9 - Volver al inicio\n0 - Salir del programa\n");
-    scanf("%d",&opcion);
-    return opcion;
-}
-int menuNuevoPaquete(){
-    system("cls");
-    int opcion;
-    printf("-----------------------------\n|      Modificar datos      |\r\n");
-    printf("-----------------------------\r\n");
-    printf("\r\n\n->NUEVO PAQUETE\nSeleccione dato a ingresar\n");
-    printf("1 - Codigo \n2 - Altura \n3 - Ancho \n4 - Largo\n5 - Peso\n9 - Volver al inicio \n0 - Salir del programa\n");
-    scanf("%d",&opcion);
-    return opcion;
-}
-int menuModifPaquete(){
-    system("cls");
-    int opcion;
-    printf("-----------------------------\n|      Modificar datos      |\r\n");
-    printf("-----------------------------\r\n");
-    printf("\r\n\n->MODIFICAR PAQUETE\nSeleccione dato a ingresar\n");
-    printf("1 - Codigo \n2 - Altura \n3 - Ancho \n4 - Largo\n5 - Peso\n9 - Volver al inicio \n0 - Salir del programa\n");
-    scanf("%d",&opcion);
-    return opcion;
-}
+
+

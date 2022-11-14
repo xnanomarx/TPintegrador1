@@ -31,10 +31,6 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="MenuCarga.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="MenuCarga.h" />
 		<Unit filename="MenuCreacion.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -52,14 +48,14 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="TDAcuil.h" />
-		<Unit filename="TDAdimension.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="TDAdimension.h" />
 		<Unit filename="TDAdomicilio.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="TDAdomicilio.h" />
+		<Unit filename="TDAentrega.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="TDAentrega.h" />
 		<Unit filename="TDAfecha.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -87,10 +83,26 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="TDAvehiculo.h" />
+		<Unit filename="archivosCargar.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="archivosCargar.h" />
+		<Unit filename="archivosGuardar.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="archivosGuardar.h" />
+		<Unit filename="archivosLeer.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="archivosLeer.h" />
 		<Unit filename="cola.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="cola.h" />
+		<Unit filename="eliminar.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="eliminar.h" />
 		<Unit filename="lista.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -98,10 +110,6 @@
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="menuCrear.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="menuCrear.h" />
 		<Unit filename="modificar.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -114,6 +122,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="nodo.h" />
+		<Unit filename="reparto.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="reparto.h" />
 		<Unit filename="util.c">
 			<Option compilerVar="CC" />
 		</Unit>

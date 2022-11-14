@@ -16,6 +16,9 @@
 #include "lista.h"
 #include "cola.h"
 #include "TDAPila.h"
+#include "TDApaquete.h"
+#include "TDAentrega.h"
+#include "TDAreparto.h"
 
 void menuInfoChofer(PtrLista listaChofer){
         system("cls");
@@ -23,23 +26,21 @@ void menuInfoChofer(PtrLista listaChofer){
         printf("-----------------------------\n|      Solicitar datos      |\r\n");
         printf("-----------------------------\r\n");
         printf("->CHOFER\nLista de choferes\n");
-        mostrarListaChoferes(listaChofer);
+        if(!listaVacia(listaChofer)){
+            mostrarListaChoferes(listaChofer);}
+        else{
+            printf("No hay choferes ingresados.\n\n");
+        }
         printf("Ingrese cualquier tecla para volver.");  //lista
         scanf("%d",&opcion);
 }
 
 void mostrarListaChoferes(PtrLista lista){
-    int codigoChofer=1;
-    PtrLista listaAux=crearLista();
-    agregarLista(listaAux,lista);
-    while(!listaVacia(listaAux)){
-        mostrarChofer((choferPtr)getCabecera(listaAux),codigoChofer);
-        PtrLista listaADestruir=listaAux;
-        listaAux=getResto(listaAux);
-        destruirLista(listaADestruir,false);
-        codigoChofer++;
+    int numChof=1;
+    for(int i=0;i<longitudLista(lista);i++){
+        mostrarChofer((choferPtr)getDatoLista(lista,i),numChof);
+        numChof++;
     }
-    destruirLista(listaAux,false);
     printf("\n");
 }
 
@@ -49,23 +50,21 @@ void menuInfoCliente(PtrLista listaCliente){
         printf("-----------------------------\n|      Solicitar datos      |\r\n");
         printf("-----------------------------\r\n");
         printf("->CLIENTE\nLista de clientes:\n\n");
-        mostrarListaClientes(listaCliente);
+        if(!listaVacia(listaCliente)){
+            mostrarListaClientes(listaCliente);}
+        else{
+            printf("No hay clientes ingresados.\n\n");
+        }
         printf("Ingrese cualquier tecla para volver.");  //lista
         scanf("%d",&opcion);
 }
 
 void mostrarListaClientes(PtrLista lista){
-    int codigoCliente=1;
-    PtrLista listaAux=crearLista();
-    agregarLista(listaAux,lista);
-    while(!listaVacia(listaAux)){
-        mostrarCliente((clientePtr)getCabecera(listaAux),codigoCliente);
-        PtrLista listaADestruir=listaAux;
-        listaAux=getResto(listaAux);
-        destruirLista(listaADestruir,false);
-        codigoCliente++;
+    int numClien=1;
+    for(int i=0;i<longitudLista(lista);i++){
+        mostrarCliente((clientePtr)getDatoLista(lista,i),numClien);
+        numClien++;
     }
-    destruirLista(listaAux,false);
     printf("\n");
 }
 
@@ -75,7 +74,11 @@ void menuInfoVehiculo(PtrLista listaVehiculo){
         printf("-----------------------------\n|      Solicitar datos      |\r\n");
         printf("-----------------------------\r\n");
         printf("->VEHICULO\nLista de vehiculos:\n\n");
-        mostrarListaVehiculo(listaVehiculo);
+        if(!listaVacia(listaVehiculo)){
+            mostrarListaVehiculo(listaVehiculo);}
+        else{
+            printf("No hay vehiculos ingresados.\n\n");
+        }
         printf("Ingrese cualquier tecla para volver.");  //lista
         scanf("%d",&opcion);
 }
@@ -95,37 +98,133 @@ void mostrarListaVehiculo(PtrLista lista){
     printf("\n");
 }
 
-
-void menuInfoReparto(PtrCola colaReparto){
+void menuInfoPaquete(PtrLista listaPaquetes){
     system("cls");
     int opcion;
     printf("-----------------------------\n|      Solicitar datos      |\r\n");
     printf("-----------------------------\r\n");
-    printf("->REPARTO\nSeleccione dato a solicitar\n");
-    printf("1 - Pila de reparto \n2 - Direccion de retiro \n3 - direccion de entrega \n4 - Hora de salida\n5 - Hora de llegada\n6 - Vehiculo\n9 - Volver\n0 - Salir del programa\n");
+    printf("->PAQUETE\nDeposito.\n\n");
+    if(!listaVacia(listaPaquetes)){
+        mostrarListaPaquete(listaPaquetes);}
+    else{
+        printf("No hay paquetes ingresados.\n\n");
+    }
+    printf("Ingrese cualquier tecla para volver.\n");  //lista
     scanf("%d",&opcion);
 }
-void menuInfoPaquete(PtrPila pilaReparto){
-    system("cls");
-    int codigo;
-    printf("-----------------------------\n|      Solicitar datos      |\r\n");
-    printf("-----------------------------\r\n");
-    printf("->PAQUETE\nPila de reparto.\n\n");
+
+void mostrarListaPaquete(PtrLista lista){
+    int numPaq=1;
+    for(int i=0;i<longitudLista(lista);i++){
+        mostrarPaquete((paquetePtr)getDatoLista(lista,i),numPaq);
+        numPaq++;
+    }
+    printf("\n");
 }
 
-int EstadoDeEntrega(int codigo,bool estadoEntrega){
-    system("cls");
-    int verMotivo=0;
-    printf("-----------------------------\n|      Solicitar datos      |\r\n");
-    printf("-----------------------------\r\n");
-    if(estadoEntrega==true){
-        printf("El paquete %d fue entregado con éxito.\n",codigo);
-    }
-    else{
-        printf("El paquete %d no fue entregado.\n",codigo);
-        printf("Desea ver el motivo?\n1 - Si\n2 - No\n");
-        scanf("%d",&verMotivo);
-    }
-    return verMotivo;
+void menuInfoEntregas(PtrLista listaEntr){
+        system("cls");
+        int opcion;
+        printf("-----------------------------\n|      Solicitar datos      |\r\n");
+        printf("-----------------------------\r\n");
+        printf("->ENTREGAS\nLista de entregas:\n\n");
+        if(!listaVacia(listaEntr)){
+            mostrarListaEntregas(listaEntr);}
+        else{
+            printf("No hay entregas ingresadas.\n\n");
+        }
+        printf("Ingrese cualquier tecla para volver.");  //lista
+        scanf("%d",&opcion);
 }
 
+void menuInfoEntregasFinalizadas(PtrLista listaEntr){
+        system("cls");
+        int opcion;
+        printf("-----------------------------\n|      Solicitar datos      |\r\n");
+        printf("-----------------------------\r\n");
+        printf("->ENTREGAS\nLista de entregas finalizadas:\n\n");
+        if(!listaVacia(listaEntr)){
+            mostrarListaEstadoEntregas(listaEntr);}
+        else{
+            printf("No hay entregas finalizadas.\n\n");
+        }
+        printf("Ingrese cualquier tecla para volver.");  //lista
+        scanf("%d",&opcion);
+}
+
+
+void menuInfoEntregasCurso(PtrLista listaEntr){
+        system("cls");
+        int opcion;
+        printf("-----------------------------\n|      Solicitar datos      |\r\n");
+        printf("-----------------------------\r\n");
+        printf("->ENTREGAS\nLista de entregas en curso:\n\n");
+        if(!listaVacia(listaEntr)){
+            mostrarListaEstadoEntregas(listaEntr);}
+        else{
+            printf("No hay entregas en curso por el momento.\n\n");
+        }
+        printf("Ingrese cualquier tecla para volver.");  //lista
+        scanf("%d",&opcion);
+}
+
+void mostrarListaEntregas(PtrLista listaEntr){
+    int numEnt=1;
+    for(int i=0;i<longitudLista(listaEntr);i++){
+        mostrarEntrega((entregaPtr)getDatoLista(listaEntr,i),numEnt);
+        numEnt++;
+    }
+    printf("\n");
+}
+
+void mostrarListaEstadoEntregas(PtrLista listaEntr){
+    int numEnt=1;
+    for(int i=0;i<longitudLista(listaEntr);i++){
+        mostrarEstadoEntr((entregaPtr)getDatoLista(listaEntr,i),numEnt);
+        numEnt++;
+    }
+    printf("\n");
+}
+
+void menuInfoReparto(PtrLista listaReparto){
+        system("cls");
+        int opcion;
+        printf("-----------------------------\n|      Solicitar datos      |\r\n");
+        printf("-----------------------------\r\n");
+        printf("->REPARTO\nLista de repartos:\n\n");
+        if(!listaVacia(listaReparto)){
+            mostrarListaReparto(listaReparto);}
+        else{
+            printf("No hay repartos ingresados.\n\n");
+        }
+        printf("Ingrese cualquier tecla para volver.");  //lista
+        scanf("%d",&opcion);
+}
+
+void mostrarListaReparto(PtrLista listaReparto){
+    int codigoRep=1;
+    int posicion=0;
+    PtrLista listaAux=crearLista();
+    agregarLista(listaAux,listaReparto);
+    while(!listaVacia(listaAux)){
+        mostrarReparto((repartoPtr)getDatoLista(listaAux,posicion),codigoRep);
+        PtrLista listaADestruir=listaAux;
+        listaAux=getResto(listaAux);
+        destruirLista(listaADestruir,false);
+        codigoRep++;
+    }
+    destruirLista(listaAux,false);
+    printf("\n");
+}
+
+void mostrarPila(PtrPila pila){
+    int cont=1;
+    PtrPila pilaAux=crearPila();
+    entregaPtr entregaAux;
+    while(pilaVacia(pila)==false){
+        entregaAux=desapilar(pila);
+        mostrarEntrega(entregaAux,cont);
+        apilar(pilaAux,entregaAux);
+        cont++;
+    }
+}

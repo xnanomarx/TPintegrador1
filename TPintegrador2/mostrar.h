@@ -26,7 +26,7 @@ void menuInfoCliente(PtrLista listaCliente);
 // Parámetros:
 // seleccion: entero con la opcion elegida por el usuario previamente
 //devuelve un numero con la opcion elegida por el usuario
-void menuInfoReparto(PtrCola colaReparto);
+void menuInfoReparto(PtrLista listaReparto);
 
 // Función de mostrar menu principal
 // Precondicion: todos los tda deben haber sido cargados
@@ -34,25 +34,11 @@ void menuInfoReparto(PtrCola colaReparto);
 // Parámetros:
 // seleccion: entero con la opcion elegida por el usuario previamente
 //devuelve un numero con la opcion elegida por el usuario
-void menuInfoPaquete(PtrPila pilaReparto);
-
-// Función de mostrar menu principal
-// Precondicion: todos los tda deben haber sido cargados
-// Postcondición: se obtiene la eleccion del usuario para seguir avanzando en el menu
-// Parámetros:
-// seleccion: entero con la opcion elegida por el usuario previamente
-//devuelve un numero con la opcion elegida por el usuario
-int EstadoDeEntrega(int codigo,bool estadoEntrega);
-// Función de mostrar menu principal
-// Precondicion: todos los tda deben haber sido cargados
-// Postcondición: se obtiene la eleccion del usuario para seguir avanzando en el menu
-// Parámetros:
-// seleccion: entero con la opcion elegida por el usuario previamente
-//devuelve un numero con la opcion elegida por el usuario
-void EstadoDeEntrega2(int mostrar);
-
+void menuInfoPaquete(PtrLista listaPaquetes);
+void EstadoDeEntrega(int codigo,bool estadoEntrega);
 void mostrarListaChoferes(PtrLista lista);
 void mostrarListaClientes(PtrLista lista);
 void menuInfoVehiculo(PtrLista listaVehiculo);
 void mostrarListaVehiculo(PtrLista lista);
+void mostrarListaPaquete(PtrLista listaPaq);
 #endif // MOSTRAR_H_INCLUDED

@@ -8,6 +8,13 @@ typedef struct hora{
 
 typedef hora* horaPtr;
 
+typedef struct horaAux{
+    int horasAux;
+    int minutosAux;
+}horaAux;
+
+typedef horaAux* horaAuxPtr;
+
 // Operación de creación (Constructor)
 // Precondición: La hora no ha sido creada.
 // Postcondición: Se crea una hora con horas y minutos.
@@ -58,5 +65,7 @@ void setMinutos(horaPtr hora, int newminuto);
 //  horas: entero representando el nuevo valor de las horas
 // No devuelve un valor
 void sethoras(horaPtr hora, int newhora);
+
+horaPtr pedirHora();
 
 #endif // TDAHORA_H_INCLUDED

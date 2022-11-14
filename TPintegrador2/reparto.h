@@ -7,7 +7,7 @@
 // Parámetros:
 // seleccion: entero con la opcion elegida por el usuario previamente
 //devuelve un numero con la opcion elegida por el usuario
-int menuNuevoReparto();
+void menuNuevoReparto(PtrLista vehic,PtrLista chofers,PtrLista listaEntr,PtrPila pilaReparto,PtrLista repartos);
 
 // Función de mostrar menu principal
 // Precondicion: todos los tda deben haber sido cargados
@@ -32,14 +32,6 @@ int menuBorrarReparto();
 // seleccion: entero con la opcion elegida por el usuario previamente
 //devuelve un numero con la opcion elegida por el usuario
 int menuPila();
-
-// Función de mostrar menu principal
-// Precondicion: todos los tda deben haber sido cargados
-// Postcondición: se obtiene la eleccion del usuario para seguir avanzando en el menu
-// Parámetros:
-// seleccion: entero con la opcion elegida por el usuario previamente
-//devuelve un numero con la opcion elegida por el usuario
-int menuNuevoPaquete();
 
 // Función de mostrar menu principal
 // Precondicion: todos los tda deben haber sido cargados
